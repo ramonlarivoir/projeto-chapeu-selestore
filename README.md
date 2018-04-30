@@ -1,7 +1,5 @@
 # Projeto Chapéu SeleStore
-
 ---
-
 ## Equipe
 ### P.O.
 - Tiago Carvalho
@@ -12,3 +10,4 @@
 - Igor Sasaoka
 - Lucas Pace
 - Nathan Toschi
+---
