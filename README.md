@@ -1,5 +1,7 @@
 # Projeto Chapéu SeleStore
+
 ---
+
 ## Equipe
 ### P.O.
 - Tiago Carvalho
