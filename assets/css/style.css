@@ -1,0 +1,47 @@
+.menu-navegacao{
+	width: auto;
+	text-align: center;
+	padding-left: 80px;
+
+}
+.logo{
+	max-width: 40%;
+    height: auto;
+    padding-left: 10px; 
+    width: auto;
+
+}
+
+.btn{
+	border: 2;
+	border-color: #FFF;
+	color: #FFF;
+	background-color: #8080;
+
+}
+.icone-adm{
+	padding-left:  20px;
+
+
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 0.5;
+  color: #6c757d;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.form-control:focus {
+  color: #6c757d;
+  background-color: #fff;
+  border-color: #6c757d;
+  outline: 2;
+  box-shadow: 0 0 0 0.2rem rgba(200, 200,200, 0.25);
+}
