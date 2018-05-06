@@ -1,0 +1,32 @@
+body{
+	background-color: #231123;
+	height: 2000px;
+}
+
+footer .container{
+	width: 100%;
+	background-color: #E8DB7D;
+}
+.page-footer{
+	background-color: #E8DB7D;
+}
+.socialMedia{
+	height: 2em;
+	width: 2em;
+}
+#iconMap{
+	width: 12em;
+	height: 12em;
+	padding: 1em;
+}
+footer ul li{
+	padding-top:1em;
+	padding-right: 4em;
+}
+h3{
+	color: #82204A;
+}
+footer ul a li{
+
+	color:#558C8C;
+}
