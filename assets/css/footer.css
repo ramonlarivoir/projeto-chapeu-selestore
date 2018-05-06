@@ -1,14 +1,14 @@
 body{
 	background-color: #231123;
-	height: 2000px;
+	color: #EFF7FF;
+	
 }
-
-footer .container{
-	width: 100%;
-	background-color: #E8DB7D;
+h1{
+	text-align: center;
 }
 .page-footer{
 	background-color: #E8DB7D;
+	font-size: 15px;
 }
 .socialMedia{
 	height: 2em;
@@ -23,10 +23,14 @@ footer ul li{
 	padding-top:1em;
 	padding-right: 4em;
 }
-h3{
+footer h3{
 	color: #82204A;
+	margin-left: 1em;
 }
-footer ul a li{
+footer ul a{
 
 	color:#558C8C;
+}
+#footerNav{
+	margin: 1em 0em;
 }
