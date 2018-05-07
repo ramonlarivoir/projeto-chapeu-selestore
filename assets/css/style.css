@@ -5,8 +5,9 @@
 
 }
 .logo{
-	max-width: 40%;
+	max-width: 70%;
     height: auto;
+    padding-top: 0px;
     padding-left: 10px; 
     width: auto;
 
@@ -20,8 +21,10 @@
 
 }
 .icone-adm{
-	padding-left:  20px;
-
+	max-width: 40%;
+    height: auto;
+    padding-left: 0px; 
+    width: auto;
 
 }
 
@@ -44,4 +47,26 @@
   border-color: #6c757d;
   outline: 2;
   box-shadow: 0 0 0 0.2rem rgba(200, 200,200, 0.25);
+}
+
+.quem-somos{
+
+  padding-top: 50px;
+  text-align: justify;
+
+}
+.textoquemsomos{
+  font-size: 23px;
+
+}
+.lupa{
+  width: 7%;
+  height: auto; 
+  padding-top: 5px;
+
+}
+.navbar{
+  min-height: : 80px;
+
+
 }
