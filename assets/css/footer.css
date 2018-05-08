@@ -1,42 +1,27 @@
-body{
-	background-color: #231123;
-	color: #EFF7FF;
-	
-}
 
-body{
-	background-color: #231123;
-	color: #EFF7FF;
-	
-}
-h1{
-	text-align: center;
-}
-.page-footer{
-	background-color: #E8DB7D;
-	font-size: 15px;
-}
 .socialMedia{
+	margin-left: 1em;
 	height: 2em;
 	width: 2em;
 }
-#iconMap{
-	width: 12em;
-	height: 12em;
-	padding: 1em;
-}
+
 footer ul li{
 	padding-top:1em;
-	padding-right: 4em;
-}
-footer h3{
-	color: #82204A;
-	margin-left: 1em;
-}
-footer ul a{
-
-	color:#558C8C;
+	text-align: center;
+	
 }
 #footerNav{
 	margin: 1em 0em;
+}
+#logoFooter{
+	padding-top: 2em;
+	
+}
+.myFooter{
+
+	background-color: #E8DB7D;
+}
+#copyrightFooter{
+	text-align: center;
+	background-color: #82204A;
 }
