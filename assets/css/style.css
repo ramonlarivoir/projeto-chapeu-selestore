@@ -89,6 +89,12 @@ width: 100%;
 }
 .informacoes-card{
   color: #000;
-text-decoration:none
+  text-decoration:none
+
+}
+.titulo-categorias{
+  padding-top: 30px;
+  font-size: 30px;
+
 
 }
