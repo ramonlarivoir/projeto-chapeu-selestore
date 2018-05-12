@@ -7,7 +7,7 @@
 
 	background-color: #558C8C;
 	margin: 10% 0%;
-	padding-bottom: 5%;
+	padding-bottom: none;
 }
 #hProdutoIndiv{
 	
@@ -22,12 +22,22 @@
 
 	align-items: center;
 	margin-bottom: 5%;
+	padding: 1%;
+	margin-left: 3%;
+	
+}
+#textoProdutoIndiv p{
+	text-align: justify;
 }
 #imgProdutoIndiv{
 	align-items: center;
 	border: #231123 solid 1%;
 	margin-bottom: 5%;
-	margin-left: 5%;
+	margin-left: 3%;
 	margin-right: 5%;
 	padding: 1%;
+}
+#btnProdutoIndiv{
+	background-color: #EFF7FF;
+	padding: 2% 0%;
 }
