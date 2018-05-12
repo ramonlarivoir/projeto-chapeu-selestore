@@ -8,10 +8,12 @@
 }
 
 .btn{
+  /* botão lupa*/
 	border: 2;
 	border-color: #FFF;
-	color: #FFF;
+	color: #000;
 	background-color: #8080;
+
 
 }
 .campo-search{
@@ -57,12 +59,8 @@
 
 }
 
-/*lupa*/
-.btn{
-  border-color: #8080;
-
-
-
+.quem-somos-imagem{
+  text-align: center;
 }
 
 
@@ -95,6 +93,23 @@ width: 100%;
 .titulo-categorias{
   padding-top: 30px;
   font-size: 30px;
-
+  padding-left: 17px;
+}
+.checkbox-todas{
+  padding: 17px;
 
 }
+.checkbox-individual{
+  padding-bottom: 10px; 
+
+}
+.btn-2{
+
+    background-color: #EEE;
+
+}
+.aplicar{
+  padding-left: 17px;
+
+}
+
