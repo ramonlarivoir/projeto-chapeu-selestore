@@ -95,7 +95,11 @@ a.botao:hover, input.botao:hover{
 	text-decoration: none;
 }
 
-
+.contato{
+	margin-top: 10px;
+	margin-bottom: 25px;
+	margin-left: 140px;
+}
 .contato label{
 	display: block;
 	font-size: 13px;
