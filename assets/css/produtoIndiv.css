@@ -1,7 +1,6 @@
 #produtoIndiv{
 
 	background-color: #231123;
-	color: #82204A;
 }
 #produtoBox{
 
@@ -10,11 +9,11 @@
 	padding-bottom: none;
 }
 #hProdutoIndiv{
-	
+
 	text-align: center;
 	margin-bottom: 5%;
 	margin-right: 5%;
-	color: black;
+	color: #000;
 
 }
 
