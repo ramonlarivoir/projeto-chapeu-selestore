@@ -1,5 +1,5 @@
 
-.socialMedia{
+.SocialMedia{
 	margin-left: 1em;
 	height: 2em;
 	width: 2em;
@@ -10,20 +10,20 @@ footer ul li{
 	text-align: center;
 	
 }
-#footerNav{
+#footer-nav{
 	margin: 1em 0em;
 }
-#logoFooter{
+#logo-footer{
 	padding-top: 2em;
 	max-width: 100%;
-	height: auto;
+	
 	
 }
-.myFooter{
+.PageFooter{
 	font-family: sans-serif;
 	background-color: #E8DB7D;
 }
-#copyrightFooter{
+#copyright-footer{
 	text-align: center;
 	background-color: #82204A;
 	color: #EFF7FF;

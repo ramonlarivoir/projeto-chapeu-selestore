@@ -1,14 +1,14 @@
-#produtoIndiv{
+#produto-indiv{
 
 	background-color: #231123;
 }
-#produtoBox{
+#produto-box{
 
 	background-color: #558C8C;
 	margin: 10% 0%;
 	padding-bottom: none;
 }
-#hProdutoIndiv{
+#h-produto-indiv{
 
 	text-align: center;
 	margin-bottom: 5%;
@@ -17,7 +17,7 @@
 
 }
 
-#textoProdutoIndiv{
+#texto-produto-indiv{
 
 	align-items: center;
 	margin-bottom: 5%;
@@ -25,10 +25,10 @@
 	margin-left: 3%;
 	
 }
-#textoProdutoIndiv p{
+#texto-produto-indiv p{
 	text-align: justify;
 }
-#imgProdutoIndiv{
+#img-produto-indiv{
 	align-items: center;
 	border: #231123 solid 1%;
 	margin-bottom: 5%;
@@ -36,7 +36,7 @@
 	margin-right: 5%;
 	padding: 1%;
 }
-#btnProdutoIndiv{
+#btn-produto-indiv{
 	background-color: #EFF7FF;
 	padding: 2% 0%;
 }
