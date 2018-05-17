@@ -89,6 +89,7 @@ a.botao, input.botao{
 	margin: 5px 0;
 	display: inline-block;
 	border: none;
+	width: auto;
 }
 a.botao:hover, input.botao:hover{
 	background: #595959;
@@ -122,8 +123,9 @@ a.botao:hover, input.botao:hover{
 }
 .contato input.botao{
 	width: auto;
+	margin-left: 37.6%;
 }
 .contato h3{
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 500;
 }
