@@ -1,0 +1,130 @@
+.form-control-aumentar{min-width:300px;}
+
+.logo{
+	max-width: 70%;
+  padding-left: 5%;
+
+}
+
+.btn-edit{
+  /* botão lupa*/
+	border: 2;
+	border-color: #FFF;
+	color: #000;
+	background-color: #8080;
+
+
+}
+
+.campo-search{
+  padding-right: : 0px;
+
+
+}
+.icone-adm{
+  max-height: 26px;
+  padding-right: 10px;
+
+}
+
+.form-control-edit {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 0.5;
+  color: #6c757d;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.form-control-edit:focus {
+  color: #6c757d;
+  background-color: #fff;
+  border-color: #6c757d;
+  outline: 2;
+  box-shadow: 0 0 0 0.2rem rgba(200, 200,200, 0.25);
+}
+
+.quem-somos{
+
+  padding-top: 8%;
+  text-align: justify;
+
+}
+.textoquemsomos{
+  font-size: 23px;
+
+}
+
+.quem-somos-imagem{
+  text-align: center;
+}
+
+
+.navbar-edit{
+  min-height: : 80px;
+
+
+}
+
+.card{
+
+
+
+}
+.imagem-produto{
+width: 100%;
+
+
+}
+.linha-card{
+  padding: 20px;
+
+
+}
+.informacoes-card{
+  color: #000;
+  text-decoration:none
+
+}
+.titulo-categorias{
+  padding-top: 30px;
+  font-size: 30px;
+  padding-left: 17px;
+}
+.checkbox-todas{
+  padding: 17px;
+
+
+}
+.checkbox-individual{
+  padding-bottom: 10px; 
+margin-bottom: 0.2rem;
+}
+.btn-2{
+
+    background-color: #EEE;
+
+}
+.aplicar{
+  padding-left: 17px;
+    border: 2;
+  border-color: #FFF;
+  color: #000;
+  background-color: #8080;
+
+
+}
+
+@media only screen and (max-width: 1024px){
+.ajeitar-imagem {
+  order: 2;
+}
+}
+.nav-item{
+  font-size: 18px;
+  padding-right: 180px;
+}
