@@ -1,0 +1,42 @@
+
+#bodyProdutos{
+  background-color: red;
+}
+.teste{
+
+  border: 1px;
+  text-align: center;
+  width: 250px;
+   height: 250px;
+
+}
+
+.imagemSlide{
+
+  align: center;
+  width: 1300px;
+  height: 500px;
+}
+
+.superDiv{
+
+  align: center;
+
+}
+
+
+  h1{
+      font-size: 60px;
+      text-align: center;
+  }
+
+  h2{
+        font-size: 20px;
+
+    }
+
+    div{
+      border: 1px;
+      text-align: center;
+      align-self: center;
+    }
