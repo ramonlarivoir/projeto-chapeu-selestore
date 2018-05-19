@@ -62,8 +62,23 @@
 .quem-somos-imagem{
   text-align: center;
   padding-bottom:  20px;
+
+}
+.titulo-quem-somos-meio
+{
+  text-align: center;
+    padding-bottom: 5px;
+
+
 }
 
+.titulo-quem-somos-esquerda
+{
+  padding-left: 80px;
+  padding-bottom: 5px;
+
+
+}
 
 .navbar-edit{
   min-height: : 80px;
@@ -71,11 +86,6 @@
 
 }
 
-.card{
-
-
-
-}
 .imagem-produto{
 width: 100%;
 
@@ -91,6 +101,11 @@ width: 100%;
   text-decoration:none
 
 }
+.card-img-top{
+  padding:  20px;
+
+}
+
 .titulo-categorias{
   padding-top: 30px;
   font-size: 30px;
