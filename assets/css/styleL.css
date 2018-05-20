@@ -17,7 +17,7 @@
 	border-color: #FFF;
 	color: #000;
 	background-color: #8080;
-
+  border: 0;
 
 }
 
@@ -111,7 +111,8 @@ width: 100%;
 
 }
 .card-img-top{
-  padding:  20px;
+
+  margin-top: 20px;
 
 }
 
@@ -130,14 +131,14 @@ width: 100%;
   margin-bottom: 0.2rem;
 }
 .btn-2{
-    background-color: #EEE;
+  background-color: rgba(35, 17, 35, 0.88);
+  opacity: 0.95;
+  color: #FFF;
 }
 .aplicar{
   padding-left: 17px;
-  border: 2;
-  border-color: #FFF;
-  color: #000;
-  background-color: #8080;
+  border: 0;
+  background-color: transparent;
 
 
 }
@@ -157,19 +158,6 @@ width: 100%;
 }
 
 
-.card-2 {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
 .card-2{
   position: relative;
   display: -ms-flexbox;
@@ -178,9 +166,9 @@ width: 100%;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1.1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 
@@ -194,7 +182,7 @@ width: 100%;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
-  .card-deck .card-2{
+  .card-2{
   display: flex;
   flex-wrap: wrap;
   -ms-flex-direction: column;
@@ -206,4 +194,8 @@ width: 100%;
   body{
     background: #EFF7FF;
 
+  }
+  .card-footer-edit{
+
+    background-color: transparent;
   }
