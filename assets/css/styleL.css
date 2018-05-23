@@ -1,8 +1,13 @@
 .form-control-aumentar{min-width:300px;}
 
+
+
+
 .logo{
-	max-width: 70%;
-  padding-left: 5%;
+	max-width: 200px;
+  min-width: 20%;
+ 
+
 
 }
 
@@ -17,7 +22,7 @@
 }
 
 .campo-search{
-  padding-right: : 0px;
+  padding-right: 0px;
 
 
 }
@@ -26,7 +31,11 @@
   padding-right: 10px;
 
 }
+.icone{
+  
 
+
+}
 .form-control-edit {
   display: block;
   width: 100%;
@@ -61,20 +70,31 @@
 
 .quem-somos-imagem{
   text-align: center;
+  padding-bottom:  20px;
+
+}
+.titulo-quem-somos-meio
+{
+  text-align: center;
+    padding-bottom: 5px;
+
+
 }
 
+.titulo-quem-somos-esquerda
+{
+  padding-left: 80px;
+  padding-bottom: 5px;
+
+
+}
 
 .navbar-edit{
-  min-height: : 80px;
-
-
-}
-
-.card{
-
-
+  background-color: rgba(35, 17, 35, 0.88);
+  opacity: 0.95;
 
 }
+
 .imagem-produto{
 width: 100%;
 
@@ -85,11 +105,16 @@ width: 100%;
 
 
 }
-.informacoes-card{
+.informacoes-card {
   color: #000;
-  text-decoration:none
+
 
 }
+.card-img-top{
+  padding:  20px;
+
+}
+
 .titulo-categorias{
   padding-top: 30px;
   font-size: 30px;
@@ -102,19 +127,21 @@ width: 100%;
 }
 .checkbox-individual{
   padding-bottom: 10px; 
-margin-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .btn-2{
-
     background-color: #EEE;
-
 }
 .aplicar{
   padding-left: 17px;
-    border: 2;
+  border: 2;
   border-color: #FFF;
   color: #000;
   background-color: #8080;
+
+
+}
+.menu-navegacao-paginas{
 
 
 }
@@ -125,6 +152,58 @@ margin-bottom: 0.2rem;
 }
 }
 .nav-item{
-  font-size: 18px;
-  padding-right: 180px;
+  font-size: 20px;
+  padding-right: 70px;
 }
+
+
+.card-2 {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card-2{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+
+.card-2> .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.card-2> .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+  .card-deck .card-2{
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  }
+  body{
+    background: #EFF7FF;
+
+  }
