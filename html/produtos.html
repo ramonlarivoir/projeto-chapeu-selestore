@@ -8,15 +8,20 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/styleL.css">
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap/icons/font/css/open-iconic.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
+    <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
+    <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
+
+
     <title>Produtos</title>
 
 
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light  "> 
+<nav class="navbar navbar-expand-lg navbar-dark navbar-edit  "> 
   <!-- Logo-->
-  <a class=" logo " href="../html/paginaInicial.html" > <img src="../assets/img/Prancheta_1.png" class="img-fluid logo"> </a>
+
+    <a class="" href="../html/pagina-inicial.html" > <img src="../assets/img/Prancheta_1.png" class="logo"> </a>
     <!-- Botão para mobile --> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,251 +31,311 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav mr-auto ">
           <!-- Menus -->
-      <li class="nav-item active">
-        <a class="nav-link" href="../html/produtos.html">Produtos <span class="sr-only">(current)</span></a>
+      <li class="nav-item nav-item1">
+        <div class="">
+          <a class="nav-link" href="../html/pagina-inicial.html">
+          <img src="../assets/bootstrap/icons/png/home-2x.png">
+          Home<span class="sr-only">(current)</span></a>
+        </div>
       </li>
-      <li class="nav-item active ">
-        <a class="nav-link" href="../html/localização.html">Localização<span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <div class=" ">
+          <a class="nav-link" href="../html/produtos.html">
+           <img src="../assets/bootstrap/icons/png/cart-2x.png"> 
+          Produtos <span class="sr-only">(current)</span></a>
+        </div>
       </li>
-      <li class="nav-item active ">
-        <a class="nav-link" href="../html/quemSomos.html">Quem Somos<span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+      <div class="">
+        <a class="nav-link" href="../html/localização.html">
+          <img src="../assets/bootstrap/icons/png/location-2x.png"> 
+          Localização<span class="sr-only">(current)</span></a>
+        </div>
       </li>
-      <li class="nav-item active ">
-        <a class="nav-link" href="../html/contato.html">Contato<span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+      <div class="">
+        <a class="nav-link " href="../html/quem-somos.html">
+          <img src="../assets/bootstrap/icons/png/info-2x.png"> 
+          Quem Somos<span class="sr-only">(current)</span></a>
+        </div>
+      </li>
+       <li class="nav-item ">
+      <div class="">
+        <a class="nav-link " href="../html/contato.html"> 
+          <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png">
+          Contato<span class="sr-only">(current)</span></a>
+        </div>
       </li>
     </ul>
-
-        <!-- icone adm -->
-    <div class="row">
-    <div class="col-sm-1">
-      <a class="icone-adm " href="#" > <img src="../assets/bootstrap/icons/png/person-2x.png" class="icone-adm"> </a>
-    </div>
-  
-    <!-- campo search + lupa -->
+    <a class="nav-link nav-link-2" href="#" > <img src="../assets/bootstrap/icons/png/person-2x.png"> <span class="sr-only">(current)</span></a>
       
-    </div>
-  </div>    
+  </div>  
 </nav>
       <!-- Produtos -->
 <div class="container">
   <div class="row">
     <div class="col-lg-3">
-
-    <h1 class="titulo-categorias">Filtro</h1>
-
-
-    <!-- campo search -->
-      <div  class="col-sm-12 col-10">
-        <form class="form-inline">
-          <div class="input-group ">
-            <input class="form-control form-control-edit  " type="search" placeholder="Procure algo" aria-label="Pesquisar">
-            <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
+      <h1 class="titulo-categorias">Filtro</h1>
+      <!-- campo search -->
+        <div  class="col-sm-12 col-10">
+          <form class="form-inline">
+            <div class="input-group ">
+              <input class="form-control form-control-edit  " type="search" placeholder="Procure algo" aria-label="Pesquisar">
+              <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
+            </div>
+          </form>
+        </div>
+        <form>
+        <div class="checkbox-todas">
+          <div class=" form-group form-check  checkbox-individual" >
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label " for="exampleRadios1">
+             Categoria 1
+            </label>
           </div>
-        </form>
-      </div>
 
-      <div class="checkbox-todas">
-        <div class=" form-group form-check  checkbox-individual" >
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label " for="exampleRadios1">
-           Categoria 1
-          </label>
+          <div class=" form-group  form-check  checkbox-individual">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+            <label class="form-check-label" for="exampleRadios2">
+             Categoria 2
+            </label>
+          </div>
+
+          <div class="form-check form-group checkbox-individual">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+            <label class="form-check-label" for="exampleRadios3">
+             Categoria 3
+            </label>
+          </div>
+
+          <div class="form-check form-group checkbox-individual">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+            <label class="form-check-label" for="exampleRadios4">
+             Categoria 4
+            </label>
+          </div>
         </div>
-        <div class=" form-group  form-check  checkbox-individual">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-          <label class="form-check-label" for="exampleRadios2">
-           Categoria 2
-          </label>
-        </div>
-        <div class="form-check form-group checkbox-individual">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
-          <label class="form-check-label" for="exampleRadios3">
-           Categoria 3
-          </label>
-        </div>
-        <div class="form-check form-group checkbox-individual">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
-          <label class="form-check-label" for="exampleRadios4">
-           Categoria 4
-          </label>
-        </div>
-      </div>
-        <div class="aplicar">
-          <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit">Aplicar</button>
-        </div>
+          <div class="aplicar">
+            <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit">Aplicar</button>
+          </div>
 
       </div>
+      </form>
 
 
 
-          		<!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
+              <!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
     
 
    <div class="col-lg-9">
       <div class="row linha-card">
-        <div class="card-deck"> <!-- card-deck separa um produto do outro -->
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-        	 <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-          	 <div class="card-body" >
-   					  <p class="card-text informacoes-card">Nome produto</p>
-   					  <b><p class="card-text informacoes-card">20R$</p></b>
-            	<p class="card-text">Detalhes</p></a>
-         		 </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-  	<!-- Segunda linha produtos --->
-
-  <div class="row linha-card">
-    <div class="card-deck"> <!-- card-deck separa um produto do outro -->      
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
+        <div class="card-deck  card-cascade wider mb-r"> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
             <div class="card-body" >
+              <a href="#">
               <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
-      </div>
-  <!-- terceira linha produtos -->
-     <div class="row linha-card">
-        <div class="card-deck"> <!-- card-deck separa um produto do outro -->
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
-             <div class="card-body" >
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
-             </div>
-          </div>
-      <!-- card na mesma linha ---> 
-          <div class="col-lg-4 col-md-6 text-center card">
-          <a href="#" style="text-decoration:none;">  <!-- removendo sublinhado do hiperlink -->
-           <img class="card-img-top" src="../assets/img/quemsomos1.png" alt="Produto 1">
+
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
             <div class="card-body" >
+              <a href="#">
               <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card">20R$</p></b>
-              <p class="card-text">Detalhes</p></a>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
             </div>
           </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      <!-- card  --> 
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="#">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="#">
+              <p class="card-text informacoes-card">Nome produto</p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      
         </div>
       </div>
-    
     </div>
-   </div>
   </div>
-  <footer class="page-footer">
-    <div class="container-fluid text-center myFooter">
-        <div class="row">   
-          <!-- coluna 1-->
-            <div class="col-md-4 col-sm-3 text-md-left text-sm-left" id="footerNav">
-              <ul class="list-unstyled nav-flex-collum">
-                <li class="nav-item"><a href="#">Principal</a></li>
-                <li class="nav-item"><a href="#">Quem Somos</a></li>
-                <li class="nav-item"><a href="#">Produtos</a></li>
-                <li class="nav-item"><a href="#">Contato</a></li>
-              </ul>
-            </div>
-            <!-- coluna 2-->
-            <div class="col-md-4 col-sm-3 text-md-center text-sm-center">
-                <img  id="logoFooter" src="../assets/img/Chapeu-Logo.png">
-            </div>     
-            <!-- coluna 3-->
-            <div class="col-md-4 col-sm-3 text-md-right text-sm-right">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#"><img class="socialMedia" src="../assets/img/twitter.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="socialMedia" src="../assets/img/facebook.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="socialMedia" src="../assets/img/instagram.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="socialMedia" src="../assets/img/localizacao.png"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Copyright -->
-        <div class="row">
-          <div class="container-fluid footer-copyright text-center" id="copyrightFooter">
-            © 2018 Copyright:
-            <a href="https://codejr.com.br/"> codejr.com.br </a>
-        </div>
-        </div>
-    </div>
-</footer>
+
+
+
+
+    
+
+
+   <nav aria-label="Navegacao de paginas">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
+  </div>
 
      
 
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 
 
-
-  <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
-</html>
