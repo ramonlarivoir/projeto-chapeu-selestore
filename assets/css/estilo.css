@@ -1,14 +1,4 @@
-body{
-	font-family: sans-serif;
-	color: #333;
-}
-a:link, a:active, a:visited{
-	color: #315e8a;
-	text-decoration: none;
-}
-a:hover{
-	text-decoration: underline;
-}
+
 /* grid 960px */
 .linha{
 	width: 960px;
@@ -63,13 +53,7 @@ a:hover{
 .sem-margin{
 	margin: 0 !important;
 }
-h1, h2, h3, h4, h5, h6{
-	font-weight: 500;
-	margin: 15px 0 10px 0;
-}
-ul li, ol li{
-	margin-bottom: 5px;
-}
+
 ul.inline li, ol.inline li{
 	display: inline;
 	margin-right: 15px;
@@ -81,7 +65,8 @@ ul.sem-marcador, ol.sem-marcador{
 	list-style: none;
 }
 a.botao, input.botao{
-	background: #404040;
+	background: rgba(35, 17, 35, 0.88);
+    opacity: 0.95;
 	padding: 5px 10px;
 	border-radius: 3px;
 	color: #ebebeb;
@@ -92,7 +77,8 @@ a.botao, input.botao{
 	width: auto;
 }
 a.botao:hover, input.botao:hover{
-	background: #595959;
+	background: rgba(35, 17, 35, 0.75);
+    opacity: 0.95;
 	text-decoration: none;
 }
 
@@ -141,4 +127,14 @@ h1.endereco{
 .mapa {
 	margin-top: 20px;
 	margin-bottom: 25px;
+}
+
+.color{
+	background-color: #EFF7FF;
+	font-family: serif;
+}
+
+.localiza{
+	background-color: #EFF7FF;
+	font-family: serif;
 }
