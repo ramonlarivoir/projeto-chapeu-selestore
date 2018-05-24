@@ -86,6 +86,10 @@ a.botao:hover, input.botao:hover{
 	margin-top: 10px;
 	margin-bottom: 25px;
 	margin-left: 140px;
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 5px 0;
 }
 .contato label{
 	display: block;
