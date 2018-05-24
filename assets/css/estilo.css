@@ -121,6 +121,10 @@ a.botao:hover, input.botao:hover{
 	text-align: center;
 }
 
+.localiza{
+	padding-top: 20px;
+}
+
 h1.endereco{
 	text-align: center;
 }
