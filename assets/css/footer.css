@@ -1,5 +1,5 @@
 
-.socialMedia{
+.SocialMedia{
 	margin-left: 1em;
 	height: 2em;
 	width: 2em;
@@ -8,22 +8,32 @@
 footer ul li{
 	padding-top:1em;
 	text-align: center;
+	font-family: serif;
+
 	
 }
-#footerNav{
+footer ul li a{
+	color:#82204A;
+}
+footer ul li a:hover{
+	text-decoration: none;
+	color:#82204A;
+
+}
+#footer-nav{
 	margin: 1em 0em;
 }
-#logoFooter{
+#logo-footer{
 	padding-top: 2em;
 	max-width: 100%;
-	height: auto;
+	
 	
 }
-.myFooter{
-	font-family: sans-serif;
+.page-footer{
+	font-family: serif;
 	background-color: #E8DB7D;
 }
-#copyrightFooter{
+#copyright-footer{
 	text-align: center;
 	background-color: #82204A;
 	color: #EFF7FF;

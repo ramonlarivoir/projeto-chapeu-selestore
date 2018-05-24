@@ -1,0 +1,47 @@
+#produto-indiv{
+
+	background-color: #EFF7FF;
+}
+#produto-box{
+
+	background-color: #422142;
+	margin: 10% 0%;
+	padding-bottom: none;
+}
+#h-produto-indiv{
+	font-family: serif;
+	text-align: center;
+	margin-bottom: 5%;
+	margin-right: 5%;
+	color: rgb(210, 231, 252);
+
+}
+#ValorProduto{
+	color: #E8DB7D;
+	
+}
+
+#texto-produto-indiv{
+
+	align-items: center;
+	margin-bottom: 5%;
+	padding: 1%;
+	margin-left: 3%;
+	color:rgb(210, 231, 252);
+	
+}
+#texto-produto-indiv p{
+	text-align: justify;
+}
+#img-produto-indiv{
+	align-items: center;
+	border: #231123 solid 1%;
+	margin-bottom: 5%;
+	margin-left: 3%;
+	margin-right: 5%;
+	padding: 1%;
+}
+#btn-produto-indiv{
+	background-color: rgb(210, 231, 252);
+	padding: 2% 0%;
+}
