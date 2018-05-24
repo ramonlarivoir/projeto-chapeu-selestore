@@ -8,7 +8,13 @@
 footer ul li{
 	padding-top:1em;
 	text-align: center;
+	text-decoration: none;
+	font-family: serif;
 	
+}
+footer ul li:hover{
+	text-decoration: none;
+
 }
 #footer-nav{
 	margin: 1em 0em;
@@ -19,8 +25,8 @@ footer ul li{
 	
 	
 }
-.PageFooter{
-	font-family: sans-serif;
+.page-footer{
+	font-family: serif;
 	background-color: #E8DB7D;
 }
 #copyright-footer{
