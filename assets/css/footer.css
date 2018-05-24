@@ -8,12 +8,16 @@
 footer ul li{
 	padding-top:1em;
 	text-align: center;
-	text-decoration: none;
 	font-family: serif;
+
 	
 }
-footer ul li:hover{
+footer ul li a{
+	color:#82204A;
+}
+footer ul li a:hover{
 	text-decoration: none;
+	color:#82204A;
 
 }
 #footer-nav{
