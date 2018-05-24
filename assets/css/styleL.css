@@ -22,11 +22,7 @@
 }
 
 .campo-search{
-<<<<<<< HEAD
-  padding-right: 0px;
-=======
   padding-right: : 0px;
->>>>>>> nathan
 
 
 }
@@ -170,7 +166,7 @@ width: 100%;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: rgb(210, 231, 252, 0.4);
+  background-color: rgba(210, 231, 252, 0.4);
   background-clip: border-box;
   border: 1.1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
