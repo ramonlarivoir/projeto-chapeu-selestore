@@ -6,9 +6,8 @@
 }
 
 footer ul li{
-	padding-top:1em;
+	padding-top:0.5em;
 	text-align: center;
-	font-family: serif;
 
 	
 }
@@ -20,16 +19,18 @@ footer ul li a:hover{
 	color:#82204A;
 
 }
-#footer-nav{
-	margin: 1em 0em;
+#footer-nav li{
+	padding-bottom: 0.5em;
 }
 #logo-footer{
-	padding-top: 2em;
+	padding-top: 1em;
 	max-width: 100%;
 	
 	
 }
+
 .page-footer{
+	font-size: 20px;
 	font-family: serif;
 	background-color: #E8DB7D;
 }
@@ -37,4 +38,8 @@ footer ul li a:hover{
 	text-align: center;
 	background-color: #82204A;
 	color: #EFF7FF;
+}
+#copyright-footer a:hover{
+	text-decoration: none;
+
 }
