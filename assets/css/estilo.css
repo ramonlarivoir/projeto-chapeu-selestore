@@ -142,11 +142,11 @@ h1.endereco{
 }
 
 .color{
-	background-color: #EFF7FF;
+	background-color: rgba(124, 71, 110, 0.6);
 	font-family: serif;
 }
 
 .localiza{
-	background-color: #EFF7FF;
+	background-color: rgba(124, 71, 110, 0.6);
 	font-family: serif;
 }
