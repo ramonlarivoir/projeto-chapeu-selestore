@@ -18,24 +18,35 @@
   height: 500px;
 }
 
+ .carrossel{
+
+   height:500px
+
+ }
+
+
+
 .superDiv{
 
   align: center;
 
 }
 
+.form-admin-produto{
+  width:500px;
+  margin: auto;
+}
 
-  h1{
+  .h1AdmProd{
       font-size: 60px;
       text-align: center;
   }
 
-  h2{
+  .h2AdmProd{
         font-size: 20px;
-
     }
 
-    div{
+    .divAdmProd{
       border: 1px;
       text-align: center;
       align-self: center;

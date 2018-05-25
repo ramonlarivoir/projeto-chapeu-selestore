@@ -51,7 +51,7 @@
       <div class = "container">
           <div class ="row">
 
-            <div class="col-lg-5 col-md-5 mt-3 mb-3 text-center card">
+            <div class="divAdmProd col-lg-5 col-md-5 mt-3 mb-3 text-center card">
              <img class="card-img-top" src="../assets/img/produtoHP2.png" alt="Produto 1">
              <button class="col-lg-3 mt-3 mx-auto  mb-2 btn btn-primary">Trocar foto</button>
             </div>
