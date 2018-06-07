@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>footer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- bootstrap-->
-    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
-    <!--css footer -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
-
-</head>
-
-<body>
 
     <footer>
         <div class="container-fluid text-center page-footer">
