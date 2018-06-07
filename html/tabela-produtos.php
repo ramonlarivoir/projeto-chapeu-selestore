@@ -1,4 +1,5 @@
 <?php include('navbar-admin.php'); ?> 
+<?php include('conexao.php'); ?>
     <div class="container">
         <table class="table table-striped table-texto">
             <thead>

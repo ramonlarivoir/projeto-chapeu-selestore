@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav-item nav-item-adm">
-                    <a class="nav-link" href="#">Categoria 3
+                    <a class="nav-link" href="cadastro-usuario.php">Usuarios
                         <span class="sr-only">(current)</span>
                     </a>
 
