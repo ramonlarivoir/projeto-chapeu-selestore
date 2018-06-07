@@ -1,118 +1,65 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> Chapeu SeleStore pagina inicial</title>
-
-        <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
-
-        <link rel="stylesheet" type="text/css" href="../assets/css/bio.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
-            <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
-              <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/styleL.css">
-  </head>
-  <body class="bg">
-
-    <nav class="navbar navbar-2 navbar-expand-lg navbar-dark navbar-edit fonte ">
+<?php include ('navbar.php') ?>
 
 
-        <a class="" href="../html/pagina-inicial.html" > <img src="../assets/img/Chapeu-Logo-branco.png" class="logo"> </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<div>
+  <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
 
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul class="navbar-nav mr-auto ">
-
-          <li class="nav-item nav-item-2">
-            <div class="">
-              <a class="nav-link nav-link-2" href="../html/pagina-inicial.html">
-              <img src="../assets/bootstrap/icons/png/home-2x.png">
-              Home<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-            <div class=" ">
-              <a class="nav-link nav-link-2" href="../html/produtos.html">
-               <img src="../assets/bootstrap/icons/png/cart-2x.png">
-              Produtos <span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/localização.html">
-              <img src="../assets/bootstrap/icons/png/location-2x.png">
-              Localização<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/quem-somos.html">
-              <img src="../assets/bootstrap/icons/png/info-2x.png">
-              Quem Somos<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-           <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/contato.html">
-              <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png">
-              Contato<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-        </ul>
-        <a class="nav-link nav-link-2" href="#" > <img src="../assets/bootstrap/icons/png/person-2x.png"> <span class="sr-only">(current)</span></a>
-
-      </div>
-    </nav>
-
-
-    <div id="carouselExampleIndicators" class=" carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="carrossel d-block w-100" src="../assets/img/harry potter.jpg" alt="Bonecos Harry Potter">
-        <div class="carousel-caption d-none d-md-block">
-   <h5>Harry Potter e as relíquias da morte em Blu Ray</h5>
-   <p>Assista ao último filme da saga em Blu Ray!</p>
- </div>
-      </div>
-      <div class="carousel-item">
-        <img class="carrossel d-block w-100" src="../assets/img/Harry_Pottah.jpg" alt="Bonecos diversos Harry Potter">
-          <div class="carousel-caption d-none d-md-block">
-        <h5>Cansado dos livros? Agora você também pode ver os filmes!</h5>
-        <p>Filmes do Harry Potter estão na promoção!!</p>
-      </div>
-      </div>
-      <div class="carousel-item">
-        <img class="carrossel d-block w-100" src="../assets/img/bonecosPop.png" alt="Bonecos amigos Harry Potter">
-          <div class="carousel-caption d-none d-md-block">
-        <h5>Os bonecos funko estão bombando!!</h5>
-        <p>Compre já o boneco funko do seu personagem favorito!</p>
-      </div>
-      </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../assets/img/harry potter.jpg" alt="Bonecos Harry Potter">
+      <div class="carousel-caption d-none d-md-block">
+ <h5>Harry Potter e as relíquias da morte em Blu Ray</h5>
+ <p>Assista ao último filme da saga em Blu Ray!</p>
+</div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/Harry_Pottah.jpg"  alt="Bonecos diversos Harry Potter">
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Cansado dos livros? Agora você também pode ver os filmes!</h5>
+      <p>Filmes do Harry Potter estão na promoção!!</p>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/bonecosPop.jpg" alt="Bonecos amigos Harry Potter">
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Os bonecos funko estão bombando!!</h5>
+      <p>Compre já o boneco funko do seu personagem favorito!</p>
+    </div>
+    </div>
   </div>
+
+</div>
+
+<div>
+
+
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+
+
+</div>
+
+
+
+
 
 <div class="mt-3 col-lg-12">
   <div class="row linha-card">
-
 
               <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center card-2">
                 <div class="view overlay zoom">
