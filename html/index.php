@@ -1,23 +1,9 @@
 <?php include ('navbar.php') ?>
 
 
-<<<<<<< HEAD:html/index.html
-        <link rel="stylesheet" type="text/css" href="../assets/css/bio.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
-           <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
-              <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
-
-       <link rel="stylesheet" type="text/css" href="../assets/css/styleL.css">
-
-  </head>
-
-  <body class="bg">
-=======
 
 <div>
   <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
->>>>>>> lucasPace:html/index.php
 
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -71,84 +57,6 @@
 
 
 
-<<<<<<< HEAD:html/index.html
-          <li class="nav-item nav-item-2">
-            <div class="">
-              <a class="nav-link nav-link-2" href="../html/pagina-inicial.html">
-              <img src="../assets/bootstrap/icons/png/home-2x.png">
-              Home<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-            <div class=" ">
-              <a class="nav-link nav-link-2" href="../html/produtos.html">
-               <img src="../assets/bootstrap/icons/png/cart-2x.png">
-              Produtos <span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/localização.html">
-              <img src="../assets/bootstrap/icons/png/location-2x.png">
-              Localização<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/quem-somos.html">
-              <img src="../assets/bootstrap/icons/png/info-2x.png">
-              Quem Somos<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-           <li class="nav-item nav-item-2">
-          <div class="">
-            <a class="nav-link nav-link-2" href="../html/contato.html">
-              <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png">
-              Contato<span class="sr-only">(current)</span></a>
-            </div>
-          </li>
-        </ul>
-        <a class="nav-link nav-link-2" href="#" > <img src="../assets/bootstrap/icons/png/person-2x.png"> <span class="sr-only">(current)</span></a>
-
-      </div>
-    </nav>
-
-
-
-<div>
-  <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
-
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="../assets/img/harry potter.jpg" alt="Bonecos Harry Potter">
-      <div class="carousel-caption d-none d-md-block">
- <h5>Harry Potter e as relíquias da morte em Blu Ray</h5>
- <p>Assista ao último filme da saga em Blu Ray!</p>
-</div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/Harry_Pottah.jpg"  alt="Bonecos diversos Harry Potter">
-        <div class="carousel-caption d-none d-md-block">
-      <h5>Cansado dos livros? Agora você também pode ver os filmes!</h5>
-      <p>Filmes do Harry Potter estão na promoção!!</p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/bonecosPop.jpg" alt="Bonecos amigos Harry Potter">
-        <div class="carousel-caption d-none d-md-block">
-      <h5>Os bonecos funko estão bombando!!</h5>
-      <p>Compre já o boneco funko do seu personagem favorito!</p>
-    </div>
-    </div>
-  </div>
-=======
->>>>>>> lucasPace:html/index.php
 
 </div>
 
