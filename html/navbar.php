@@ -14,7 +14,7 @@
     <link rel="icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
     <link rel="shortcut icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
     <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
-
+    <link href="../assets/css/produtoIndiv.css" rel="stylesheet">
 
 
     <title>Produtos</title>
