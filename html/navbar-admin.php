@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap/icons/font/css/open-iconic.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/navbarAdm.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bio.css">
+    <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
+    <link rel="stylesheet" type="text/css" href="../assets/css/footerAdmin.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/TabelaStyle.css">
 
 </head>
 

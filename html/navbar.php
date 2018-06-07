@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
     <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
     <link rel="stylesheet" href="../assets/css/estilo.css" />
-  <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
-  <link rel="icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
-  <link rel="shortcut icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
-   <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
+    <link rel="icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
+    <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
 
 
 
@@ -26,7 +26,7 @@
 <nav class="navbar navbar-2 navbar-expand-lg navbar-dark navbar-edit fonte "> 
   <!-- Logo-->
   <div class="col-3 posicao-logo" >
-    <a class="" href="../html/index.html" > <img src="../assets/img/Chapeu-Logo-branco.png" class="logo"> </a>
+    <a class="" href="../html/index.php" > <img src="../assets/img/Chapeu-Logo-branco.png" class="logo"> </a>
   </div> 
     <!-- Botão para mobile --> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/localização.php">
+        <a class="nav-link nav-link-2" href="../html/Localização.php">
           <img src="../assets/bootstrap/icons/png/location-2x.png"> 
           Localização<span class="sr-only">(current)</span></a>
         </div>
@@ -78,9 +78,3 @@
   </div>  
 </nav>
 
-
-    <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
-
-  </body>
-</html> 

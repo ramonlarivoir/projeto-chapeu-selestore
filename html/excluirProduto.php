@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/bio.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  </head>
-  <body>
-
+<?php
+  include("navbar-admin.php")
+?>
 
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -40,8 +31,6 @@
 
 
 
-  </body>
-
-  <script src="../assets/js/jquery-3.3.1.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-</html>
+<?php
+  include("footer-admin.php");
+?>
