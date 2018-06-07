@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> Chapeu SeleStore pagina inicial</title>
+<?php include ('navbar.php') ?>
 
-        <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
 
+<<<<<<< HEAD:html/index.html
         <link rel="stylesheet" type="text/css" href="../assets/css/bio.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
@@ -17,20 +13,65 @@
   </head>
 
   <body class="bg">
+=======
 
-    <nav class="navbar navbar-2 navbar-expand-lg navbar-dark navbar-edit fonte ">
+<div>
+  <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
+>>>>>>> lucasPace:html/index.php
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../assets/img/harry potter.jpg" alt="Bonecos Harry Potter">
+      <div class="carousel-caption d-none d-md-block">
+ <h5>Harry Potter e as relíquias da morte em Blu Ray</h5>
+ <p>Assista ao último filme da saga em Blu Ray!</p>
+</div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/Harry_Pottah.jpg"  alt="Bonecos diversos Harry Potter">
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Cansado dos livros? Agora você também pode ver os filmes!</h5>
+      <p>Filmes do Harry Potter estão na promoção!!</p>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/bonecosPop.jpg" alt="Bonecos amigos Harry Potter">
+        <div class="carousel-caption d-none d-md-block">
+      <h5>Os bonecos funko estão bombando!!</h5>
+      <p>Compre já o boneco funko do seu personagem favorito!</p>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<div>
 
 
-        <a class="" href="../html/pagina-inicial.html" > <img src="../assets/img/Chapeu-Logo-branco.png" class="logo"> </a>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
 
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul class="navbar-nav mr-auto ">
+</div>
 
+
+
+
+<<<<<<< HEAD:html/index.html
           <li class="nav-item nav-item-2">
             <div class="">
               <a class="nav-link nav-link-2" href="../html/pagina-inicial.html">
@@ -106,6 +147,8 @@
     </div>
     </div>
   </div>
+=======
+>>>>>>> lucasPace:html/index.php
 
 </div>
 

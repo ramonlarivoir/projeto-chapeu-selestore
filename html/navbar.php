@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" href="../assets/bootstrap/icons/font/css/open-iconic.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
     <link rel="icon" type="imagem/png" href="../assets/img/Chapeu.png" >
+    <link rel="stylesheet" href="../assets/css/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
+  <link rel="icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/img/Chapeu.png" type="image/x-icon" />
+   <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
 
 
 
@@ -34,35 +39,35 @@
           <!-- Menus -->
       <li class="nav-item nav-item-2">
         <div class="">
-          <a class="nav-link nav-link-2 " href="../html/index.html">
+          <a class="nav-link nav-link-2 " href="../html/index.php">
           <img src="../assets/bootstrap/icons/png/home-2x.png" >
           Home<span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
         <div class="">
-          <a class="nav-link nav-link-2" href="../html/produtos.html">
+          <a class="nav-link nav-link-2" href="../html/produtos.php">
            <img src="../assets/bootstrap/icons/png/cart-2x.png"> 
           Produtos <span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/localização.html">
+        <a class="nav-link nav-link-2" href="../html/localização.php">
           <img src="../assets/bootstrap/icons/png/location-2x.png"> 
           Localização<span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/quem-somos.html">
+        <a class="nav-link nav-link-2" href="../html/quem-somos.php">
           <img src="../assets/bootstrap/icons/png/info-2x.png"> 
           Quem Somos<span class="sr-only">(current)</span></a>
         </div>
       </li>
        <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/contato.html"> 
+        <a class="nav-link nav-link-2" href="../html/contato.php"> 
           <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png">
           Contato<span class="sr-only">(current)</span></a>
         </div>
