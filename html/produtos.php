@@ -80,10 +80,12 @@
       echo 'falha: '. $db_connect->connect_error;
     }
     else{
-      $sql = "SELECT * from produto";
+      $sql = "SELECT * from produto limit 0,9"; // limitar 9 por pagina
       $result = $db_connect->query($sql);
+      $cou = mysqli_num_rows($result);
       if($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){  ?>
+        $aux = 0 ;
+        while($row = $result->fetch_assoc()){            ?>
 
           <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
@@ -112,12 +114,14 @@
 
 
 
-        <?php }
+        <?php  $aux++; }
 
 
 
       }
-
+      else {
+        echo "Não há produtos";
+      }
 
     } 
     ?>
@@ -140,9 +144,16 @@
 
    <nav aria-label="Navegacao de paginas">
   <ul class="pagination justify-content-center">
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <?php $a = $cou/9;
+          $a=ceil($a);
+          for($b = 1; $b <= $a ; $b++ ) { ?>
+
+          <li class="page-item"><a class="page-link" href="#"><?php echo $a ?>  </a></li>
+
+
+            <?php 
+           }
+          ?>
   </ul>
 </nav>
   </div>
