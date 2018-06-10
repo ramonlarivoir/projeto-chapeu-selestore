@@ -1,6 +1,6 @@
 <?php
 
-$conexao = new mysqli("localhost","root","toor","chapeuSelestore");
+$conexao = new mysqli("localhost","admin","admin","chapeuSelestore");
 
 
 if (mysqli_connect_errno())
