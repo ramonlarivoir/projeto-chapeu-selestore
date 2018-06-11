@@ -91,14 +91,14 @@
             <div class="view overlay zoom">
                 <img src=" <?php echo $row['url_imagem']; ?>"
                  class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
+                <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
                   </div>
                 </a>
             </div>           
             <div class="card-body" >
-              <a href="#">
+              <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
               <p class="card-text informacoes-card">
                 <?php echo $row['nome_produto']; ?></p>
               <b><p class="card-text informacoes-card font-weight-bold ">R$<?php echo $row['preco']; ?>
