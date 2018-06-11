@@ -1,5 +1,19 @@
 
-<?php include ('navbar.php') ?>
+<?php 
+    include ('navbar.php');
+    $server = 'localhost';
+    $user = 'admin';
+    $password = 'admin';
+    $db_name = 'chapeuselestore';
+    $port = '3306';
+
+    $db_connect = new mysqli($server, $user,$password,
+      $db_name, $port);
+    mysqli_set_charset($db_connect,"utf8");
+
+ ?>
+
+
 
       <!-- Produtos -->
 <div class="container fonte">
@@ -60,19 +74,36 @@
    <div class="col-lg-9">
       <div class="row linha-card">
         <div class="card-deck  card-cascade wider mb-r"> 
+
+      <?php 
+      if($db_connect->connect_error){
+      echo 'falha: '. $db_connect->connect_error;
+    }
+    else{
+      $sql = "SELECT * from produto limit 0,9"; // limitar 9 por pagina
+      $result = $db_connect->query($sql);
+      $cou = mysqli_num_rows($result);
+      if($result->num_rows > 0){
+        $aux = 0 ;
+        while($row = $result->fetch_assoc()){            ?>
+
           <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
+                <img src=" <?php echo $row['url_imagem']; ?>"
+                 class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
                   </div>
                 </a>
             </div>           
             <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
+              <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
+              <p class="card-text informacoes-card">
+                <?php echo $row['nome_produto']; ?></p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$<?php echo $row['preco']; ?>
+
+              </p></b>
                 <div class="card-footer card-footer-edit">
                   <p class="card-text informacoes-card">Detalhes</p>
                 </div>
@@ -80,166 +111,25 @@
             </div>
           </div>
 
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      <!-- card  --> 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
-            <div class="view overlay zoom">
-                <img src="../assets/img/quemsomos1.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                <a href="#">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
-                  </div>
-                </a>
-            </div>           
-            <div class="card-body" >
-              <a href="#">
-              <p class="card-text informacoes-card">Nome produto</p>
-              <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                <div class="card-footer card-footer-edit">
-                  <p class="card-text informacoes-card">Detalhes</p>
-                </div>
-              </a>
-            </div>
-          </div>
+
+
+
+        <?php  $aux++; }
+
+
+
+      }
+      else {
+        echo "Não há produtos";
+      }
+
+    } 
+    ?>
+
+
+
+
+
       
         </div>
       </div>
@@ -254,9 +144,16 @@
 
    <nav aria-label="Navegacao de paginas">
   <ul class="pagination justify-content-center">
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <?php $a = $cou/9;
+          $a=ceil($a);
+          for($b = 1; $b <= $a ; $b++ ) { ?>
+
+          <li class="page-item"><a class="page-link" href="#"><?php echo $a ?>  </a></li>
+
+
+            <?php 
+           }
+          ?>
   </ul>
 </nav>
   </div>

@@ -1,4 +1,16 @@
-<?php include ('navbar.php') ?>
+<?php 
+    include ('navbar.php');
+    $server = 'localhost';
+    $user = 'admin';
+    $password = 'admin';
+    $db_name = 'chapeuselestore';
+    $port = '3306';
+
+    $db_connect = new mysqli($server, $user,$password,
+      $db_name, $port);
+    mysqli_set_charset($db_connect,"utf8");
+
+ ?>
 
 
 
@@ -81,139 +93,59 @@
 
 
 
-<div class="mt-3 col-lg-12">
-  <div class="row linha-card">
+   <div class="col-lg-12  ">
+      <div class="row linha-card ">
+        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center"> 
+       <?php 
+        if($db_connect->connect_error){
+        echo 'falha: '. $db_connect->connect_error;
+      }
+      else{
+        //achando os maiores valores de id_produto
+        $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+        $row = mysqli_fetch_array( $rowSQL );
+        $maiorId = $row['max'];
 
-              <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP2.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
-                </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+        $sql =  $sql = "SELECT * from produto";
+        $result = $db_connect->query($sql);
+        if($result->num_rows > 0){
+          $i = $maiorId;
 
-              <div class="col-lg-3 col-md-3 col-sm-3 text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP3.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
-                </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+          while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){           ?>
 
-              <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP2.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
-                </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+            <div class="view overlay zoom">
+                <img src=" <?php echo $row['url_imagem']; ?>"
+                 class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
+                  <div class="mask flex-center">
+                      <p class="grey-text"></p> 
+                  </div>
+                </a>
+            </div>           
+            <div class="card-body" >
+              <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
+              <p class="card-text informacoes-card">
+                <?php echo $row['nome_produto']; ?></p>
+              <b><p class="card-text informacoes-card font-weight-bold ">R$<?php echo $row['preco']; ?>
 
-  </div>
-</div>
-3<div class="mt-5 col-lg-12">
-  <div class="row linha-card">
-
-
-
-              <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP3.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
+              </p></b>
+                <div class="card-footer card-footer-edit">
+                  <p class="card-text informacoes-card">Detalhes</p>
                 </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-3 col-sm-3 mx-0 text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP2.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
-                </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-3 col-sm-3 mx-auto text-center card-2">
-                <div class="view overlay zoom">
-                    <img src="../assets/img/produtoHP3.png" class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
-                    <a href="#">
-                      <div class="mask flex-center">
-                          <p class="grey-text"></p>
-                      </div>
-                    </a>
-                </div>
-                <div class="card-body" >
-                  <a href="#">
-                  <p class="card-text informacoes-card">Nome produto</p>
-                  <b><p class="card-text informacoes-card font-weight-bold ">R$20,00</p></b>
-                    <div class="card-footer card-footer-edit">
-                      <p class="card-text informacoes-card">Detalhes</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-  </div>
-</div>
+              </a>
+            </div>
+          </div>
 
 	<?php
+$i--; } ?>
+        </div>
+      </div>
+    </div>
+
+<?php
+}
+
+}
 		include("footer.php");
 	?>
