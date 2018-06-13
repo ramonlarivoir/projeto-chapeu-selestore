@@ -1,7 +1,7 @@
 
 <body>
     <footer class="footer" id="FooterAdmin">
-        <div class="container footer-copyright text-center">
+        <div class="container footer-copyright text-center navbar-fixed-bottom">
             <h4>Chapéu Selestore</h4> © 2018 Copyright:
             <a href="https://codejr.com.br/"> codejr.com.br </a>
         </div>
