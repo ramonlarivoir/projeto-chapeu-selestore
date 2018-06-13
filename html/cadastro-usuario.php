@@ -38,7 +38,7 @@
     mysqli_close($conexao);
         
 ?>
-<div class="col-6 mx-auto">
+<div class="col-6 mx-auto" id="formulario-usuario">
     <form action="cadastro-usuario.php" method="post">
         <div class="form-group">
             <label for="usuario">Nome do usuário</label>
