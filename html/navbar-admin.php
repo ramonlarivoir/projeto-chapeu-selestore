@@ -36,7 +36,7 @@
                     </a>
                 </li>
                 <li class="nav-item nav-item-adm">
-                    <a class="nav-link" href="cadastro-usuario.php">Usuarios
+                    <a class="nav-link" href="tabela-usuarios.php">Usuarios
                         <span class="sr-only">(current)</span>
                     </a>
 
