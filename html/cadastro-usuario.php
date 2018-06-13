@@ -51,7 +51,9 @@
             <label for="Confirmar_Senha">Repita sua senha</label>
             <input type="password" class="form-control" name="confirmacaoDaSenha" placeholder="Confirme Sua Senha" required>
         </div>
-        <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
+        <div class="col-3 mx-auto ">
+            <button type="submit" name="enviar" class="btn btn-primary ">Enviar</button>
+        </div>
     </form>
  
 </div>
