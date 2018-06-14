@@ -5,7 +5,7 @@
 	$server = 'localhost';
     $user = 'admin';
     $password = 'admin';
-    $db_name = 'chapeuselestore';
+    $db_name = 'chapeuSelestore';
     $port = '3306';
 
     $db_connect = new mysqli($server, $user,$password,$db_name, $port);

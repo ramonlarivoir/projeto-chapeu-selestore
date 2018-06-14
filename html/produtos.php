@@ -4,7 +4,7 @@
     $server = 'localhost';
     $user = 'admin';
     $password = 'admin';
-    $db_name = 'chapeuselestore';
+    $db_name = 'chapeuSelestore';
     $port = '3306';
 
     $db_connect = new mysqli($server, $user,$password,
@@ -15,55 +15,60 @@
 
 
 
-      <!-- Produtos -->
+      <!-- Produtos  Search -->
+
+      <?php  
+      // listagem de categorias
+      $categorias = "SELECT * FROM `categoria`";
+      $resultadoCategorias = $db_connect->query($categorias);
+       ?>
+
 <div class="container fonte">
   <div class="row">
     <div class="col-lg-3">
       <h1 class="titulo-categorias">Filtro</h1>
       <!-- campo search -->
         <div  class="col-sm-12 col-10">
-          <form class="form-inline">
+          <form class="form-inline" method="POST"> <!-- metodo post -->
             <div class="input-group ">
-              <input class="form-control form-control-edit  " type="search" placeholder="Procure algo" aria-label="Pesquisar">
+              <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Procure algo" aria-label="Pesquisar">
               <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
             </div>
           </form>
         </div>
-        <form>
-        <div class="checkbox-todas">
+        <form method="POST">
+          <div class="checkbox-todas">
+
+
+
+      <?php  
+      //pesquisa por texto
+        
+        @$pesquisa = $_POST['pesquisa'];
+
+      //exibir categorias
+      if($resultadoCategorias->num_rows > 0){
+        $numeroLoop = 0;
+        while($exibirC = $resultadoCategorias->fetch_assoc()){           
+      ?>
           <div class=" form-group form-check  checkbox-individual" >
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label " for="exampleRadios1">
-             Categoria 1
+            <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $numeroLoop?>" value="option<?php echo $numeroLoop;?>">
+            <label class="form-check-label " for="<?php echo $numeroLoop?>">
+                <?php echo $exibirC['nome_categoria']; ?>
             </label>
           </div>
+          <?php 
+        $numeroLoop++;
+        }
+      } ?>
 
-          <div class=" form-group  form-check  checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-            <label class="form-check-label" for="exampleRadios2">
-             Categoria 2
-            </label>
-          </div>
 
-          <div class="form-check form-group checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
-            <label class="form-check-label" for="exampleRadios3">
-             Categoria 3
-            </label>
-          </div>
 
-          <div class="form-check form-group checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
-            <label class="form-check-label" for="exampleRadios4">
-             Categoria 4
-            </label>
-          </div>
         </div>
           <div class="aplicar">
-            <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit">Aplicar</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit" >Aplicar</button>
           </div>
-
-      </div>
+        </div>
       </form>
 
 
@@ -76,11 +81,17 @@
         <div class="card-deck  card-cascade wider mb-r"> 
 
       <?php 
-      if($db_connect->connect_error){
-      echo 'falha: '. $db_connect->connect_error;
-    }
-    else{
-      $sql = "SELECT * from produto limit 0,9"; // limitar 9 por pagina
+      if($pesquisa){
+
+        $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit 0,9"; // limitar 9 por pagina
+      }
+
+      else {
+
+        $sql = "SELECT * from produto  limit 0,9";
+      
+      }
+      
       $result = $db_connect->query($sql);
       $cou = mysqli_num_rows($result);
       if($result->num_rows > 0){
@@ -89,8 +100,7 @@
 
           <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src=" <?php echo $row['url_imagem']; ?>"
-                 class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 1000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
@@ -122,8 +132,6 @@
       else {
         echo "Não há produtos";
       }
-
-    } 
     ?>
 
 
