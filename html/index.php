@@ -3,7 +3,7 @@
     $server = 'localhost';
     $user = 'admin';
     $password = 'admin';
-    $db_name = 'chapeuselestore';
+    $db_name = 'chapeuSelestore';
     $port = '3306';
 
     $db_connect = new mysqli($server, $user,$password,
@@ -106,13 +106,11 @@
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
 
-        $sql =  $sql = "SELECT * from produto";
+        $sql = "SELECT * from produto ORDER BY id_produto DESC";
         $result = $db_connect->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
-
-          while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){           ?>
-
+          while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){    ?>
           <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
                 <img src=" <?php echo $row['url_imagem']; ?>"
@@ -137,7 +135,7 @@
             </div>
           </div>
 
-	<?php
+  <?php
 $i--; } ?>
         </div>
       </div>
@@ -147,5 +145,5 @@ $i--; } ?>
 }
 
 }
-		include("footer.php");
-	?>
+    include("footer.php");
+  ?>
