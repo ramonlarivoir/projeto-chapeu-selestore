@@ -25,16 +25,17 @@
                if($db_connect->connect_error==true){
                  echo 'falha na conexão'.$db_connect->connect_error;
                }else{
-              //    echo 'conectou';
+                  echo 'conectou';
 
                  $nome = $_POST["nomeCategoria"];
 
                  $id = $_POST["id_categoria"];
 
                  if($id!=NULL && $nome!=NULL){
+                   echo "ooi";
                    $sql2 = "INSERT INTO categoria(id_categoria,nome_categoria) VALUES ($nome,$id)";
 
-                     $db_connect->query($sql);
+                     $db_connect->query($sql2);
                  }
 
                }
