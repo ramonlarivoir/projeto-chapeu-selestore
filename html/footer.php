@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>footer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- bootstrap-->
-    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
-    <!--css footer -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
-
-</head>
-
-<body>
 
     <footer>
         <div class="container-fluid text-center page-footer">
@@ -21,16 +7,16 @@
                 <div class="col-md-4 col-sm-3 text-md-left text-sm-left" id="footer-nav">
                     <ul class="list-unstyled nav-flex-collum">
                         <li class="nav-item">
-                            <a href="index.html">Principal</a>
+                            <a href="index.php">Principal</a>
                         </li>
                         <li class="nav-item">
-                            <a href="quem-somos.html">Quem Somos</a>
+                            <a href="quem-somos.php">Quem Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="produtos.html">Produtos</a>
+                            <a href="produtos.php">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contato.html">Contato</a>
+                            <a href="contato.php">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +43,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Localização.html">
+                            <a href="Localização.php">
                                 <img class="SocialMedia" src="../assets/img/localizacao.png">
                             </a>
                         </li>

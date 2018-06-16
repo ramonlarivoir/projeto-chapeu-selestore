@@ -1,7 +1,8 @@
 .table-texto{
     text-align: center;
     margin-top:3%;
-    padding-right: 10%;
-
-
+    padding-right: 5%;
+}
+#formulario-usuario{
+    padding: 5% 0%;
 }

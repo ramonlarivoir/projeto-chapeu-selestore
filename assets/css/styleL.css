@@ -192,7 +192,7 @@ width: 100%;
   margin-left: 15px;
   }
   .bg{
-    background: #EFF7FF;
+    background: rgba(124, 71, 110, 0.6);
 
   }
   .card-footer-edit{
@@ -204,15 +204,20 @@ width: 100%;
     font-family: serif;
   }
 
-  /* IGNORAR -> codigo copiado do mdb.min.css para colocar a hover e a shadow no navbar sem precisar chamar todo o arquivo e mudar a pagina dos coleguinhas */
-.navbar-2  .nav-item-2 .nav-link-2{color:#fff;-webkit-transition:.35s;-o-transition:.35s;transition:.35s}
-.nav-item-2 .nav-link-2:hover {
-      color: rgba(255, 255, 255, 0.75);
-    }
+  /* codigo copiado do mdb.min.css para colocar a hover e a shadow no navbar sem precisar chamar todo o arquivo e mudar a pagina dos coleguinhas */
+.navbar-2  .nav-item-2 .nav-link-2{color:#FFF;-webkit-transition:.35s;-o-transition:.35s;transition:.35s}
+
     .navbar-2 {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding-right: 1rem !important;
   font-weight: 300; }
+  .hover-test:hover{
+    color: #333;
 
+  }
 
+.posicao-logo{
+  text-align-last: center;
+
+}
