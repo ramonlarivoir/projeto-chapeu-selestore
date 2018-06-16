@@ -26,7 +26,7 @@
 				</form>
         <h3>Contato direto:</h3>
         <ul class="sem-padding sem-marcador">
-          <li><img src="../assets/img/e-mail.jpg"/> Email: <strong>chapeuselestore@outlook.com</strong></li>
+          <li><img src="../assets/img/e-mail.jpg"/> Email: <strong>chapeuselestore@gmail.com</strong></li>
           <li><img src="../assets/img/telefone.png"/> Telefone: <strong>(32)3333-3333</strong></li>
           <li><img src="../assets/img/facebook.png"/> Facebook: <a href="https://www.facebook.com/">Chapéu SeleStore</a></li>
         </ul>
