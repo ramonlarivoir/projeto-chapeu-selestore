@@ -98,9 +98,9 @@
         $aux = 0 ;
         while($row = $result->fetch_assoc()){            ?>
 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+          <div class="col-xl-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 1000px;">
+                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
