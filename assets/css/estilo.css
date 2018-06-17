@@ -164,3 +164,9 @@ a.link-face:hover{
 	color: #28288c;
 
 }
+
+p.msg-sucesso{
+	font-weight: bold;
+	text-align: center;
+}
+
