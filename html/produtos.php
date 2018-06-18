@@ -21,6 +21,7 @@
       // listagem de categorias
       $categorias = "SELECT * FROM `categoria`";
       $resultadoCategorias = $db_connect->query($categorias);
+
        ?>
 
 <div class="container fonte">
@@ -29,7 +30,7 @@
       <h1 class="titulo-categorias">Filtro</h1>
       <!-- campo search -->
         <div  class="col-sm-12 col-10">
-          <form class="form-inline" method="POST"> <!-- metodo post -->
+          <form class="form-inline" method="get"> <!-- metodo post -->
             <div class="input-group ">
               <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Procure algo" aria-label="Pesquisar">
               <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
@@ -44,7 +45,7 @@
       <?php  
       //pesquisa por texto
         
-        @$pesquisa = $_POST['pesquisa'];
+        @$pesquisa = $_GET['pesquisa'];
 
       //exibir categorias
       if($resultadoCategorias->num_rows > 0){
@@ -81,26 +82,44 @@
         <div class="card-deck  card-cascade wider mb-r"> 
 
       <?php 
-      if($pesquisa){
+      if(isset($_GET['page']))
+        $cod_pagina = $_GET['page'];
+      else $cod_pagina=1;
 
-        $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit 0,9"; // limitar 9 por pagina
+      $inicioProdutos = ( $cod_pagina-1 )*9;
+      $finalProdutos = $cod_pagina*9;
+
+      //contando quantidade de produtos
+      $todosProdutos = "SELECT * from produto";
+      $resultadoTodosProdutos =   $db_connect->query($todosProdutos);
+      $cou = mysqli_num_rows($resultadoTodosProdutos);
+        
+
+
+      if($pesquisa){
+      $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%'";   // se houver pesquisa, contar quantos produtos há semelhantes aos termos da pesquisa
+      $result =   $db_connect->query($sql);
+      $cou = mysqli_num_rows($result);
+      $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
+      $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
       }
 
       else {
+      
+      $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
 
-        $sql = "SELECT * from produto  limit 0,9";
+      $result = $db_connect->query($sql);
+
       
       }
       
-      $result = $db_connect->query($sql);
-      $cou = mysqli_num_rows($result);
+      
       if($result->num_rows > 0){
-        $aux = 0 ;
         while($row = $result->fetch_assoc()){            ?>
 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+          <div class="col-xl-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 1000px;">
+                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
@@ -124,7 +143,7 @@
 
 
 
-        <?php  $aux++; }
+        <?php  }
 
 
 
@@ -150,20 +169,31 @@
     
 
 
-   <nav aria-label="Navegacao de paginas">
-  <ul class="pagination justify-content-center">
-    <?php $a = $cou/9;
-          $a=ceil($a);
-          for($b = 1; $b <= $a ; $b++ ) { ?>
+    <nav aria-label="Navegacao de paginas">
+      <ul class="pagination justify-content-center">
+        <?php $a = $cou/9;
+              $a=ceil($a);
+              $bold = "font-weight: bold;" ;
+              for($b = 1; $b <= $a ; $b++ ) { 
 
-          <li class="page-item"><a class="page-link" href="#"><?php echo $a ?>  </a></li>
+                if($pesquisa){      ?>
+
+                      <li class="page-item"><a class="page-link"  style="<?php if($b == $cod_pagina)  echo $bold; ?>"   href="produtos.php?page=<?php echo $b ?>&pesquisa=<?php echo $pesquisa ?>" ><?php echo $b ?>  </a></li>
+                    <?php
+                }
+
+                else { ?>
+
+                  <li class="page-item"><a class="page-link" style="<?php if($b == $cod_pagina)  echo $bold; ?>" href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
 
 
-            <?php 
-           }
-          ?>
-  </ul>
-</nav>
+                <?php 
+               }
+
+             }
+              ?>
+      </ul>
+    </nav>
   </div>
   
 	<?php
