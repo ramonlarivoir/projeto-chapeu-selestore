@@ -5,15 +5,19 @@
       <div class = "container">
           <div class ="row">
 
-            <form action="cadastroCategoria.php" method="post" class="form-admin-produto">
-              <label for="id_categoria">ID da nova categoria:</label>
+
+            <form action="cadastraCategoria.php" method="post" class="form-admin-produto">
+              <label for="nomeC">Nome da Categoria:</label>
+              <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
+              <label for="id_categoria">Novo ID:</label>
               <input type="text" name="id_categoria" id="id_categoria" class="form-control"/required>
-              <label for="nomeCategoria">Nome da nova categoria:</label>
-              <input type="text" name="nomeCategoria" id="nomeCategoria" class="form-control"/required>
+
+
 
                <button class="mt-3 btn btn-success " type="submit">Salvar</button>
 
                <?php
+
                $server = 'localhost';
                $user = 'root';
                $password = 'root';
@@ -22,24 +26,33 @@
 
                $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 
+
+               $nome = $_POST["nomeC"];
+
+               $id = $_POST["id_categoria"];
+
                if($db_connect->connect_error==true){
                  echo 'falha na conexão'.$db_connect->connect_error;
                }else{
-                  echo 'conectou';
+                //  echo 'conectou';
 
-                 $nome = $_POST["nomeCategoria"];
+               if($id!=NULL && $nome!=NULL){
+                // echo "ooi";
+                 $sql2 = "INSERT INTO categoria(id_categoria,nome_categoria) VALUES ('$id','$nome')";
 
-                 $id = $_POST["id_categoria"];
-
-                 if($id!=NULL && $nome!=NULL){
-                   echo "ooi";
-                   $sql2 = "INSERT INTO categoria(id_categoria,nome_categoria) VALUES ($nome,$id)";
-
-                     $db_connect->query($sql2);
-                 }
-
+                   $db_connect->query($sql2);
                }
+
+             }
+
+               echo $nome;
+               echo $id;
+            //   echo $descricao;
+
+
                 ?>
+
+
               </form>
 
             </div>
