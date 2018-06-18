@@ -45,8 +45,8 @@
 
              }
 
-               echo $nome;
-               echo $id;
+            //   echo $nome;
+            //   echo $id;
             //   echo $descricao;
 
 
