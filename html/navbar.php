@@ -76,9 +76,7 @@
     
         <!-- Default dropleft button -->
         <div class="btn-group dropleft">
-          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <a class="nav-link nav-link-2" href="#" > <img src="../assets/bootstrap/icons/png/person-3x.png"> <span class="sr-only">(current)</span></a>
-          </button>
+          <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria=expanded="false" href="#" > <img src="../assets/bootstrap/icons/png/person-3x.png"> <span class="sr-only">(current)</span></a>
             <div class="dropdown-menu">
               <form class="px-4 py-3">
                 <div class="form-group">
