@@ -8,11 +8,7 @@
 
             <form action="cadastraCategoria.php" method="post" class="form-admin-produto">
               <label for="nomeC">Nome da Categoria:</label>
-            <!--  <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
-              <label for="id_categoria">Novo ID:</label>-->
-              <input type="text" name="id_categoria" id="id_categoria" class="form-control"/required>
-
-
+              <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
 
                <button class="mt-3 btn btn-success " type="submit">Salvar</button>
 
@@ -27,21 +23,9 @@
 
 
                $nome = $_POST["nomeC"];
-          //     $id = $_POST["id_categoria"];
-
-               $sqlConsultaID = "SELECT id_categoria FROM categoria";
-
-               $resultado = mysqli_query($db_connect,$sqlConsultaID);
 
 
-
-
-
-
-
-               while()
-
-
+              echo $nome;
 
 
 
@@ -50,14 +34,14 @@
                }else{
                   echo 'conectou';
 
-               if($id!=NULL && $nome!=NULL){
+                  $sql = "INSERT INTO categoria(nome_categoria) VALUES ('$nome')";
 
-                   $sql2 = "INSERT INTO categoria(id_categoria,nome_categoria) VALUES (null,'$nome')";
-                   $db_connect->query($sql2);
+                  $db_connect->query($sql);
 
                }
 
-             }
+
+
 
                 ?>
 
