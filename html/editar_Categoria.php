@@ -1,48 +1,44 @@
 <?php
     include("navbar-admin.php");
+
+    $server = 'localhost';
+    $user = 'root';
+    $password = 'root';
+    $port = '3306';
+    $nomeBancoDados = 'chapeuseletor';
+    $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
+
+
+                   $nome = $_POST['nomeC'];
+                   $id = $_GET['id'];
+
 ?>
 
       <div class = "container">
           <div class ="row">
 
 
-            <form action="cadastraCategoria.php" method="post" class="form-admin-produto">
+            <form action="editar_Categoria.php?id=<?php echo $id; ?>" method="post" class="form-admin-produto">
               <label for="nomeC">Nome da Categoria:</label>
               <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
+
+
 
                <button class="mt-3 btn btn-success " type="submit">Salvar</button>
 
                <?php
 
-               $server = 'localhost';
-               $user = 'root';
-               $password = 'root';
-               $port = '3306';
-               $nomeBancoDados = 'chapeuseletor';
-               $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
-
-
-               $nome = $_POST["nomeC"];
-
-
-              echo $nome;
-
-
-
                if($db_connect->connect_error==true){
                  echo 'falha na conexão'.$db_connect->connect_error;
                }else{
-                  echo 'conectou';
-
 
                   if($nome != NULL){
-                    $sql = "INSERT INTO categoria(nome_categoria) VALUES ('$nome')";
+                         $sql = "UPDATE categoria SET nome_categoria='$nome' WHERE id_categoria='$id'";
                     $db_connect->query($sql);
                   }
+                    $db_connect->query($sql);
 
                }
-
-
 
 
                 ?>

@@ -16,7 +16,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
         if($resultado){
             echo
                 '<div class="alert alert-success text-center" role="alert">
-                    AVISO: CATEGORIA DELETADO COM SUCESSO!!!
+                    AVISO: CATEGORIA DELETADA COM SUCESSO!!!
                 </div>';
         }else{
             echo
