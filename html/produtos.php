@@ -30,47 +30,49 @@
       <h1 class="titulo-categorias">Filtro</h1>
       <!-- campo search -->
         <div  class="col-sm-12 col-10">
-          <form class="form-inline" method="get"> <!-- metodo post -->
+          <form class="form-inline"> <!-- metodo post -->
             <div class="input-group ">
               <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Procure algo" aria-label="Pesquisar">
               <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
             </div>
           </form>
         </div>
-        <form method="POST">
-          <div class="checkbox-todas">
+        <form method="get">
+            <div class="checkbox-todas">
 
 
 
-      <?php  
-      //pesquisa por texto
-        
-        @$pesquisa = $_GET['pesquisa'];
+        <?php  
+        //pesquisa por texto
+          
+          @$pesquisa = $_GET['pesquisa'];
 
-      //exibir categorias
-      if($resultadoCategorias->num_rows > 0){
-        $numeroLoop = 0;
-        while($exibirC = $resultadoCategorias->fetch_assoc()){           
-      ?>
-          <div class=" form-group form-check  checkbox-individual" >
-            <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $numeroLoop?>" value="option<?php echo $numeroLoop;?>">
-            <label class="form-check-label " for="<?php echo $numeroLoop?>">
-                <?php echo $exibirC['nome_categoria']; ?>
-            </label>
+          @$opcaoEscolhida = $_GET['Filtro'];
+
+        //exibir categorias
+        if($resultadoCategorias->num_rows > 0){
+          while($exibirC = $resultadoCategorias->fetch_assoc()){           
+        ?>
+            <div class=" form-group form-check  checkbox-individual" >
+              <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $exibirC['id_categoria']?>" value="<?php echo $exibirC['id_categoria'];?>">
+              <label class="form-check-label " for="<?php echo $numeroLoop?>">
+                  <?php echo $exibirC['nome_categoria']; ?>
+              </label>
+            </div>
+            <?php 
+          }
+
+        } ?>
+
+
+
           </div>
-          <?php 
-        $numeroLoop++;
-        }
-      } ?>
-
-
-
-        </div>
-          <div class="aplicar">
-            <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit" >Aplicar</button>
+            <div class="aplicar">
+              <button type="submit" name="" class="btn btn-secondary btn-lg btn-2 btn-edit" >Aplicar</button>
+            </div>
           </div>
-        </div>
       </form>
+
 
 
 
@@ -97,21 +99,28 @@
 
 
       if($pesquisa){
-      $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%'";   // se houver pesquisa, contar quantos produtos há semelhantes aos termos da pesquisa
-      $result =   $db_connect->query($sql);
-      $cou = mysqli_num_rows($result);
-      $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
-      $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
+          $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%'";   // se houver pesquisa, contar quantos produtos há semelhantes aos termos da pesquisa
+          $result =   $db_connect->query($sql);
+          $cou = mysqli_num_rows($result);
+          $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
+          $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
       }
+      else if($opcaoEscolhida){
+          $opcaoEscolhida = $_GET['Filtro'];  
+          $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida'";
+          $result =   $db_connect->query($sql);
+          $cou = mysqli_num_rows($result);
+          
 
-      else {
+          $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida' limit ". $inicioProdutos . ',' .$finalProdutos;
+          $result = $db_connect->query($sql);
+         }
+
+      else {      
+        $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
+        $result = $db_connect->query($sql);   
+      }      
       
-      $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
-
-      $result = $db_connect->query($sql);
-
-      
-      }
       
       
       if($result->num_rows > 0){
@@ -179,6 +188,10 @@
                 if($pesquisa){      ?>
 
                       <li class="page-item"><a class="page-link"  style="<?php if($b == $cod_pagina)  echo $bold; ?>"   href="produtos.php?page=<?php echo $b ?>&pesquisa=<?php echo $pesquisa ?>" ><?php echo $b ?>  </a></li>
+                    <?php
+                }
+                else if ($opcaoEscolhida){       ?>
+                   <li class="page-item"><a class="page-link"  style="<?php if($b == $cod_pagina)  echo $bold; ?>"   href="produtos.php?page=<?php echo $b ?>&Filtro=<?php echo $opcaoEscolhida ?>"><?php echo $b ?>  </a></li>
                     <?php
                 }
 
