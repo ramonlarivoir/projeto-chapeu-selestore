@@ -62,10 +62,10 @@
     <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
-  $(function () {
-    $('.dropdown-toggle').dropdown();
-  }); 
-</script>
+      $(function () {
+        $('.dropdown-toggle').dropdown();
+      }); 
+    </script>
 </body>
 
 </html>
