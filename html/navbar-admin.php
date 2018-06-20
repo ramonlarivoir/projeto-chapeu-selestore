@@ -1,3 +1,12 @@
+<?php 
+    
+    if(($_SESSION['usuarioLogin'])==NULL){
+      $_SESSION['loginErro'] = "Área restrita!";
+      header("Location: index.php");
+    }
+    else {}
+?>
+
 <!DOCTYPE html>
 <html lang="br">
 
