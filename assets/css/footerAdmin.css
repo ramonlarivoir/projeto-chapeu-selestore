@@ -1,7 +1,13 @@
+body{
+    height: 100%;
+}
+html{
+    height: 100%;
+}
 #FooterAdmin{
     height: 70px;
     background-color: #c7f3e9;
-    position: absolute;
+    position: relative;
     width: 100%;
     margin-top: -70px;
 
