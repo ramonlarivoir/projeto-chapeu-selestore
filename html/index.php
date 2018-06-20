@@ -12,7 +12,12 @@
 
  ?>
 
-
+ <p class="text-center text-danger">
+    <?php if(isset($_SESSION['loginErro'])){
+      echo $_SESSION['loginErro'];
+      unset($_SESSION['loginErro']);
+    } ?>
+ </p>
 
 <div>
   <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
