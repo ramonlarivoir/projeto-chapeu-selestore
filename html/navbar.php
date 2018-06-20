@@ -78,14 +78,14 @@
         <div class="btn-group dropleft">
           <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria=expanded="false" href="#" > <img src="../assets/bootstrap/icons/png/person-3x.png"> <span class="sr-only">(current)</span></a>
             <div class="dropdown-menu">
-              <form class="px-4 py-3">
+              <form class="px-4 py-3" method="post" action="valida.php">
                 <div class="form-group">
                   <label for="exampleDropdownFormEmail1">E-mail</label>
-                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@exemplo.com">
+                  <input type="text" name="email" class="form-control" id="inputEmail" placeholder="email@exemplo.com">
                 </div>
                 <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+                <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
               </form>
@@ -95,11 +95,4 @@
   </div>  
 </nav>
 
-<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>   
-<script>
-  $(function () {
-    $('.dropdown-toggle').dropdown();
-  }); 
-</script>
 
