@@ -53,13 +53,13 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
   $preco = $_POST["preço"];
   $descricao = $_POST["descricao"];
   //$fileDestination = $_POST["file"];
-  $idDaCategoria = $idCategoria;
+  $idDaCategoria = $_POST["select"];
 
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
 
-     $resultado = "UPDATE produto SET  nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$arquivo' WHERE id_produto='$id'";
+     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$arquivo' WHERE id_produto='$id'";
     $db_connect->query($resultado);
 
 
@@ -96,7 +96,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
        <label for="descricao">Descrição:</label>
        <textarea type="text" name="descricao" id="descricao" class="form-control field" rows="3" /required></textarea>
 
-       <select class="form-control form-control-sm">
+       <select class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
      $resultado = $db_connect->query($query);
@@ -105,7 +105,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$nomeCategoria.'</option>
+           <option>'.$idCategoria.'</option>
            ';
          }
        }
