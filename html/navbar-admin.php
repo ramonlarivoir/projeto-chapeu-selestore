@@ -1,6 +1,6 @@
 <?php 
-    
-    if(($_SESSION['usuarioLogin'])==NULL){
+    session_start();
+    if(!isset($_SESSION['usuarioLogin'])){
       $_SESSION['loginErro'] = "Área restrita!";
       header("Location: index.php");
     }
