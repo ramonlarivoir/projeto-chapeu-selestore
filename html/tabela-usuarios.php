@@ -25,7 +25,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Usuário</th>
                 <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col"><a href="cadastro-usuario.php"><img src="../assets/bootstrap/icons/png/plus-4x.png" alt="adicionar-usuario"></a></th>
 
             </tr>
         </thead>
@@ -41,17 +41,17 @@
                         echo 
                             '
                             <tr>
-                                <td>'.$idUsuario.'</th>
-                                    <td>'.$nomeUsuario.'</td>
-                                    <td>
-                                        <a href="" role="button" data-toggle="modal" data-target="#excluirUsuario'.$contador.'">
-                                            <img src="../assets/bootstrap/icons/png/trash-2x.png">
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="editar-usuario.php?id='.$idUsuario.'">
-                                            <img src="../assets/bootstrap/icons/png/cog-2x.png">
-                                        </a>
+                                <td>'.$idUsuario.'</td>
+                                <td>'.$nomeUsuario.'</td>
+                                <td>
+                                    <a href="" role="button" data-toggle="modal" data-target="#excluirUsuario'.$contador.'">
+                                        <img src="../assets/bootstrap/icons/png/trash-2x.png">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="editar-usuario.php?id='.$idUsuario.'">
+                                        <img src="../assets/bootstrap/icons/png/cog-2x.png">
+                                    </a>
                                 </td>
                             </tr>
                             <div class="modal fade" id="excluirUsuario'.$contador.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
