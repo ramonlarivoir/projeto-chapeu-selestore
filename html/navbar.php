@@ -76,7 +76,7 @@
       </li>
     </ul>
     
-
+        <!-- Default dropleft button -->
         <div class="btn-group dropleft">
           <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria=expanded="false" href="#" > <img src="../assets/bootstrap/icons/png/person-3x.png"> <span class="sr-only">(current)</span></a>
             <div class="dropdown-menu">
