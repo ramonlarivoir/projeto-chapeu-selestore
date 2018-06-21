@@ -5,14 +5,17 @@
     $password = 'admin';
     $db_name = 'chapeuSelestore';
     $port = '3306';
-
     $db_connect = new mysqli($server, $user,$password,
       $db_name, $port);
     mysqli_set_charset($db_connect,"utf8");
-
  ?>
 
-
+ <p class="text-center text-danger">
+    <?php if(isset($_SESSION['loginErro'])){
+      echo $_SESSION['loginErro'];
+      unset($_SESSION['loginErro']);
+    } ?>
+ </p>
 
 <div>
   <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
@@ -105,7 +108,6 @@
         $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
-
         $sql = "SELECT * from produto ORDER BY id_produto DESC";
         $result = $db_connect->query($sql);
         if($result->num_rows > 0){
@@ -143,7 +145,6 @@ $i--; } ?>
 
 <?php
 }
-
 }
     include("footer.php");
   ?>
