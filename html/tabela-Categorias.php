@@ -89,6 +89,16 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
                             $contador++;
                     }
                 }
+
+                echo'
+                <td>
+                    <a href="cadastraCategoria.php?id='.$idCategoria.'">
+                        <img src="../assets/bootstrap/icons/png/plus-2x.png">
+                    </a>
+            </td>';
+
+
+
                 mysqli_close($db_connect);
             ?>
 
