@@ -1,17 +1,13 @@
 <?php include("navbar-admin.php");?>
 <?php
-$server = 'localhost';
-$user = 'root';
-$password = 'root';
-$port = '3306';
-$nomeBancoDados = 'chapeuseletor';
+include("conexao.php");
 
-$db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
+$conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from produto WHERE id_produto ='$id'";
-        $resultado = $db_connect->query($query);
+        $resultado = $conexao->query($query);
         if($resultado){
             echo
                 '<div class="alert alert-success text-center" role="alert">
@@ -32,27 +28,30 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
                 <th scope="col">ID</th>
                 <th scope="col">Produto</th>
                 <th scope="col">Preço</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Descrição</th>
+
+
 
             </tr>
         </thead>
         <tbody>
             <?php
                 $query = "SELECT * from produto";
-                $resultado = $db_connect->query($query);
+                $resultado = $conexao->query($query);
                 if($resultado >0){
                     $contador = 0;
                     while($row = $resultado->fetch_assoc()){
                         $nomeProduto = $row['nome_produto'];
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
+                        $descricao = $row['descricao'];
                         echo
                             '
                             <tr>
                                 <td>'.$idProduto.'</td>
                                     <td>'.$nomeProduto.'</td>
                                       <td>'.$preco.'</td>
+                                        <td>'.$descricao.'</td>
                                     <td>
                                         <a href="" role="button" data-toggle="modal" data-target="#excluirProduto'.$contador.'">
                                             <img src="../assets/bootstrap/icons/png/trash-2x.png">
@@ -99,7 +98,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
                     </a>
             </td>';
 
-                mysqli_close($db_connect);
+                mysqli_close($conexao);
             ?>
 
 

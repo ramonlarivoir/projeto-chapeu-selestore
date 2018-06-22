@@ -1,11 +1,6 @@
-
 <?php include("navbar-admin.php");?>
 <?php
-$server = 'localhost';
-$user = 'root';
-$password = 'root';
-$port = '3306';
-$nomeBancoDados = 'chapeuseletor';
+include("conexao.php");
 
 $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>

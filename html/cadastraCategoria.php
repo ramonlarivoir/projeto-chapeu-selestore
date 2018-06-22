@@ -1,5 +1,6 @@
 <?php
     include("navbar-admin.php");
+    include("conexao.php");
 ?>
 
       <div class = "container">
@@ -13,13 +14,6 @@
                <button class="mt-3 btn btn-success " type="submit">Salvar</button>
 
                <?php
-
-               $server = 'localhost';
-               $user = 'root';
-               $password = 'root';
-               $port = '3306';
-               $nomeBancoDados = 'chapeuseletor';
-               $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 
 
                $nome = $_POST["nomeC"];
@@ -37,7 +31,9 @@
 
                   if($nome != NULL){
                     $sql = "INSERT INTO categoria(nome_categoria) VALUES ('$nome')";
+
                     $db_connect->query($sql);
+
                   }
 
                }

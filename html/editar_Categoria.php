@@ -1,56 +1,59 @@
 <?php
     include("navbar-admin.php");
 
-    $server = 'localhost';
-    $user = 'root';
-    $password = 'root';
-    $port = '3306';
-    $nomeBancoDados = 'chapeuseletor';
-    $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
+    include("conexao.php");
 
 
-                   $nome = $_POST['nomeC'];
-                   $id = $_GET['id'];
+    $nome = $_POST['nomeC'];
+    $id = $_GET['id'];
+
+    $query = "SELECT * from categoria WHERE id_categoria = '$id'";
+    $resultado = $conexao->query($query);
+
+        while($row = $resultado->fetch_assoc()){
+            $nomeCategoria = $row['nome_categoria'];
+          }
+
 
 ?>
 
-      <div class = "container">
-          <div class ="row">
+<div class = "container">
+    <div class ="row">
 
 
-            <form action="editar_Categoria.php?id=<?php echo $id; ?>" method="post" class="form-admin-produto">
-              <label for="nomeC">Nome da Categoria:</label>
-              <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
+      <form action="editar_Categoria.php?id=<?php echo $id; ?>" method="post" class="form-admin-produto">
+        <label for="nomeC">Nome da Categoria:</label>
+        <input type="text" name="nomeC" id="nomeC" class="form-control" value="<?php echo $nomeCategoria; ?>"/required>
 
 
 
-               <button class="mt-3 btn btn-success " type="submit">Salvar</button>
+         <button class="mt-3 btn btn-success " type="submit">Salvar</button>
 
-               <?php
+         <?php
 
-               if($db_connect->connect_error==true){
-                 echo 'falha na conexão'.$db_connect->connect_error;
-               }else{
+         if($conexao->connect_error==true){
+           echo 'falha na conexão'.$conexao->connect_error;
+         }else{
 
-                  if($nome != NULL){
-                         $sql = "UPDATE categoria SET nome_categoria='$nome' WHERE id_categoria='$id'";
-                    $db_connect->query($sql);
-                  }
-                    $db_connect->query($sql);
+            if($nome != NULL){
+                   $sql = "UPDATE categoria SET nome_categoria='$nome' WHERE id_categoria='$id'";
+              $conexao->query($sql);
+            }
+              $conexao->query($sql);
 
-               }
-
-
-                ?>
+         }
 
 
-              </form>
+          ?>
 
-            </div>
 
-               <a class="mt-3 mb-3 btn btn-primary" href="produtosTeste.html" role="button">Voltar</a>
+        </form>
 
-         </div>
+      </div>
+
+         <a class="mt-3 mb-3 btn btn-primary" href="tabela-Categorias.php" role="button">Voltar</a>
+
+   </div>
 <?php
     include("footer-admin.php");
 ?>
