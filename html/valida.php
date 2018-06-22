@@ -5,7 +5,7 @@
     if($_SERVER['REQUEST_METHOD']=='POST'){ 
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        //$senha = md5($senha);
+        $senha = md5($senha);
 
         $query = "SELECT * FROM usuario WHERE login = '$email' AND senha = '$senha'";
 		$resultado = $conexao->query($query);
