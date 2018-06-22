@@ -102,7 +102,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
 
   <div class = "container col-lg-6 ml-8">
        <label for="descricao">Descrição:</label>
-       <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"></textarea>
+       <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
 
        <select value="<?php echo $categoriaProduto ?>"class="form-control form-control-sm" name="select">
      <?php
