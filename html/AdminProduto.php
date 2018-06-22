@@ -55,7 +55,11 @@ include("conexao.php");
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
-$resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination' WHERE id_produto='$id'";
+   if($fileDestination!=null){
+     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination' WHERE id_produto='$id'";
+   }else{
+     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao' WHERE id_produto='$id'";
+   }
     $conexao->query($resultado);
 
     $query = "SELECT * from produto WHERE id_produto = '$id'";
@@ -83,7 +87,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
       <form  action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data" class="form-admin-produto">
         <img class="card-img-top" src="<?php echo $arquivineo ?>" alt="Produto 1">
 
-           <input type="file" value="<?php echo $arquivineo ?>" name="file" ></input>
+           <input type="file" value="<?php echo  $fileTemporaryName?>" name="file" ></input>
 
 
 
@@ -104,7 +108,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
        <label for="descricao">Descrição:</label>
        <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
 
-       <select value="<?php echo $categoriaProduto ?>"class="form-control form-control-sm" name="select">
+       <select value="<?php echo $categoriaProduto ?>" class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
      $resultado = $conexao->query($query);
@@ -113,7 +117,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$nomeCategoria.'</option>
+           <option>'.$idCategoria.'</option>
            ';
          }
        }
@@ -122,13 +126,14 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
     </div>
       </select>
 
-                   <button type="submit" name="submit" >Upload</button>
+
+          <button type="submit" name="submit" >Upload</button>
 
 
        </form>
 
     </div>
-     <a class="mt-3 mb-3 btn btn-primary" href="produtosTeste.html" role="button">Voltar</a>
+     <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
   </div>
 
 
