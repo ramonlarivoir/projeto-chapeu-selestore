@@ -5,13 +5,7 @@
 
 <?php
 
-$server = 'localhost';
-$user = 'root';
-$password = 'root';
-$port = '3306';
-$nomeBancoDados = 'chapeuseletor';
-$db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
-
+include("conexao.php");
 ?>
 
 <?php
@@ -59,7 +53,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
    $id = $_GET['id'];
 
      $resultado = "INSERT INTO produto(id_categoria,nome_produto,preco,descricao,url_imagem) VALUES ('$idDaCategoria','$nome','$preco','$descricao','$arquivo')";
-    $db_connect->query($resultado);
+    $conexao->query($resultado);
 
 
 
@@ -98,7 +92,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
        <select class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
-     $resultado = $db_connect->query($query);
+     $resultado = $conexao->query($query);
      if($resultado >0){
          while($row = $resultado->fetch_assoc()){
           $nomeCategoria = $row['nome_categoria'];
@@ -108,7 +102,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
            ';
          }
        }
-        mysqli_close($db_connect);
+        mysqli_close($conexao);
       ?>
       </select>
 

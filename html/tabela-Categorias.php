@@ -2,12 +2,11 @@
 <?php
 include("conexao.php");
 
-$db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from categoria WHERE id_categoria ='$id'";
-        $resultado = $db_connect->query($query);
+        $resultado = $conexao->query($query);
         if($resultado){
             echo
                 '<div class="alert alert-success text-center" role="alert">
@@ -35,7 +34,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
         <tbody>
             <?php
                 $query = "SELECT * from categoria";
-                $resultado = $db_connect->query($query);
+                $resultado = $conexao->query($query);
                 if($resultado >0){
                     $contador = 0;
                     while($row = $resultado->fetch_assoc()){
@@ -94,7 +93,7 @@ $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 
 
 
-                mysqli_close($db_connect);
+                mysqli_close($conexao);
             ?>
 
 
