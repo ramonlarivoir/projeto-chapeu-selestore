@@ -6,6 +6,7 @@
 <?php
 
 include("conexao.php");
+
 ?>
 
 <?php
@@ -50,6 +51,7 @@ include("conexao.php");
   $idDaCategoria = $_POST["select"];
 
   $arquivo = $_GET['file'];
+   $id = $_GET['id'];
 
      $resultado = "INSERT INTO produto(id_categoria,nome_produto,preco,descricao,url_imagem) VALUES ('$idDaCategoria','$nome','$preco','$descricao','$arquivo')";
     $conexao->query($resultado);
@@ -70,7 +72,7 @@ include("conexao.php");
           <div class ="row">
    <div class="divAdmProd col-lg-5 col-md-5 mt-5 mb-5 text-center card">
 
-      <form  action="cadastraProduto.php?>" method="POST" enctype="multipart/form-data">
+      <form  action="cadastraProduto.php" method="POST" enctype="multipart/form-data">
         <img class="card-img-top" src="<?php echo $fileDestination; ?>" alt="Produto 1">
 
            <input type="file" value="Input" name="file" ></input>
@@ -96,7 +98,7 @@ include("conexao.php");
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$nomeCategoria.'</option>
+           <option>'.$idCategoria.'</option>
            ';
          }
        }
