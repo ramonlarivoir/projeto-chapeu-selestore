@@ -1,12 +1,17 @@
 <?php
-    //session_start();
     include("navbar-admin.php");
 ?>
+
+
 <?php
+
 include("conexao.php");
+
 ?>
 
 <?php
+
+
 
   if(isset($_POST['submit'])){
     $file = $_FILES['file'];
@@ -50,48 +55,59 @@ include("conexao.php");
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
+$resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination' WHERE id_produto='$id'";
+    $conexao->query($resultado);
 
-     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$arquivo' WHERE id_produto='$id'";
-    $db_connect->query($resultado);
+    $query = "SELECT * from produto WHERE id_produto = '$id'";
+    $resultado = $conexao->query($query);
 
-
+        while($row = $resultado->fetch_assoc()){
+            $nomeProduto = $row['nome_produto'];
+            $precoProduto = $row['preco'];
+            $descricaoProduto = $row['descricao'];
+            $arquivineo = $row["url_imagem"];
+            $categoriaProduto = $row["categoria_produto"];
+          }
+    echo $nomeCategoria;
 
 
  ?>
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title></title>
-    </head>
-    <body>
+
+
+
 
       <div class = "container">
           <div class ="row">
-   <div class="divAdmProd col-lg-5 col-md-5 mt-5 mb-5 text-center card">
+   <div class="divAdmProd col-lg-5 col-md-5 mx-auto mt-5 mb-5 text-center card">
 
-      <form  action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data">
-        <img class="card-img-top" src="<?php echo $fileDestination; ?>" alt="Produto 1">
+      <form  action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data" class="form-admin-produto">
+        <img class="card-img-top" src="<?php echo $arquivineo ?>" alt="Produto 1">
 
-           <input type="file" value="Input" name="file" ></input>
-           <button type="submit" name="submit" >Upload</button>
+           <input type="file" value="<?php echo $arquivineo ?>" name="file" ></input>
 
-       </form>
+
+
+     </div>
+   </div>
+ </div>
+
+<div class="container mx-auto">
+    <div class = "container col-lg-2 ml-8">
+       <label for="nomeC">Nome:</label>
+       <input value="<?php echo $nomeProduto; ?>" type="text" name="nomeC" id="nomeC" class="form-control"/required>
+       <label for="preço">Preço:</label>
+       <input value="<?php echo $precoProduto; ?>" type="text" name="preço" id="preço" class="form-control"/required>
+
      </div>
 
-     <form action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?>" method="POST" class="form-admin-produto">
-       <label for="nomeC">Nome:</label>
-       <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
-       <label for="preço">Preço:</label>
-       <input type="text" name="preço" id="preço" class="form-control"/required>
-
+  <div class = "container col-lg-6 ml-8">
        <label for="descricao">Descrição:</label>
-       <textarea type="text" name="descricao" id="descricao" class="form-control field" rows="3" /required></textarea>
+       <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
 
-       <select class="form-control form-control-sm" name="select">
+       <select value="<?php echo $categoriaProduto ?>"class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
-     $resultado = $db_connect->query($query);
+     $resultado = $conexao->query($query);
      if($resultado >0){
          while($row = $resultado->fetch_assoc()){
           $nomeCategoria = $row['nome_categoria'];
@@ -101,11 +117,12 @@ include("conexao.php");
            ';
          }
        }
-        mysqli_close($db_connect);
+        mysqli_close($conexao);
       ?>
+    </div>
       </select>
 
-        <button class="mt-3 btn btn-success " type="submit">Salvar</button>
+                   <button type="submit" name="submit" >Upload</button>
 
 
        </form>
@@ -115,8 +132,6 @@ include("conexao.php");
   </div>
 
 
-    </body>
-  </html>
 
 
 <?php

@@ -1,13 +1,7 @@
 
-<?php
+<?php 
     include ('navbar.php');
-    $server = 'localhost';
-    $user = 'root';
-    $password = 'root';
-    $port = '3306';
-    $nomeBancoDados = 'chapeuseletor';
-    $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
-    mysqli_set_charset($db_connect,"utf8");
+    include('conexao.php');
 
  ?>
 
@@ -15,10 +9,10 @@
 
       <!-- Produtos  Search -->
 
-      <?php
+      <?php  
       // listagem de categorias
       $categorias = "SELECT * FROM `categoria`";
-      $resultadoCategorias = $db_connect->query($categorias);
+      $resultadoCategorias = $conexao->query($categorias);
 
        ?>
 
@@ -75,48 +69,48 @@
 
 
               <!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
-
+    
 
    <div class="col-lg-9">
       <div class="row linha-card">
-        <div class="card-deck  card-cascade wider mb-r">
+        <div class="card-deck  card-cascade wider mb-r"> 
 
-      <?php
+      <?php 
       if(isset($_GET['page']))
         $cod_pagina = $_GET['page'];
       else $cod_pagina=1;
 
       $inicioProdutos = ( $cod_pagina-1 )*9;
-      $finalProdutos = $cod_pagina*9;
+      $finalProdutos = $cod_pagina*9 - $inicioProdutos;
 
       //contando quantidade de produtos
       $todosProdutos = "SELECT * from produto";
-      $resultadoTodosProdutos =   $db_connect->query($todosProdutos);
+      $resultadoTodosProdutos =   $conexao->query($todosProdutos);
       $cou = mysqli_num_rows($resultadoTodosProdutos);
-
+        
 
 
       if($pesquisa){
           $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%'";   // se houver pesquisa, contar quantos produtos há semelhantes aos termos da pesquisa
-          $result =   $db_connect->query($sql);
+          $result =   $conexao->query($sql);
           $cou = mysqli_num_rows($result);
           $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
-          $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
+          $result =   $conexao->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
       }
       else if($opcaoEscolhida){
           $opcaoEscolhida = $_GET['Filtro'];  
           $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida'";
-          $result =   $db_connect->query($sql);
+          $result =   $conexao->query($sql);
           $cou = mysqli_num_rows($result);
           
 
           $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida' limit ". $inicioProdutos . ',' .$finalProdutos;
-          $result = $db_connect->query($sql);
+          $result = $conexao->query($sql);
          }
 
       else {      
         $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
-        $result = $db_connect->query($sql);   
+        $result = $conexao->query($sql);   
       }      
       
       
@@ -129,10 +123,10 @@
                 <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
-                      <p class="grey-text"></p>
+                      <p class="grey-text"></p> 
                   </div>
                 </a>
-            </div>
+            </div>           
             <div class="card-body" >
               <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
               <p class="card-text informacoes-card">
@@ -164,7 +158,7 @@
 
 
 
-
+      
         </div>
       </div>
     </div>
@@ -173,7 +167,7 @@
 
 
 
-
+    
 
 
     <nav aria-label="Navegacao de paginas">
@@ -181,7 +175,7 @@
         <?php $a = $cou/9;
               $a=ceil($a);
               $bold = "font-weight: bold;" ;
-              for($b = 1; $b <= $a ; $b++ ) {
+              for($b = 1; $b <= $a ; $b++ ) { 
 
                 if($pesquisa){      ?>
 
@@ -198,7 +192,7 @@
                   <li class="page-item"><a class="page-link" style="<?php if($b == $cod_pagina)  echo $bold; ?>" href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
 
 
-                <?php
+                <?php 
                }
 
              }
@@ -206,7 +200,7 @@
       </ul>
     </nav>
   </div>
-
+  
 	<?php
 		include("footer.php");
 	?>

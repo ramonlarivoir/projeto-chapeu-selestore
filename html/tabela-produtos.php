@@ -2,7 +2,6 @@
 <?php
 include("conexao.php");
 
-$conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
@@ -93,7 +92,7 @@ $conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 
                 echo'
                 <td>
-                    <a href="cadastraProduto.php?id='.$idCategoria.'">
+                    <a href="cadastraProduto.php?">
                         <img src="../assets/bootstrap/icons/png/plus-2x.png">
                     </a>
             </td>';
