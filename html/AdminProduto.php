@@ -56,10 +56,10 @@ include("conexao.php");
    $id = $_GET['id'];
 
 $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination' WHERE id_produto='$id'";
-    $db_connect->query($resultado);
+    $conexao->query($resultado);
 
     $query = "SELECT * from produto WHERE id_produto = '$id'";
-    $resultado = $db_connect->query($query);
+    $resultado = $conexao->query($query);
 
         while($row = $resultado->fetch_assoc()){
             $nomeProduto = $row['nome_produto'];
@@ -107,7 +107,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
        <select value="<?php echo $categoriaProduto ?>"class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
-     $resultado = $db_connect->query($query);
+     $resultado = $conexao->query($query);
      if($resultado >0){
          while($row = $resultado->fetch_assoc()){
           $nomeCategoria = $row['nome_categoria'];
@@ -117,7 +117,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
            ';
          }
        }
-        mysqli_close($db_connect);
+        mysqli_close($conexao);
       ?>
     </div>
       </select>
