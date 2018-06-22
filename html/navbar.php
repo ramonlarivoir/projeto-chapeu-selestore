@@ -82,12 +82,12 @@
             <div class="dropdown-menu">
               <form class="px-4 py-3" method="post" action="valida.php">
                 <div class="form-group">
-                  <label for="exampleDropdownFormEmail1">E-mail</label>
-                  <input type="text" name="email" class="form-control" id="inputEmail" placeholder="email@exemplo.com">
+                  <label for="exampleDropdownFormEmail1">Usuário</label>
+                  <input type="text" name="email" class="form-control" id="inputEmail" placeholder="usuário">
                 </div>
                 <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
+                <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="********">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
               </form>
