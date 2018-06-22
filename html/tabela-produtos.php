@@ -2,7 +2,6 @@
 <?php
 include("conexao.php");
 
-$conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
