@@ -81,7 +81,7 @@
       else $cod_pagina=1;
 
       $inicioProdutos = ( $cod_pagina-1 )*9;
-      $finalProdutos = $cod_pagina*9;
+      $finalProdutos = $cod_pagina*9 - $inicioProdutos;
 
       //contando quantidade de produtos
       $todosProdutos = "SELECT * from produto";
