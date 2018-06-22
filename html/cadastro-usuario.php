@@ -23,7 +23,7 @@
                     AVISO: Nome do usuário já cadastrado!!!
                 </div>';
         }else{
-            $query = "INSERT INTO usuario(login,senha) VALUES('$usuario','$senha')";
+            $query = "INSERT INTO usuario(login,senha) VALUES('$usuario',MD5('$senha'))";
             $resultado = $conexao->query($query);
             if($resultado){
                 echo 

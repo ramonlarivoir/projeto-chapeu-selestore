@@ -12,7 +12,7 @@
 }
 
 .btn-edit{
-  /* botão lupa*/
+  
 	border: 2;
 	border-color: #FFF;
 	color: #000;
@@ -22,7 +22,7 @@
 }
 
 .campo-search{
-  padding-right: : 0px;
+  padding-right: 0px;
 
 
 }
@@ -31,11 +31,7 @@
   padding-right: 10px;
 
 }
-.icone{
-  
 
-
-}
 .form-control-edit {
   display: block;
   width: 100%;
@@ -138,10 +134,6 @@ width: 100%;
   padding-left: 17px;
   border: 0;
   background-color: transparent;
-
-
-}
-.menu-navegacao-paginas{
 
 
 }

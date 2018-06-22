@@ -49,7 +49,7 @@
                             </a>
 
                     </ul>
-                    <a class="nav-link " id="nav-adm-icon" href="#">
+                    <a class="nav-link " id="nav-adm-icon" href="sair.php">
                             <img src="../assets/bootstrap/icons/png/account-logout-3x.png">
                             <span class="sr-only">(current)</span>
                     </a>

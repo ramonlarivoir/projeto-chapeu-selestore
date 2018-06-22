@@ -79,9 +79,6 @@
         <?php } // fechando if ?> 
 <!--/.Carousel Wrapper-->
 
-
-
-
    <div class="col-lg-12  ">
       <div class="row linha-card ">
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center"> 

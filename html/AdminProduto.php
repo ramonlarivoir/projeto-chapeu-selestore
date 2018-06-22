@@ -113,7 +113,7 @@ $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$idCategoria.'</option>
+           <option>'.$nomeCategoria.'</option>
            ';
          }
        }
