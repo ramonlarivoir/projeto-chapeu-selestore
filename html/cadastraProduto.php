@@ -98,7 +98,7 @@ include("conexao.php");
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$idCategoria.'</option>
+           <option>'.$nomeCategoria.'</option>
            ';
          }
        }
