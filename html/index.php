@@ -5,93 +5,79 @@
     $password = 'admin';
     $db_name = 'chapeuSelestore';
     $port = '3306';
+
     $db_connect = new mysqli($server, $user,$password,
       $db_name, $port);
     mysqli_set_charset($db_connect,"utf8");
+
  ?>
 
- <p class="text-center text-danger">
-    <?php if(isset($_SESSION['loginErro'])){
-      echo $_SESSION['loginErro'];
-      unset($_SESSION['loginErro']);
-    } ?>
- </p>
 
-<div>
-  <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
 
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="../assets/img/harry potter.jpg" alt="Bonecos Harry Potter">
-      <div class="carousel-caption d-none d-md-block">
- <h5>Harry Potter e as relíquias da morte em Blu Ray</h5>
- <p>Assista ao último filme da saga em Blu Ray!</p>
-</div>
+
+
+
+
+
+
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <?php 
+      //achando os maiores valores de id_produto
+      $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+      $row = mysqli_fetch_array( $rowSQL );
+      $maiorId = $row['max'];
+
+      $sql = "SELECT * from produto ORDER BY id_produto DESC"; // ordenando por id_produto decrescente
+      $result = $db_connect->query($sql);
+        if($result->num_rows > 0){
+          $i = $maiorId;
+            while( $i > $maiorId - 3 && $row = $result->fetch_assoc()){    ?>
+
+
+      
+        <div class="carousel-item <?php if($i === $maiorId){ echo 'active'; }  ?>">
+            <div class="view">
+                <img class="d-block w-100" style="max-height: 900px;" src="<?php echo $row['url_imagem'] ; ?>" alt="">
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive"><?php echo $row['nome_produto'] ; ?></h3>
+                <p><?php echo $row['descricao'] ; ?></p>
+            </div>
+        </div>
+
+
+
+        <?php
+        $i--; } //fechando while?>
+
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/Harry_Pottah.jpg"  alt="Bonecos diversos Harry Potter">
-        <div class="carousel-caption d-none d-md-block">
-      <h5>Cansado dos livros? Agora você também pode ver os filmes!</h5>
-      <p>Filmes do Harry Potter estão na promoção!!</p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/bonecosPop.jpg" alt="Bonecos amigos Harry Potter">
-        <div class="carousel-caption d-none d-md-block">
-      <h5>Os bonecos funko estão bombando!!</h5>
-      <p>Compre já o boneco funko do seu personagem favorito!</p>
-    </div>
-    </div>
-  </div>
-
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
 </div>
-
-<div>
-
-
-<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-
-<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-</div>
-
-
-</div>
-
-
-
-
-
-</div>
-
-<div>
-
-
-<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-
-<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-</div>
-
-
-</div>
-
+        <?php } // fechando if ?> 
+<!--/.Carousel Wrapper-->
 
 
 
@@ -108,6 +94,7 @@
         $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
+
         $sql = "SELECT * from produto ORDER BY id_produto DESC";
         $result = $db_connect->query($sql);
         if($result->num_rows > 0){
@@ -145,6 +132,7 @@ $i--; } ?>
 
 <?php
 }
+
 }
     include("footer.php");
   ?>
