@@ -12,3 +12,9 @@
 #nav-adm-icon{
     text-align: right;
 }
+#corretor{
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
+    
+}

@@ -42,14 +42,14 @@
     <form action="cadastro-usuario.php" method="post">
         <div class="form-group">
             <label for="usuario">Nome do usuário</label>
-            <input type="text" class="form-control field" name="usuario" placeholder="Seu Nome" required>
+            <input type="text" class="form-control input-cadastro-usuario" name="usuario" placeholder="Seu Nome" required>
         </div>
         <div class="form-group">
             <label for="Senha">Senha</label>
-            <input type="password" class="form-control"name="senha" placeholder="Sua Senha" required>
+            <input type="password" class="form-control input-cadastro-usuario"name="senha" placeholder="Sua Senha" required>
         </div><div class="form-group">
             <label for="Confirmar_Senha">Repita sua senha</label>
-            <input type="password" class="form-control" name="confirmacaoDaSenha" placeholder="Confirme Sua Senha" required>
+            <input type="password" class="form-control input-cadastro-usuario" name="confirmacaoDaSenha" placeholder="Confirme Sua Senha" required>
         </div>
         <div class="col-3 mx-auto ">
             <button type="submit" name="enviar" class="btn btn-primary ">Enviar</button>

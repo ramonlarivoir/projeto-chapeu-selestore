@@ -3,16 +3,19 @@
     $server = 'localhost';
     $user = 'admin';
     $password = 'admin';
-    $db_name = 'chapeuselestore';
+    $db_name = 'chapeuSelestore';
     $port = '3306';
-
     $db_connect = new mysqli($server, $user,$password,
       $db_name, $port);
     mysqli_set_charset($db_connect,"utf8");
-
  ?>
 
-
+ <p class="text-center text-danger">
+    <?php if(isset($_SESSION['loginErro'])){
+      echo $_SESSION['loginErro'];
+      unset($_SESSION['loginErro']);
+    } ?>
+ </p>
 
 <div>
   <div id="carouselExampleIndicators" class="carousel slide mt-5 col-lg-10 mx-auto" data-ride="carousel">
@@ -105,18 +108,15 @@
         $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
-
-        $sql =  $sql = "SELECT * from produto";
+        $sql = "SELECT * from produto ORDER BY id_produto DESC";
         $result = $db_connect->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
-
-          while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){           ?>
-
+          while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){    ?>
           <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
                 <img src=" <?php echo $row['url_imagem']; ?>"
-                 class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                 class="img-fluid  hoverable rounded card-img-top "style="width: 1000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
                       <p class="grey-text"></p> 
@@ -137,7 +137,7 @@
             </div>
           </div>
 
-	<?php
+  <?php
 $i--; } ?>
         </div>
       </div>
@@ -145,7 +145,6 @@ $i--; } ?>
 
 <?php
 }
-
 }
-		include("footer.php");
-	?>
+    include("footer.php");
+  ?>

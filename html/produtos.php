@@ -1,102 +1,175 @@
 
-<?php 
+<?php
     include ('navbar.php');
     $server = 'localhost';
-    $user = 'admin';
-    $password = 'admin';
-    $db_name = 'chapeuselestore';
+    $user = 'root';
+    $password = 'root';
     $port = '3306';
-
-    $db_connect = new mysqli($server, $user,$password,
-      $db_name, $port);
+    $nomeBancoDados = 'chapeuseletor';
+    $db_connect = new mysqli($server, $user, $password, $nomeBancoDados, $port);
     mysqli_set_charset($db_connect,"utf8");
 
  ?>
 
 
 
-      <!-- Produtos -->
+      <!-- Produtos  Search -->
+
+      <?php
+      // listagem de categorias
+      $categorias = "SELECT * FROM `categoria`";
+      $resultadoCategorias = $db_connect->query($categorias);
+
+       ?>
+
 <div class="container fonte">
   <div class="row">
     <div class="col-lg-3">
       <h1 class="titulo-categorias">Filtro</h1>
       <!-- campo search -->
         <div  class="col-sm-12 col-10">
-          <form class="form-inline">
+          <form class="form-inline"> <!-- metodo post -->
             <div class="input-group ">
-              <input class="form-control form-control-edit  " type="search" placeholder="Procure algo" aria-label="Pesquisar">
+              <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Procure algo" aria-label="Pesquisar">
               <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
             </div>
           </form>
         </div>
-        <form>
-        <div class="checkbox-todas">
+        <form method="get">
+            <div class="checkbox-todas">
+
+
+
+<<<<<<< HEAD
+      <?php
+      //pesquisa por texto
+
+        @$pesquisa = $_GET['pesquisa'];
+
+      //exibir categorias
+      if($resultadoCategorias->num_rows > 0){
+        $numeroLoop = 0;
+        while($exibirC = $resultadoCategorias->fetch_assoc()){
+      ?>
           <div class=" form-group form-check  checkbox-individual" >
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label " for="exampleRadios1">
-             Categoria 1
+            <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $numeroLoop?>" value="option<?php echo $numeroLoop;?>">
+            <label class="form-check-label " for="<?php echo $numeroLoop?>">
+                <?php echo $exibirC['nome_categoria']; ?>
             </label>
           </div>
+          <?php
+        $numeroLoop++;
+        }
+      } ?>
+=======
+        <?php  
+        //pesquisa por texto
+          
+          @$pesquisa = $_GET['pesquisa'];
 
-          <div class=" form-group  form-check  checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-            <label class="form-check-label" for="exampleRadios2">
-             Categoria 2
-            </label>
-          </div>
+          @$opcaoEscolhida = $_GET['Filtro'];
 
-          <div class="form-check form-group checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
-            <label class="form-check-label" for="exampleRadios3">
-             Categoria 3
-            </label>
-          </div>
+        //exibir categorias
+        if($resultadoCategorias->num_rows > 0){
+          while($exibirC = $resultadoCategorias->fetch_assoc()){           
+        ?>
+            <div class=" form-group form-check  checkbox-individual" >
+              <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $exibirC['id_categoria']?>" value="<?php echo $exibirC['id_categoria'];?>">
+              <label class="form-check-label " for="<?php echo $numeroLoop?>">
+                  <?php echo $exibirC['nome_categoria']; ?>
+              </label>
+            </div>
+            <?php 
+          }
 
-          <div class="form-check form-group checkbox-individual">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
-            <label class="form-check-label" for="exampleRadios4">
-             Categoria 4
-            </label>
-          </div>
-        </div>
-          <div class="aplicar">
-            <button type="button" class="btn btn-secondary btn-lg btn-2 btn-edit">Aplicar</button>
-          </div>
+        } ?>
+>>>>>>> 04e2892f9498cf2a6ef3a5c598822fe190a21e2d
 
-      </div>
+
+
+          </div>
+            <div class="aplicar">
+              <button type="submit" name="" class="btn btn-secondary btn-lg btn-2 btn-edit" >Aplicar</button>
+            </div>
+          </div>
       </form>
 
 
 
+
               <!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
-    
+
 
    <div class="col-lg-9">
       <div class="row linha-card">
-        <div class="card-deck  card-cascade wider mb-r"> 
+        <div class="card-deck  card-cascade wider mb-r">
 
-      <?php 
-      if($db_connect->connect_error){
-      echo 'falha: '. $db_connect->connect_error;
-    }
-    else{
-      $sql = "SELECT * from produto limit 0,9"; // limitar 9 por pagina
+      <?php
+      if(isset($_GET['page']))
+        $cod_pagina = $_GET['page'];
+      else $cod_pagina=1;
+
+      $inicioProdutos = ( $cod_pagina-1 )*9;
+      $finalProdutos = $cod_pagina*9;
+
+      //contando quantidade de produtos
+      $todosProdutos = "SELECT * from produto";
+      $resultadoTodosProdutos =   $db_connect->query($todosProdutos);
+      $cou = mysqli_num_rows($resultadoTodosProdutos);
+
+
+
+      if($pesquisa){
+          $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%'";   // se houver pesquisa, contar quantos produtos há semelhantes aos termos da pesquisa
+          $result =   $db_connect->query($sql);
+          $cou = mysqli_num_rows($result);
+          $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
+          $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
+      }
+<<<<<<< HEAD
+
+      else {
+
+      $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
+
       $result = $db_connect->query($sql);
-      $cou = mysqli_num_rows($result);
+
+
+      }
+
+
+=======
+      else if($opcaoEscolhida){
+          $opcaoEscolhida = $_GET['Filtro'];  
+          $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida'";
+          $result =   $db_connect->query($sql);
+          $cou = mysqli_num_rows($result);
+          
+
+          $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida' limit ". $inicioProdutos . ',' .$finalProdutos;
+          $result = $db_connect->query($sql);
+         }
+
+      else {      
+        $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
+        $result = $db_connect->query($sql);   
+      }      
+      
+      
+      
+>>>>>>> 04e2892f9498cf2a6ef3a5c598822fe190a21e2d
       if($result->num_rows > 0){
-        $aux = 0 ;
         while($row = $result->fetch_assoc()){            ?>
 
-          <div class="col-lg-3 col-md-5 col-sm-12 text-center card-2">
+          <div class="col-xl-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src=" <?php echo $row['url_imagem']; ?>"
-                 class="img-fluid  hoverable rounded card-img-top " href="#" alt="">
+                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
-                      <p class="grey-text"></p> 
+                      <p class="grey-text"></p>
                   </div>
                 </a>
-            </div>           
+            </div>
             <div class="card-body" >
               <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
               <p class="card-text informacoes-card">
@@ -114,7 +187,7 @@
 
 
 
-        <?php  $aux++; }
+        <?php  }
 
 
 
@@ -122,15 +195,13 @@
       else {
         echo "Não há produtos";
       }
-
-    } 
     ?>
 
 
 
 
 
-      
+
         </div>
       </div>
     </div>
@@ -139,25 +210,40 @@
 
 
 
-    
 
 
-   <nav aria-label="Navegacao de paginas">
-  <ul class="pagination justify-content-center">
-    <?php $a = $cou/9;
-          $a=ceil($a);
-          for($b = 1; $b <= $a ; $b++ ) { ?>
 
-          <li class="page-item"><a class="page-link" href="#"><?php echo $a ?>  </a></li>
+    <nav aria-label="Navegacao de paginas">
+      <ul class="pagination justify-content-center">
+        <?php $a = $cou/9;
+              $a=ceil($a);
+              $bold = "font-weight: bold;" ;
+              for($b = 1; $b <= $a ; $b++ ) {
+
+                if($pesquisa){      ?>
+
+                      <li class="page-item"><a class="page-link"  style="<?php if($b == $cod_pagina)  echo $bold; ?>"   href="produtos.php?page=<?php echo $b ?>&pesquisa=<?php echo $pesquisa ?>" ><?php echo $b ?>  </a></li>
+                    <?php
+                }
+                else if ($opcaoEscolhida){       ?>
+                   <li class="page-item"><a class="page-link"  style="<?php if($b == $cod_pagina)  echo $bold; ?>"   href="produtos.php?page=<?php echo $b ?>&Filtro=<?php echo $opcaoEscolhida ?>"><?php echo $b ?>  </a></li>
+                    <?php
+                }
+
+                else { ?>
+
+                  <li class="page-item"><a class="page-link" style="<?php if($b == $cod_pagina)  echo $bold; ?>" href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
 
 
-            <?php 
-           }
-          ?>
-  </ul>
-</nav>
+                <?php
+               }
+
+             }
+              ?>
+      </ul>
+    </nav>
   </div>
-  
+
 	<?php
 		include("footer.php");
 	?>

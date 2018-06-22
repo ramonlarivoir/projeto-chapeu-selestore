@@ -142,11 +142,31 @@ h1.endereco{
 }
 
 .color{
-	background-color: #EFF7FF;
+	background-color: rgba(124, 71, 110, 0.6);
 	font-family: serif;
 }
 
 .localiza{
-	background-color: #EFF7FF;
+	background-color: rgba(124, 71, 110, 0.6);
 	font-family: serif;
 }
+
+.erro-form {
+	color: #962a2a;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+a.link-face{
+	color: #2e4aad;
+}
+a.link-face:hover{
+	color: #28288c;
+
+}
+
+p.msg-sucesso{
+	font-weight: bold;
+	text-align: center;
+}
+
