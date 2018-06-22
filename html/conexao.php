@@ -1,6 +1,7 @@
 <?php
 
 $conexao = new mysqli("localhost","admin","admin","chapeuSelestore");
+mysqli_set_charset($conexao,"utf8");
 
 
 if (mysqli_connect_errno())
