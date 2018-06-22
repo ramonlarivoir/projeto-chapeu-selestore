@@ -70,7 +70,7 @@ include("conexao.php");
             $precoProduto = $row['preco'];
             $descricaoProduto = $row['descricao'];
             $arquivineo = $row["url_imagem"];
-            $categoriaProduto = $row["categoria_produto"];
+            $categoriaProduto = $row["id_categoria"];
           }
     echo $nomeCategoria;
 
@@ -108,23 +108,28 @@ include("conexao.php");
        <label for="descricao">Descrição:</label>
        <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
 
-       <select value="<?php echo $categoriaProduto ?>" class="form-control form-control-sm" name="select">
-     <?php
-     $query = "SELECT * from categoria";
-     $resultado = $conexao->query($query);
-     if($resultado >0){
-         while($row = $resultado->fetch_assoc()){
-          $nomeCategoria = $row['nome_categoria'];
-          $idCategoria = $row['id_categoria'];
-         echo'
-           <option>'.$idCategoria.'</option>
-           ';
-         }
-       }
-        mysqli_close($conexao);
-      ?>
-    </div>
-      </select>
+       <label for="nomeC">Categoria:</label>
+           <select class="form-control form-control-sm" name="select">
+         <?php
+         $query = "SELECT * from categoria";
+         $resultado = $conexao->query($query);
+         if($resultado >0){
+             while($row = $resultado->fetch_assoc()){
+              $nomeCategoria = $row['nome_categoria'];
+              $idCategoria = $row['id_categoria'];
+              if($idCategoria!=$categoriaProduto){
+             echo'
+               <option>'.$idCategoria.'</option>
+               ';
+             }else{
+                  echo  '<option selected> '.$categoriaProduto.'</option>';
+             }
+             }
+           }
+            mysqli_close($conexao);
+          ?>
+        </div>
+          </select>
 
 
           <button type="submit" name="submit" >Upload</button>
