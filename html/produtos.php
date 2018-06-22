@@ -40,28 +40,6 @@
 
 
 
-<<<<<<< HEAD
-      <?php
-      //pesquisa por texto
-
-        @$pesquisa = $_GET['pesquisa'];
-
-      //exibir categorias
-      if($resultadoCategorias->num_rows > 0){
-        $numeroLoop = 0;
-        while($exibirC = $resultadoCategorias->fetch_assoc()){
-      ?>
-          <div class=" form-group form-check  checkbox-individual" >
-            <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $numeroLoop?>" value="option<?php echo $numeroLoop;?>">
-            <label class="form-check-label " for="<?php echo $numeroLoop?>">
-                <?php echo $exibirC['nome_categoria']; ?>
-            </label>
-          </div>
-          <?php
-        $numeroLoop++;
-        }
-      } ?>
-=======
         <?php  
         //pesquisa por texto
           
@@ -83,7 +61,6 @@
           }
 
         } ?>
->>>>>>> 04e2892f9498cf2a6ef3a5c598822fe190a21e2d
 
 
 
@@ -126,19 +103,6 @@
           $sql = "SELECT * from produto  WHERE nome_produto LIKE '%$pesquisa%' limit " . $inicioProdutos . ',' .$finalProdutos;
           $result =   $db_connect->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
       }
-<<<<<<< HEAD
-
-      else {
-
-      $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
-
-      $result = $db_connect->query($sql);
-
-
-      }
-
-
-=======
       else if($opcaoEscolhida){
           $opcaoEscolhida = $_GET['Filtro'];  
           $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida'";
@@ -157,7 +121,6 @@
       
       
       
->>>>>>> 04e2892f9498cf2a6ef3a5c598822fe190a21e2d
       if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){            ?>
 

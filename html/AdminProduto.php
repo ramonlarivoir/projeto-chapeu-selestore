@@ -3,7 +3,7 @@
     include("navbar-admin.php");
 ?>
 <?php
-php include("conexao.php");
+include("conexao.php");
 ?>
 
 <?php
