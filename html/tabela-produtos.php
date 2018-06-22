@@ -92,11 +92,7 @@ include("conexao.php");
 
                 echo'
                 <td>
-<<<<<<< HEAD
-                    <a href="cadastraProduto.php?id='.$idProduto.'">
-=======
                     <a href="cadastraProduto.php?">
->>>>>>> Andre
                         <img src="../assets/bootstrap/icons/png/plus-2x.png">
                     </a>
             </td>';
