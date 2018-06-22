@@ -53,7 +53,7 @@ include("conexao.php");
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
-     $resultado = "INSERT INTO produto(id_categoria,nome_produto,preco,descricao,url_imagem) VALUES ('$idDaCategoria','$nome','$preco','$descricao','$arquivo')";
+     $resultado = "INSERT INTO produto(id_categoria,nome_produto,preco,descricao,url_imagem) VALUES ('$idDaCategoria','$nome','$preco','$descricao','$fileDestination')";
     $conexao->query($resultado);
 
 
