@@ -23,8 +23,8 @@
 
 
 
-               if($db_connect->connect_error==true){
-                 echo 'falha na conexão'.$db_connect->connect_error;
+               if($conexao->connect_error==true){
+                 echo 'falha na conexão'.$conexao->connect_error;
                }else{
                   echo 'conectou';
 
@@ -32,7 +32,7 @@
                   if($nome != NULL){
                     $sql = "INSERT INTO categoria(nome_categoria) VALUES ('$nome')";
 
-                    $db_connect->query($sql);
+                    $conexao->query($sql);
 
                   }
 

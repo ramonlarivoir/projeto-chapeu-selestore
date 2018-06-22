@@ -75,13 +75,12 @@ include("conexao.php");
         <img class="card-img-top" src="<?php echo $fileDestination; ?>" alt="Produto 1">
 
            <input type="file" value="Input" name="file" ></input>
-           <button type="submit" name="submit" >Upload</button>
 
-       </form>
+
+
      </div>
 
-     <form action="cadastraProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?>" method="POST" class="form-admin-produto">
-       <label for="nomeC">Nome:</label>
+     <label for="nomeC">Nome:</label>
        <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
        <label for="preço">Preço:</label>
        <input type="text" name="preço" id="preço" class="form-control"/required>
@@ -106,13 +105,13 @@ include("conexao.php");
       ?>
       </select>
 
-        <button class="mt-3 btn btn-success " type="submit">Salvar</button>
+           <button type="submit" name="submit" >Upload</button>
 
 
        </form>
 
     </div>
-     <a class="mt-3 mb-3 btn btn-primary" href="produtosTeste.html" role="button">Voltar</a>
+     <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
   </div>
 
 
