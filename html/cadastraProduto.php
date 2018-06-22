@@ -1,8 +1,10 @@
 <?php
-    //session_start();
     include("navbar-admin.php");
 ?>
+
+
 <?php
+
 include("conexao.php");
 ?>
 
@@ -50,9 +52,8 @@ include("conexao.php");
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
-
-     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$arquivo' WHERE id_produto='$id'";
-    $db_connect->query($resultado);
+     $resultado = "INSERT INTO produto(id_categoria,nome_produto,preco,descricao,url_imagem) VALUES ('$idDaCategoria','$nome','$preco','$descricao','$arquivo')";
+    $conexao->query($resultado);
 
 
 
@@ -70,7 +71,7 @@ include("conexao.php");
           <div class ="row">
    <div class="divAdmProd col-lg-5 col-md-5 mt-5 mb-5 text-center card">
 
-      <form  action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data">
+      <form  action="cadastraProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data">
         <img class="card-img-top" src="<?php echo $fileDestination; ?>" alt="Produto 1">
 
            <input type="file" value="Input" name="file" ></input>
@@ -79,7 +80,7 @@ include("conexao.php");
        </form>
      </div>
 
-     <form action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?>" method="POST" class="form-admin-produto">
+     <form action="cadastraProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?>" method="POST" class="form-admin-produto">
        <label for="nomeC">Nome:</label>
        <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
        <label for="preço">Preço:</label>
@@ -91,7 +92,7 @@ include("conexao.php");
        <select class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
-     $resultado = $db_connect->query($query);
+     $resultado = $conexao->query($query);
      if($resultado >0){
          while($row = $resultado->fetch_assoc()){
           $nomeCategoria = $row['nome_categoria'];
@@ -101,7 +102,7 @@ include("conexao.php");
            ';
          }
        }
-        mysqli_close($db_connect);
+        mysqli_close($conexao);
       ?>
       </select>
 

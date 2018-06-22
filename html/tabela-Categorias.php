@@ -2,21 +2,20 @@
 <?php
 include("conexao.php");
 
-$conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 ?>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
-        $query = "DELETE from produto WHERE id_produto ='$id'";
+        $query = "DELETE from categoria WHERE id_categoria ='$id'";
         $resultado = $conexao->query($query);
         if($resultado){
             echo
                 '<div class="alert alert-success text-center" role="alert">
-                    AVISO: PRODUTO DELETADO COM SUCESSO!!!
+                    AVISO: CATEGORIA DELETADA COM SUCESSO!!!
                 </div>';
         }else{
             echo
                 '<div class="alert alert-danger text-center" role="alert">
-                    AVISO: ERRO AO TENTAR DELETAR PRODUTO!!!
+                    AVISO: ERRO AO TENTAR DELETAR CATEGORIA!!!
                 </div>';
         }
     }
@@ -26,44 +25,38 @@ $conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Produto</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Descrição</th>
-
-
+                <th scope="col">Categoria</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
 
             </tr>
         </thead>
         <tbody>
             <?php
-                $query = "SELECT * from produto";
+                $query = "SELECT * from categoria";
                 $resultado = $conexao->query($query);
                 if($resultado >0){
                     $contador = 0;
                     while($row = $resultado->fetch_assoc()){
-                        $nomeProduto = $row['nome_produto'];
-                        $idProduto = $row['id_produto'];
-                        $preco = $row['preco'];
-                        $descricao = $row['descricao'];
+                        $nomeCategoria = $row['nome_categoria'];
+                        $idCategoria = $row['id_categoria'];
                         echo
                             '
                             <tr>
-                                <td>'.$idProduto.'</td>
-                                    <td>'.$nomeProduto.'</td>
-                                      <td>'.$preco.'</td>
-                                        <td>'.$descricao.'</td>
+                                <td>'.$idCategoria.'</th>
+                                    <td>'.$nomeCategoria.'</td>
                                     <td>
-                                        <a href="" role="button" data-toggle="modal" data-target="#excluirProduto'.$contador.'">
+                                        <a href="" role="button" data-toggle="modal" data-target="#excluirCategoria'.$contador.'">
                                             <img src="../assets/bootstrap/icons/png/trash-2x.png">
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="AdminProduto.php?id='.$idProduto.'">
+                                        <a href="editar_Categoria.php?id='.$idCategoria.'">
                                             <img src="../assets/bootstrap/icons/png/cog-2x.png">
                                         </a>
                                 </td>
                             </tr>
-                            <div class="modal fade" id="excluirProduto'.$contador.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="excluirCategoria'.$contador.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
 
@@ -75,12 +68,12 @@ $conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
                                 </div>
 
                                 <div class="modal-body">
-                                    Tem certeza que deseja excluir este produto?
+                                    Tem certeza que deseja excluir este categoria?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <form method="post" action="tabela-produtos.php">
-                                        <button href="" type="submit" name ="id" value="'.$idProduto.'" class="btn btn-danger">Excluir produto</button>
+                                    <form method="post" action="tabela-Categorias.php">
+                                        <button href="" type="submit" name ="id" value="'.$idCategoria.'" class="btn btn-danger">Excluir categoria</button>
                                     </form>
                                 </div>
                                 </div>
@@ -93,16 +86,18 @@ $conexao = new mysqli($server, $user, $password, $nomeBancoDados, $port);
 
                 echo'
                 <td>
-                    <a href="cadastraProduto.php?id='.$idCategoria.'">
+                    <a href="cadastraCategoria.php?id='.$idCategoria.'">
                         <img src="../assets/bootstrap/icons/png/plus-2x.png">
                     </a>
             </td>';
+
+
 
                 mysqli_close($conexao);
             ?>
 
 
-        </body>
+        </tbody>
     </table>
 </div>
 <?php include("footer-admin.php");?>

@@ -76,23 +76,39 @@
       </li>
     </ul>
     
-        <!-- Default dropleft button -->
-        <div class="btn-group dropleft">
-          <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria=expanded="false" href="#" > <img src="../assets/bootstrap/icons/png/person-3x.png"> <span class="sr-only">(current)</span></a>
-            <div class="dropdown-menu">
-              <form class="px-4 py-3" method="post" action="valida.php">
-                <div class="form-group">
-                  <label for="exampleDropdownFormEmail1">E-mail</label>
-                  <input type="text" name="email" class="form-control" id="inputEmail" placeholder="email@exemplo.com">
-                </div>
-                <div class="form-group">
-                <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-              </form>
+        <!-- Button trigger modal -->
+
+    <a href="" role="button" data-toggle="modal" data-target="#exampleModal">
+    <img src="../assets/bootstrap/icons/png/person-3x.png"></a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Área administrativa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
+          <div class="modal-body">
+            
+            <form class="px-4 py-3" method="post" action="valida.php">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Usuário</label>
+                      <input type="text" name="email" class="form-control" id="inputEmail" placeholder="usuário">
+                    </div>
+                    <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Senha</label>
+                    <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="******">
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+                  </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
       
   </div>  
 </nav>
