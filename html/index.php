@@ -1,15 +1,6 @@
 <?php 
     include ('navbar.php');
-    $server = 'localhost';
-    $user = 'admin';
-    $password = 'admin';
-    $db_name = 'chapeuSelestore';
-    $port = '3306';
-
-    $db_connect = new mysqli($server, $user,$password,
-      $db_name, $port);
-    mysqli_set_charset($db_connect,"utf8");
-
+    include('conexao.php');
  ?>
 
 
@@ -35,12 +26,12 @@
 
       <?php 
       //achando os maiores valores de id_produto
-      $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+      $rowSQL = mysqli_query($conexao,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
       $row = mysqli_fetch_array( $rowSQL );
       $maiorId = $row['max'];
 
       $sql = "SELECT * from produto ORDER BY id_produto DESC"; // ordenando por id_produto decrescente
-      $result = $db_connect->query($sql);
+      $result = $conexao->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
             while( $i > $maiorId - 3 && $row = $result->fetch_assoc()){    ?>
@@ -83,17 +74,17 @@
       <div class="row linha-card ">
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center"> 
        <?php 
-        if($db_connect->connect_error){
-        echo 'falha: '. $db_connect->connect_error;
+        if($conexao->connect_error){
+        echo 'falha: '. $conexao->connect_error;
       }
       else{
         //achando os maiores valores de id_produto
-        $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+        $rowSQL = mysqli_query($conexao,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
 
         $sql = "SELECT * from produto ORDER BY id_produto DESC";
-        $result = $db_connect->query($sql);
+        $result = $conexao->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
           while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){    ?>

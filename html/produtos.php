@@ -2,7 +2,6 @@
 <?php 
     include ('navbar.php');
     include('conexao.php');
-
  ?>
 
 
