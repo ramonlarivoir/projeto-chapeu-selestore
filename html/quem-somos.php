@@ -8,7 +8,7 @@
         <div class="row quem-somos">
           <div class="col-xl-8 col-12">
             <h1 class="titulo-quem-somos-esquerda animated fadeIn" >Missão</h1>
-            <p class="textoquemsomos animated fadeIn">A loja Chapéu Slestore trata-se de um espaço no qual produtos da saga Harry Potter são vendidos e divulgados. A empresa é comandada por uma equipe de potterheads motivados a cumprir a missão de distribuir os melhores produtos relacionados a Harry e seus amigos!</p>
+            <p class="textoquemsomos animated fadeIn">A loja Chapéu Selestore trata-se de um espaço no qual produtos da saga Harry Potter são vendidos e divulgados. A empresa é comandada por uma equipe de potterheads motivados a cumprir a missão de distribuir os melhores produtos relacionados a Harry e seus amigos!</p>
           </div>
             <div class="col quem-somos-imagem ">
               <img class="rounded-circle animated fadeInLeft hoverable " src="../assets/img/quemsomos1.png"  width=300px height=300px>
@@ -23,7 +23,7 @@
         <div class="row quem-somos">
             <div class="col-xl-8 col-12 order-1">
             <h1 class="titulo-quem-somos-meio animated fadeIn">Visão</h1>
-            <p class="textoquemsomos animated fadeIn">A loja Chapéu Slestore trata-se de um espaço no qual produtos da saga Harry Potter são vendidos e divulgados. A empresa é comandada por uma equipe de potterheads motivados a cumprir a missão de distribuir os melhores produtos relacionados a Harry e seus amigos!</p>
+            <p class="textoquemsomos animated fadeIn">Como bons fãns de Harry Potter que são, os funcionários da Chapéu Selestore entendem o ponto de vista do consumidor e procuram ao máximo se colocar no lugar de seus clientes, já que um dia eles também já compraram produtos de Harry Potter e entendem como é importante fazer suas compras através de um mercado seguro e cuidadoso.</p>
           </div>
 
           <div class="col quem-somos-imagem ajeitar-imagem">
