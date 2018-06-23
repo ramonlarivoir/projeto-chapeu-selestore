@@ -212,3 +212,22 @@ width: 100%;
   text-align-last: center;
 
 }
+.tamanho-padrao-carousel-imagem{
+  width:100% !important;
+  height: 700px !important;
+
+
+}
+.tamanho-padrao-card-imagem-produtos{
+  width:100% !important;
+  height: 200px !important;
+
+
+}
+
+.tamanho-padrao-card-imagem-index{
+  width:100% !important;
+  height: 400px !important;
+
+
+}
