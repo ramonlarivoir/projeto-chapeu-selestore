@@ -34,12 +34,12 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ">
                         <li class="nav-item nav-item-adm">
-                            <a class="nav-link" href="#">Categoria 1
+                            <a class="nav-link" href="tabela-produtos.php">Produtos
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item nav-item-adm">
-                            <a class="nav-link" href="#">Categoria 2
+                            <a class="nav-link" href="tabela-Categorias.php">Categorias
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
