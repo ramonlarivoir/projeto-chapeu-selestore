@@ -18,7 +18,7 @@
             header("Location: index.php");
         } else{
             $_SESSION['usuarioLogin'] = $row['login'];
-            header("Location: AdminProduto.php");
+            header("Location: tabela-produtos.php");
         }
 
 	}
