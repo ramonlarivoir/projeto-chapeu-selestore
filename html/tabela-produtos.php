@@ -47,7 +47,7 @@ include("conexao.php");
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
                         $descricao = $row['descricao'];
-                        $imagem = $row['url-imagem'];
+                        $imagem = $row['url_imagem'];
                         echo
                             '
                             <tr>
@@ -67,7 +67,7 @@ include("conexao.php");
                                 </td>
                                 <td>
                                     <a href="AdminProduto.php?id='.$idProduto.'">
-                                        <img src="../assets/bootstrap/icons/png/cog-2x.png">
+                                        <img  src="../assets/bootstrap/icons/png/cog-2x.png">
                                     </a>
                                 </td>
                             </tr>
@@ -83,7 +83,7 @@ include("conexao.php");
                                         </div>
                                         
                                         <div class="modal-body">
-                                            <img src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
+                                            <img  class = "img-responsive img-modal" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>
