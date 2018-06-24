@@ -49,7 +49,7 @@
 					</p>
 				</div>
 				<div class="col-12 text-center" id="btn-produto-indiv">
-					<a href="produtos.html" class="btn btn-primary" role="button">Voltar</a>
+					<a href="produtos.php" class="btn btn-primary" role="button">Voltar</a>
 				</div>
 			</div>
 		</div>
