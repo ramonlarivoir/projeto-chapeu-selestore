@@ -6,7 +6,7 @@
         $novoUsuario = $_POST['usuario'];
         $novaSenha =   $_POST['senha'];
         $confirmarNovaSenha = $_POST['confirmacaoDaSenha'];
-        $query = "UPDATE usuario SET login = '$novoUsuario', senha = '$novaSenha' WHERE id_usuario = $id";
+        $query = "UPDATE usuario SET login = '$novoUsuario', senha = MD5('$novaSenha') WHERE id_usuario = $id";
         if($novaSenha != $confirmarNovaSenha){
             echo 
                 '<div class="alert alert-danger text-center" role="alert">
