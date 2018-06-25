@@ -57,17 +57,17 @@ include("conexao.php");
                                 <td>'.$descricao.'</td>
                                 <td>
                                     <a href="" role="button" data-toggle="modal" data-target="#exibirImagem'.$contador.'">
-                                        <img src="../assets/bootstrap/icons/png/eye-2x.png">
+                                        <img src="../../assets/bootstrap/icons/png/eye-2x.png">
                                     </a>
                                 </td>
                                 <td>
                                     <a href="" role="button" data-toggle="modal" data-target="#excluirProduto'.$contador.'">
-                                        <img src="../assets/bootstrap/icons/png/trash-2x.png">
+                                        <img src="../../assets/bootstrap/icons/png/trash-2x.png">
                                     </a>
                                 </td>
                                 <td>
                                     <a href="AdminProduto.php?id='.$idProduto.'">
-                                        <img  src="../assets/bootstrap/icons/png/cog-2x.png">
+                                        <img  src="../../assets/bootstrap/icons/png/cog-2x.png">
                                     </a>
                                 </td>
                             </tr>
@@ -127,7 +127,7 @@ include("conexao.php");
                 echo'
                 <td>
                     <a href="cadastraProduto.php?">
-                        <img src="../assets/bootstrap/icons/png/plus-2x.png">
+                        <img src="../../assets/bootstrap/icons/png/plus-2x.png">
                     </a>
             </td>';
 

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include ('conexao.php');
+	include ('admin/conexao.php');
 
     if($_SERVER['REQUEST_METHOD']=='POST'){ 
         $email = $_POST['email'];
@@ -18,7 +18,7 @@
             header("Location: index.php");
         } else{
             $_SESSION['usuarioLogin'] = $row['login'];
-            header("Location: tabela-produtos.php");
+            header("Location: admin/tabela-produtos.php");
         }
 
 	}

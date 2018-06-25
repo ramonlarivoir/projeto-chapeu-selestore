@@ -47,12 +47,12 @@ include("conexao.php");
                                     <td>'.$nomeCategoria.'</td>
                                     <td>
                                         <a href="" role="button" data-toggle="modal" data-target="#excluirCategoria'.$contador.'">
-                                            <img src="../assets/bootstrap/icons/png/trash-2x.png">
+                                            <img src="../../assets/bootstrap/icons/png/trash-2x.png">
                                         </a>
                                     </td>
                                     <td>
                                         <a href="editar_Categoria.php?id='.$idCategoria.'">
-                                            <img src="../assets/bootstrap/icons/png/cog-2x.png">
+                                            <img src="../../assets/bootstrap/icons/png/cog-2x.png">
                                         </a>
                                 </td>
                             </tr>
@@ -87,7 +87,7 @@ include("conexao.php");
                 echo'
                 <td>
                     <a href="cadastraCategoria.php?id='.$idCategoria.'">
-                        <img src="../assets/bootstrap/icons/png/plus-2x.png">
+                        <img src="../../assets/bootstrap/icons/png/plus-2x.png">
                     </a>
             </td>';
 
