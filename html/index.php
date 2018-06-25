@@ -1,6 +1,6 @@
 <?php 
     include ('navbar.php');
-    include('conexao.php');
+    include('admin/conexao.php');
  ?>
 
 <!--Carousel Wrapper-->
