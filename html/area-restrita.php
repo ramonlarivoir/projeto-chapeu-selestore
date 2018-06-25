@@ -6,7 +6,7 @@
       	<div class="col-lg-12">
 
           <ul class="sem-padding sem-marcador">
-      	<img src="../assets/img/arearestrita.png">
+      	<img src="../assets/img/arearestrita.jpg">
       	
       	<div class="margem-sup">
       	<div class="alert alert-danger text-center" role="alert">
