@@ -25,7 +25,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Usuário</th>
                 <th scope="col"></th>
-                <th scope="col"><a href="cadastro-usuario.php"><img src="../assets/bootstrap/icons/png/plus-4x.png" alt="adicionar-usuario"></a></th>
+                <th scope="col"><a href="cadastro-usuario.php"><img src="../../assets/bootstrap/icons/png/plus-4x.png" alt="adicionar-usuario"></a></th>
 
             </tr>
         </thead>
@@ -45,37 +45,37 @@
                                 <td>'.$nomeUsuario.'</td>
                                 <td>
                                     <a href="" role="button" data-toggle="modal" data-target="#excluirUsuario'.$contador.'">
-                                        <img src="../assets/bootstrap/icons/png/trash-2x.png">
+                                        <img src="../../assets/bootstrap/icons/png/trash-2x.png">
                                     </a>
                                 </td>
                                 <td>
                                     <a href="editar-usuario.php?id='.$idUsuario.'">
-                                        <img src="../assets/bootstrap/icons/png/cog-2x.png">
+                                        <img src="../../assets/bootstrap/icons/png/cog-2x.png">
                                     </a>
                                 </td>
                             </tr>
                             <div class="modal fade" id="excluirUsuario'.$contador.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">AVISO</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>      
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">AVISO</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>      
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            Tem certeza que deseja excluir este usuário?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <form method="post" action="tabela-usuarios.php">
+                                                <button href="" type="submit" name ="id" value="'.$idUsuario.'" class="btn btn-danger">Excluir Usuário</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="modal-body">
-                                    Tem certeza que deseja excluir este usuário?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <form method="post" action="tabela-usuarios.php">
-                                        <button href="" type="submit" name ="id" value="'.$idUsuario.'" class="btn btn-danger">Excluir Usuário</button>
-                                    </form>
-                                </div>
-                                </div>
-                            </div>
                             </div>
                             ';
                             $contador++;

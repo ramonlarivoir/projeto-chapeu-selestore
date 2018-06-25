@@ -55,7 +55,7 @@
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/Localização.php">
+        <a class="nav-link nav-link-2" href="../html/localização.php">
           <img src="../assets/bootstrap/icons/png/location-2x.png"> 
           Localização<span class="sr-only">(current)</span></a>
         </div>
@@ -96,11 +96,11 @@
             <form class="px-4 py-3" method="post" action="valida.php">
                     <div class="form-group">
                       <label for="exampleDropdownFormEmail1">Usuário</label>
-                      <input type="text" name="email" class="form-control" id="inputEmail" placeholder="usuário">
+                      <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Nome de usuário">
                     </div>
                     <div class="form-group">
                     <label for="exampleDropdownFormPassword1">Senha</label>
-                    <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="******">
+                    <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
                     </div>
                     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
                   </form>

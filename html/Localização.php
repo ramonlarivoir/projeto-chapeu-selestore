@@ -2,7 +2,7 @@
 	
 <?php include ('navbar.php') ?>
 
-	<div class="localiza">
+	<div class="margem-sup">
 		<section>
 			<div class="endereco">
 				<h1>Localização</h1>
@@ -17,7 +17,7 @@
         <iframe width="100%" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=UFJF&key=AIzaSyAoTAmjuouJBPtSCqntFFN8Tvj3p-ytFmk" allowfullscreen></iframe>
     </section>
   </div>
-	</div>
+</div>
 
 	<?php
 		include("footer.php");
