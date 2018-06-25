@@ -141,16 +141,6 @@ h1.endereco{
 	margin-bottom: 25px;
 }
 
-.color{
-	background-color: rgba(124, 71, 110, 0.6);
-	font-family: serif;
-}
-
-.localiza{
-	background-color: rgba(124, 71, 110, 0.6);
-	font-family: serif;
-}
-
 .erro-form {
 	color: #962a2a;
 	font-size: 12px;
