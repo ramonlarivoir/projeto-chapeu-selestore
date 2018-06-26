@@ -61,6 +61,29 @@
         <?php } // fechando if ?> 
 <!--/.Carousel Wrapper-->
 
+
+<div class="row mb-5 jumb">
+    <div class="col-md-12">
+        <div class="jumb-bg">
+            <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+                <div class="py-5">
+
+                    <!--Content-->
+                       
+                        <h2 class="card-title pt-3 mb-5 font-bold">Confira as maiores novidades do mundo dos Bruxos!</h2>
+                        <p class="px-5 pb-4">Sonserina não, sonserina não...</p>
+                        
+                    <!--Content-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
    <div class="col-lg-12  ">
       <div class="row linha-card ">
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center"> 

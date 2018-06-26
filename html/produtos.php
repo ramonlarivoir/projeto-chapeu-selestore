@@ -18,19 +18,21 @@
 
 <div class="container fonte">
   <div class="row">
-    <div class="col-lg-3">
-      <h1 class="titulo-categorias">Filtro</h1>
+      <div class="col-lg-3 conjunto-categorias"  >
+      <div class="card-3">
+      <h1 class="titulo-categorias">O que deseja?</h1>
       <!-- campo search -->
         <div  class="col-sm-12 col-10">
           <form class="form-inline"> <!-- metodo post -->
             <div class="input-group ">
-              <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Procure algo" aria-label="Pesquisar">
-              <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png"></i></button>
+              <input class="form-control form-control-edit  " type="text" name = "pesquisa" placeholder="Busque pelo nome" aria-label="Pesquisar">
+              <button class="btn btn-edit" type="submit"><img src="../assets/bootstrap/icons/png/magnifying-glass-2x.png" class="icones-navbar"></i></button>
             </div>
           </form>
         </div>
         <form method="get">
             <div class="checkbox-todas">
+            <h1 class="subtitulo-categrorias">Categorias</h1>
 
 
 
@@ -60,18 +62,18 @@
 
           </div>
             <div class="aplicar">
-              <button type="submit" name="" class="btn btn-secondary btn-lg btn-2 btn-edit" >Aplicar</button>
+              <button type="submit" name="" class="btn btn-success btn-lg btn-2 btn-edit" >Filtrar</button>
             </div>
-          </div>
-      </form>
-
+        </form>
+      </div>
+      </div>
 
 
 
               <!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
     
 
-   <div class="col-lg-9">
+  <div class="col-lg-9 ">
       <div class="row linha-card">
         <div class="card-deck  card-cascade wider mb-r"> 
 
@@ -122,8 +124,8 @@
             <div class="view overlay zoom">
                 <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top tamanho-padrao-card-imagem-produtos" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
-                  <div class="mask flex-center">
-                      <p class="grey-text"></p> 
+                  <div class="mask  waves-effect waves-light rgba-white-slight flex-center">
+                      <p class="grey-text "></p> 
                   </div>
                 </a>
             </div>           
@@ -189,7 +191,7 @@
 
                 else { ?>
 
-                  <li class="page-item"><a class="page-link" style="<?php if($b == $cod_pagina)  echo $bold; ?>" href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
+                  <li class="page-item"><a class="page-link paginacao" style="<?php if($b == $cod_pagina)  echo $bold; ?>"  href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
 
 
                 <?php 

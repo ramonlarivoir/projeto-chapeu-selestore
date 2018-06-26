@@ -5,10 +5,10 @@
 	<div class="margem-sup">
 		<section>
 			<div class="endereco">
-				<h1>Localização</h1>
+				<h1 class="fonte">Localização</h1>
 				<img src="img/mapa.jpg" alt="" />
 				<ul class="sem-padding sem-marcador">
-					<li>Rua José Lourenço Kelmer, S/n - Martelos, Juiz de Fora - MG, 36036-330</li>
+					<li class="fonte">Rua José Lourenço Kelmer, S/n - Martelos, Juiz de Fora - MG, 36036-330</li>
 				</ul>
 			</div>
 		</section>
