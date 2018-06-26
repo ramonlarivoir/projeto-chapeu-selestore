@@ -4,7 +4,7 @@
     include('admin/conexao.php');
  ?>
 
->>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -88,13 +88,13 @@
 
    <div class="col-lg-12  ">
       <div class="row linha-card ">
-<<<<<<< HEAD
+
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
-       <?php
-=======
+
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
+
        <?php
->>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
+
         if($conexao->connect_error){
         echo 'falha: '. $conexao->connect_error;
       }
