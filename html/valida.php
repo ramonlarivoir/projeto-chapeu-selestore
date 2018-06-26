@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	include ('conexao.php');
+	include ('admin/conexao.php');
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){ 
+    if($_SERVER['REQUEST_METHOD']=='POST'){
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $senha = md5($senha);
@@ -13,15 +13,15 @@
         //$resultado = mysqli_fetch_assoc($result);
 
         if (empty($resultado)) {
-			
+
             $_SESSION['loginErro'] = "mandado";
             header("Location: index.php");
         } else{
             $_SESSION['usuarioLogin'] = $row['login'];
-            header("Location: tabela-produtos.php");
+            header("Location: admin/tabela-produtos.php");
         }
 
 	}
-	
+
 
 ?>

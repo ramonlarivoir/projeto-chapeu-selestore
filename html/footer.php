@@ -22,7 +22,7 @@
                 </div>
                 <!-- coluna 2-->
                 <div class="col-md-4 col-sm-3 text-md-center text-sm-center">
-                    <img id="logo-footer" src="../assets/img/Chapeu-Logo.png">
+                    <img id="logo-footer" src="../assets/img/Chapeu.png" class="">
                 </div>
                 <!-- coluna 3-->
                 <div class="col-md-4 col-sm-3 text-md-right text-sm-right">

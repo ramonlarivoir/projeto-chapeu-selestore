@@ -1,26 +1,10 @@
-<?php 
+
+<?php
     include ('navbar.php');
-    $server = 'localhost';
-    $user = 'admin';
-    $password = 'admin';
-    $db_name = 'chapeuSelestore';
-    $port = '3306';
-
-    $db_connect = new mysqli($server, $user,$password,
-      $db_name, $port);
-    mysqli_set_charset($db_connect,"utf8");
-
+    include('admin/conexao.php');
  ?>
 
-
-
-
-
-
-
-
-
-
+>>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -33,20 +17,20 @@
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
 
-      <?php 
+      <?php
       //achando os maiores valores de id_produto
-      $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+      $rowSQL = mysqli_query($conexao,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
       $row = mysqli_fetch_array( $rowSQL );
       $maiorId = $row['max'];
 
       $sql = "SELECT * from produto ORDER BY id_produto DESC"; // ordenando por id_produto decrescente
-      $result = $db_connect->query($sql);
+      $result = $conexao->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
             while( $i > $maiorId - 3 && $row = $result->fetch_assoc()){    ?>
 
 
-      
+
         <div class="carousel-item <?php if($i === $maiorId){ echo 'active'; }  ?>">
             <div class="view">
                 <img class="d-block w-100 tamanho-padrao-carousel-imagem "  src="<?php echo $row['url_imagem'] ; ?>" alt="">
@@ -76,24 +60,52 @@
     </a>
     <!--/.Controls-->
 </div>
-        <?php } // fechando if ?> 
+        <?php } // fechando if ?>
 <!--/.Carousel Wrapper-->
+
+
+<div class="row mb-5 jumb">
+    <div class="col-md-12">
+        <div class="jumb-bg">
+            <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+                <div class="py-5">
+
+                    <!--Content-->
+
+                        <h2 class="card-title pt-3 mb-5 font-bold">Confira as maiores novidades do mundo dos Bruxos!</h2>
+                        <p class="px-5 pb-4">Sonserina não, sonserina não...</p>
+
+                    <!--Content-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
    <div class="col-lg-12  ">
       <div class="row linha-card ">
-        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center"> 
-       <?php 
-        if($db_connect->connect_error){
-        echo 'falha: '. $db_connect->connect_error;
+<<<<<<< HEAD
+        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
+       <?php
+=======
+        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
+       <?php
+>>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
+        if($conexao->connect_error){
+        echo 'falha: '. $conexao->connect_error;
       }
       else{
         //achando os maiores valores de id_produto
-        $rowSQL = mysqli_query($db_connect,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
+        $rowSQL = mysqli_query($conexao,"SELECT MAX( id_produto ) AS max FROM `produto`;" );
         $row = mysqli_fetch_array( $rowSQL );
         $maiorId = $row['max'];
 
         $sql = "SELECT * from produto ORDER BY id_produto DESC";
-        $result = $db_connect->query($sql);
+        $result = $conexao->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
           while( $i > $maiorId - 6 && $row = $result->fetch_assoc()){    ?>
@@ -103,10 +115,10 @@
                  class="img-fluid  hoverable rounded card-img-top tamanho-padrao-card-imagem-index "style="width: 1000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask flex-center">
-                      <p class="grey-text"></p> 
+                      <p class="grey-text"></p>
                   </div>
                 </a>
-            </div>           
+            </div>
             <div class="card-body" >
               <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
               <p class="card-text informacoes-card">
