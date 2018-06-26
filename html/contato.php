@@ -101,7 +101,7 @@ use PHPMailer\PHPMailer\Exception;
             
   ?>
   
-<div class="color">
+  <div class="margem-sup fonte">
     <div class ="container-fluid">
       <div class="contato col-12">
         <h2>Envie sua mensagem</h2>

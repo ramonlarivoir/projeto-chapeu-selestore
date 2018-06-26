@@ -1,10 +1,10 @@
-<?php
-    include('navbar.php');
 
-    include('conexao.php');
+<?php
+    include ('navbar.php');
+    include('admin/conexao.php');
  ?>
 
-
+>>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -63,10 +63,38 @@
         <?php } // fechando if ?>
 <!--/.Carousel Wrapper-->
 
+
+<div class="row mb-5 jumb">
+    <div class="col-md-12">
+        <div class="jumb-bg">
+            <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+                <div class="py-5">
+
+                    <!--Content-->
+
+                        <h2 class="card-title pt-3 mb-5 font-bold">Confira as maiores novidades do mundo dos Bruxos!</h2>
+                        <p class="px-5 pb-4">Sonserina não, sonserina não...</p>
+
+                    <!--Content-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
    <div class="col-lg-12  ">
       <div class="row linha-card ">
+<<<<<<< HEAD
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
        <?php
+=======
+        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
+       <?php
+>>>>>>> 025d8f9fcf28b65cd5450aafe012b96277932c2f
         if($conexao->connect_error){
         echo 'falha: '. $conexao->connect_error;
       }

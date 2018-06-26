@@ -18,10 +18,6 @@
     <link href="../assets/bootstrap/css/mdb.min.css" rel="stylesheet">
     <link href="../assets/css/produtoIndiv.css" rel="stylesheet">
 
-
-    <title>Produtos</title>
-
-
   </head>
   <body class="bg">
 
@@ -42,35 +38,35 @@
       <li class="nav-item nav-item-2">
         <div class="">
           <a class="nav-link nav-link-2 " href="../html/index.php">
-          <img src="../assets/bootstrap/icons/png/home-2x.png" >
+          <img src="../assets/bootstrap/icons/png/home-2x.png" class="icones-navbar">
           Home<span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
         <div class="">
           <a class="nav-link nav-link-2" href="../html/produtos.php">
-           <img src="../assets/bootstrap/icons/png/cart-2x.png"> 
+           <img src="../assets/bootstrap/icons/png/cart-2x.png"class="icones-navbar"> 
           Produtos <span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/Localização.php">
-          <img src="../assets/bootstrap/icons/png/location-2x.png"> 
+        <a class="nav-link nav-link-2" href="../html/localização.php">
+          <img src="../assets/bootstrap/icons/png/location-2x.png" class="icones-navbar"> 
           Localização<span class="sr-only">(current)</span></a>
         </div>
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
         <a class="nav-link nav-link-2" href="../html/quem-somos.php">
-          <img src="../assets/bootstrap/icons/png/info-2x.png"> 
+          <img src="../assets/bootstrap/icons/png/info-2x.png" class="icones-navbar"> 
           Quem Somos<span class="sr-only">(current)</span></a>
         </div>
       </li>
        <li class="nav-item nav-item-2">
       <div class="">
         <a class="nav-link nav-link-2" href="../html/contato.php"> 
-          <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png">
+          <img src="../assets/bootstrap/icons/png/envelope-closed-2x.png" class="icones-navbar">
           Contato<span class="sr-only">(current)</span></a>
         </div>
       </li>
@@ -79,7 +75,7 @@
         <!-- Button trigger modal -->
 
     <a href="" role="button" data-toggle="modal" data-target="#exampleModal">
-    <img src="../assets/bootstrap/icons/png/person-3x.png"></a>
+    <img src="../assets/bootstrap/icons/png/person-3x.png" class="icones-navbar"></a>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
