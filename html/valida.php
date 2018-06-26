@@ -2,7 +2,7 @@
 	session_start();
 	include ('conexao.php');
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){ 
+    if($_SERVER['REQUEST_METHOD']=='POST'){
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $senha = md5($senha);
@@ -13,7 +13,7 @@
         //$resultado = mysqli_fetch_assoc($result);
 
         if (empty($resultado)) {
-			
+
             $_SESSION['loginErro'] = "mandado";
             header("Location: index.php");
         } else{
@@ -22,6 +22,6 @@
         }
 
 	}
-	
+
 
 ?>

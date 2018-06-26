@@ -19,14 +19,14 @@
                $nome = $_POST["nomeC"];
 
 
-              
+
 
 
 
                if($conexao->connect_error==true){
                  echo 'falha na conexão'.$conexao->connect_error;
                }else{
-                  
+
 
 
                   if($nome != NULL){
