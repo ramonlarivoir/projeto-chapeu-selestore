@@ -1,59 +1,55 @@
 <?php
     include("navbar-admin.php");
-
     include("conexao.php");
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $id = $_POST['id'];
+        $novaCategoria = $_POST['categoria'];
 
+        $query = "UPDATE categoria SET nome_categoria = '$novaCategoria' WHERE id_categoria = $id";
 
-    $nome = $_POST['nomeC'];
-    $id = $_GET['id'];
-
-    $query = "SELECT * from categoria WHERE id_categoria = '$id'";
-    $resultado = $conexao->query($query);
-
-        while($row = $resultado->fetch_assoc()){
-            $nomeCategoria = $row['nome_categoria'];
-          }
-
-
-?>
-
-<div class = "container">
-    <div class ="row">
-
-
-      <form action="editar_Categoria.php?id=<?php echo $id; ?>" method="post" class="form-admin-produto">
-        <label for="nomeC">Nome da Categoria:</label>
-        <input type="text" name="nomeC" id="nomeC" class="form-control" value="<?php echo $nomeCategoria; ?>"/required>
-
-
-
-         <button class="mt-3 btn btn-success " type="submit">Salvar</button>
-
-         <?php
-
-         if($conexao->connect_error==true){
-           echo 'falha na conexão'.$conexao->connect_error;
-         }else{
-
-            if($nome != NULL){
-                   $sql = "UPDATE categoria SET nome_categoria='$nome' WHERE id_categoria='$id'";
-              $conexao->query($sql);
+            $resultado = $conexao->query($query);
+            if($resultado){
+                echo
+                    '<div class="alert alert-success text-center" role="alert">
+                        CATEGORIA EDITADA COM SUCESSO!!!
+                    </div>';
+            }else{
+                echo
+                    '<div class="alert alert-danger text-center" role="alert">
+                      AVISO: ERRO AO TENTAR EDITAR CATEGORIA!!!
+                     </div>';
             }
-              $conexao->query($sql);
 
-         }
+            echo '    <div class="col-3 mx-auto">
+                      <form action="tabela-Categorias.php">
+                    <button type="submit" name="id" value = "'.$id.'" class="btn btn-primary ">Voltar à tabela de categorias</button>
+                      </form>
+                </div>';
 
+        }
+    if($_SERVER['REQUEST_METHOD']=='GET'){
+        $id = $_GET['id'];
+        $query = "SELECT * from categoria WHERE id_categoria = '$id' ";
+        $resultado = $conexao->query($query);
+        $row = $resultado->fetch_assoc();
+        $nomeCategoria = $row['nome_categoria'];
+        echo '
+            <div class="col-6 mx-auto" id="formulario-categoria">
+                <form action="editar_Categoria.php" method="post">
+                    <div class="form-group">
+                        <label for="categoria">Nome da categoria</label>
+                        <input type="text" class="form-control input-cadastro-categoria" name="categoria" value="'.$nomeCategoria.'" required>
+                    </div>
 
-          ?>
+                    <div class="col-3 mx-auto ">
+                        <button type="submit" name="id" value = "'.$id.'" class="btn btn-primary ">Enviar</button>
+                    </div>
+                </form>
 
+            </div>
+        ';
 
-        </form>
+    }
 
-      </div>
-
-         <a class="mt-3 mb-3 btn btn-primary" href="tabela-Categorias.php" role="button">Voltar</a>
-
-   </div>
-<?php
     include("footer-admin.php");
 ?>
