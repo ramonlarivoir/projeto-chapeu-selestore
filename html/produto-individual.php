@@ -1,23 +1,17 @@
-<?php 
+<?php
 	include("navbar.php");
+    include('admin/conexao.php');
 
 	$cod_produto = $_GET['produto'];
-	$server = 'localhost';
-    $user = 'admin';
-    $password = 'admin';
-    $db_name = 'chapeuSelestore';
-    $port = '3306';
+ 
 
-    $db_connect = new mysqli($server, $user,$password,$db_name, $port);
-    mysqli_set_charset($db_connect,"utf8");
-
-    if($db_connect->connect_error){
-      echo 'falha: '. $db_connect->connect_error;
+    if($conexao->connect_error){
+      echo 'falha: '. $conexao->connect_error;
     }
     else{
 
-	      $sql = "SELECT * from produto WHERE id_produto = '$cod_produto'"; 
-	      $result = $db_connect->query($sql);
+	      $sql = "SELECT * from produto WHERE id_produto = '$cod_produto'";
+	      $result = $conexao->query($sql);
 
 	      if($result->num_rows > 0){
 
@@ -34,7 +28,7 @@
 ?>
 
 	<?php if ($produto_cod != 	NULL){ ?>
-		<div class="container mx-auto " id="produto-box">
+		<div class="container mx-auto conjunto-categorias " id="produto-box">
 			<h1 id="h-produto-indiv"><?php echo $produto_nome ?> </h1>
 			<div class="row">
 				<div class="col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-8 text-lg-left text-md-right text-sm-center tex-xs-center" id="img-produto-indiv">
@@ -63,7 +57,7 @@
 			<h2 style="color:#333;">Nem os melhores bruxos encontraram esse produto.</h2>
 		</div>
 
-		<?php 
-	} 
+		<?php
+	}
 		include("footer.php");
 		?>

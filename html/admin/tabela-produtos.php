@@ -30,7 +30,8 @@ include("conexao.php");
                 <th scope="col">Descrição</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col"><a href="cadastraProduto.php"><img src="../../assets/bootstrap/icons/png/plus-4x.png" alt="adicionar-usuario"></a></th>
+
 
 
 
@@ -74,20 +75,20 @@ include("conexao.php");
                             <div class="modal fade" id="exibirImagem'.$contador.'" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
-                                    
+
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="imageModalLabel">Imagem do Produto</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
-                                            </button>      
+                                            </button>
                                         </div>
-                                        
+
                                         <div class="modal-body">
                                             <img  class = "img-responsive img-modal" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>
-                    
+
                                         </div>
                                     </div>
                                 </div>
@@ -124,12 +125,6 @@ include("conexao.php");
                     }
                 }
 
-                echo'
-                <td>
-                    <a href="cadastraProduto.php?">
-                        <img src="../../assets/bootstrap/icons/png/plus-2x.png">
-                    </a>
-            </td>';
 
                 mysqli_close($conexao);
             ?>

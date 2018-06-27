@@ -4596,27 +4596,27 @@ a.waves-effect, a.waves-light {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
-.btn-secondary {
+. {
   background-color: #aa66cc !important;
   color: #fff !important; }
-  .btn-secondary:hover {
+  .:hover {
     background-color: #b579d2; }
-  .btn-secondary:focus, .btn-secondary.focus {
+  .:focus, ..focus {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-  .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+  .:focus, .:active, ..active {
     background-color: #773399; }
-  .btn-secondary.dropdown-toggle {
+  ..dropdown-toggle {
     background-color: #aa66cc !important; }
-    .btn-secondary.dropdown-toggle:hover, .btn-secondary.dropdown-toggle:focus {
+    ..dropdown-toggle:hover, ..dropdown-toggle:focus {
       background-color: #b579d2 !important; }
-  .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active,
-  .show > .btn-secondary.dropdown-toggle {
+  .:not([disabled]):not(.disabled):active, .:not([disabled]):not(.disabled).active,
+  .show > ..dropdown-toggle {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     background-color: #773399 !important; }
-  .btn-secondary:not([disabled]):not(.disabled):active:focus, .btn-secondary:not([disabled]):not(.disabled).active:focus,
-  .show > .btn-secondary.dropdown-toggle:focus {
+  .:not([disabled]):not(.disabled):active:focus, .:not([disabled]):not(.disabled).active:focus,
+  .show > ..dropdown-toggle:focus {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 

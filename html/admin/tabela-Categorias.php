@@ -27,7 +27,8 @@ include("conexao.php");
                 <th scope="col">ID</th>
                 <th scope="col">Categoria</th>
                 <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col"><a href="cadastraCategoria.php"><img src="../../assets/bootstrap/icons/png/plus-4x.png" alt="adicionar-usuario"></a></th>
+
 
             </tr>
         </thead>
@@ -83,14 +84,6 @@ include("conexao.php");
                             $contador++;
                     }
                 }
-
-                echo'
-                <td>
-                    <a href="cadastraCategoria.php?id='.$idCategoria.'">
-                        <img src="../../assets/bootstrap/icons/png/plus-2x.png">
-                    </a>
-            </td>';
-
 
 
                 mysqli_close($conexao);

@@ -1,6 +1,7 @@
 <?php
     session_start(); 
 
+<<<<<<< HEAD
     $erro = NULL;
     $server = 'localhost';
     $user = 'admin';
@@ -29,17 +30,40 @@
             
         }elseif(isset($resultado)){
             $_SESSION['usuarioLogin'] = $resultado['login'];
+=======
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $senha = md5($senha);
+
+        $query = "SELECT * FROM usuario WHERE login = '$email' AND senha = '$senha'";
+		$resultado = $conexao->query($query);
+		$row = $resultado->fetch_assoc();
+        //$resultado = mysqli_fetch_assoc($result);
+
+        if (empty($resultado)) {
+
+            $_SESSION['loginErro'] = "mandado";
+            header("Location: index.php");
+        } else{
+            $_SESSION['usuarioLogin'] = $row['login'];
+>>>>>>> master
             header("Location: admin/tabela-produtos.php");
         }else{
             $_SESSION['loginErro'] = "Usuário ou senha inválido";
             header("Location: ".$_SERVER['HTTP_REFERER']."");
         }
 
+<<<<<<< HEAD
 
     } else {
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
         header("Location: ".$_SERVER['HTTP_REFERER']."");
     }
 }
+=======
+	}
+>>>>>>> master
+
 
 ?>
