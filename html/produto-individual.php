@@ -28,7 +28,7 @@
 ?>
 
 	<?php if ($produto_cod != 	NULL){ ?>
-		<div class="container mx-auto " id="produto-box">
+		<div class="container mx-auto conjunto-categorias " id="produto-box">
 			<h1 id="h-produto-indiv"><?php echo $produto_nome ?> </h1>
 			<div class="row">
 				<div class="col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-8 text-lg-left text-md-right text-sm-center tex-xs-center" id="img-produto-indiv">
