@@ -1,10 +1,9 @@
 <?php
 	include("navbar.php");
+    include('admin/conexao.php');
 
 	$cod_produto = $_GET['produto'];
-	include("conexao.php");
-
-    mysqli_set_charset($conexao,"utf8");
+ 
 
     if($conexao->connect_error){
       echo 'falha: '. $conexao->connect_error;
