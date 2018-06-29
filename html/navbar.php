@@ -51,7 +51,7 @@
       </li>
       <li class="nav-item nav-item-2">
       <div class="">
-        <a class="nav-link nav-link-2" href="../html/localização.php">
+        <a class="nav-link nav-link-2" href="../html/Localização.php">
           <img src="../assets/bootstrap/icons/png/location-2x.png" class="icones-navbar"> 
           Localização<span class="sr-only">(current)</span></a>
         </div>

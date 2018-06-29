@@ -1,3 +1,4 @@
+<title>Quem somos</title>
 <?php include ('navbar.php') ?>
 
       <!-- Pagina Quem somos -->

@@ -3,6 +3,7 @@
 include("conexao.php");
 
 ?>
+<title>Tabela de Produtos</title>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from produto WHERE id_produto ='$id'";

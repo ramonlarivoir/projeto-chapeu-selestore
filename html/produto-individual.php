@@ -1,3 +1,4 @@
+<title>Produto</title>
 <?php
 	include("navbar.php");
     include('admin/conexao.php');
