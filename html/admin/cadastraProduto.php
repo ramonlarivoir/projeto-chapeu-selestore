@@ -60,13 +60,7 @@ include("conexao.php");
 
 
  ?>
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title></title>
-    </head>
-    <body>
+
 
       <div class = "container">
           <div class ="row">
@@ -77,10 +71,9 @@ include("conexao.php");
 
            <input type="file" value="Input" name="file" ></input>
 
-
-
      </div>
 
+       <div class = "container">
      <label for="nomeC">Nome:</label>
        <input type="text" name="nomeC" id="nomeC" class="form-control"/required>
        <label for="preço">Preço:</label>
@@ -110,14 +103,13 @@ include("conexao.php");
 
 
        </form>
+     </div>
 
     </div>
+
      <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
   </div>
 
-
-    </body>
-  </html>
 
 
 <?php
