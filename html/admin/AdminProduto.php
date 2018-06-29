@@ -31,6 +31,7 @@ include("conexao.php");
       if($fileError === 0){
         if($fileSize<1000000){
           $fileNameNew = uniqid('',true).".".$fileActualExt;
+          $fileDestination2 = '../assets/img/'.$fileNameNew;
           $fileDestination = '../../assets/img/'.$fileNameNew;
           move_uploaded_file($fileTemporaryName,$fileDestination);
         }else{
@@ -66,7 +67,7 @@ include("conexao.php");
    $id = $_GET['id'];
 
    if($fileDestination!=null){
-     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination' WHERE id_produto='$id'";
+     $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao',url_imagem = '$fileDestination2' WHERE id_produto='$id'";
    }else{
      $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao' WHERE id_produto='$id'";
    }
@@ -79,7 +80,7 @@ include("conexao.php");
             $nomeProduto = $row['nome_produto'];
             $precoProduto = $row['preco'];
             $descricaoProduto = $row['descricao'];
-            $arquivineo = $row["url_imagem"];
+            $arquivineo = '../'.$row["url_imagem"];
             $categoriaProduto = $row["id_categoria"];
           }
 

@@ -48,7 +48,7 @@ include("conexao.php");
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
                         $descricao = $row['descricao'];
-                        $imagem = $row['url_imagem'];
+                        $imagem = '../'.$row['url_imagem'];
                         echo
                             '
                             <tr>

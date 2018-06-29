@@ -1,5 +1,5 @@
 
-<?php 
+<?php
     include ('navbar.php');
     include('admin/conexao.php');
 
@@ -9,7 +9,7 @@
 
       <!-- Produtos  Search -->
 
-      <?php  
+      <?php
       // listagem de categorias
       $categorias = "SELECT * FROM `categoria`";
       $resultadoCategorias = $conexao->query($categorias);
@@ -36,16 +36,16 @@
 
 
 
-        <?php  
+        <?php
         //pesquisa por texto
-          
+
           @$pesquisa = $_GET['pesquisa'];
 
           @$opcaoEscolhida = $_GET['Filtro'];
 
         //exibir categorias
         if($resultadoCategorias->num_rows > 0){
-          while($exibirC = $resultadoCategorias->fetch_assoc()){           
+          while($exibirC = $resultadoCategorias->fetch_assoc()){
         ?>
             <div class=" form-group form-check  checkbox-individual" >
               <input class="form-check-input" type="radio" name="Filtro" id="<?php echo $exibirC['id_categoria']?>" value="<?php echo $exibirC['id_categoria'];?>">
@@ -53,7 +53,7 @@
                   <?php echo $exibirC['nome_categoria']; ?>
               </label>
             </div>
-            <?php 
+            <?php
           }
 
         } ?>
@@ -71,13 +71,13 @@
 
 
               <!-- list group item -> cria um 'menu'  action -> cria efeito quando mouse esta em cima  light -> personalizando cores -->
-    
+
 
   <div class="col-lg-9 ">
       <div class="row linha-card">
-        <div class="card-deck  card-cascade wider mb-r"> 
+        <div class="card-deck  card-cascade wider mb-r">
 
-      <?php 
+      <?php
       if(isset($_GET['page']))
         $cod_pagina = $_GET['page'];
       else $cod_pagina=1;
@@ -89,7 +89,7 @@
       $todosProdutos = "SELECT * from produto";
       $resultadoTodosProdutos =   $conexao->query($todosProdutos);
       $cou = mysqli_num_rows($resultadoTodosProdutos);
-        
+
 
 
       if($pesquisa){
@@ -100,35 +100,38 @@
           $result =   $conexao->query($sql); // mostrar os produtos ja filtrados dentro do limite de 9 por categoria
       }
       else if($opcaoEscolhida){
-          $opcaoEscolhida = $_GET['Filtro'];  
+          $opcaoEscolhida = $_GET['Filtro'];
           $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida'";
           $result =   $conexao->query($sql);
           $cou = mysqli_num_rows($result);
-          
+
 
           $sql = "SELECT * from produto  WHERE id_categoria LIKE '$opcaoEscolhida' limit ". $inicioProdutos . ',' .$finalProdutos;
           $result = $conexao->query($sql);
          }
 
-      else {      
+      else {
         $sql = "SELECT * from produto  limit " . $inicioProdutos . ',' .$finalProdutos;
-        $result = $conexao->query($sql);   
-      }      
-      
-      
-      
+        $result = $conexao->query($sql);
+      }
+
+
+
       if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){            ?>
 
           <div class="col-xl-3 col-md-5 col-sm-12 text-center card-2">
             <div class="view overlay zoom">
-                <img src=" <?php echo $row['url_imagem']; ?>"  class="img-fluid  hoverable rounded card-img-top tamanho-padrao-card-imagem-produtos" style="width: 10000px;">
+              <?php
+                $fileExt = explode('..',$row['url_imagem']); 
+              ?>
+                <img src=" <?php echo $fileExt; ?>"  class="img-fluid  hoverable rounded card-img-top tamanho-padrao-card-imagem-produtos" style="width: 10000px;">
                 <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>">
                   <div class="mask  waves-effect waves-light rgba-white-slight flex-center">
-                      <p class="grey-text "></p> 
+                      <p class="grey-text "></p>
                   </div>
                 </a>
-            </div>           
+            </div>
             <div class="card-body" >
               <a href="produto-individual.php?produto=<?php echo $row['id_produto']; ?>" >
               <p class="card-text informacoes-card">
@@ -160,7 +163,7 @@
 
 
 
-      
+
         </div>
       </div>
     </div>
@@ -169,7 +172,7 @@
 
 
 
-    
+
 
 
     <nav aria-label="Navegacao de paginas">
@@ -177,7 +180,7 @@
         <?php $a = $cou/9;
               $a=ceil($a);
               $bold = "font-weight: bold;" ;
-              for($b = 1; $b <= $a ; $b++ ) { 
+              for($b = 1; $b <= $a ; $b++ ) {
 
                 if($pesquisa){      ?>
 
@@ -194,7 +197,7 @@
                   <li class="page-item"><a class="page-link paginacao" style="<?php if($b == $cod_pagina)  echo $bold; ?>"  href="produtos.php?page=<?php echo $b ?>"><?php echo $b ?>  </a></li>
 
 
-                <?php 
+                <?php
                }
 
              }
@@ -202,7 +205,7 @@
       </ul>
     </nav>
   </div>
-  
+
 	<?php
 		include("footer.php");
 	?>
