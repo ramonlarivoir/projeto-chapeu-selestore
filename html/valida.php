@@ -3,8 +3,11 @@
 
     include("conexao.php");
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
     if(!$conexao){
         die("Falha na conexão: " . mysqli_conexaoect_error());
     } else {
