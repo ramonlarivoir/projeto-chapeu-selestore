@@ -74,38 +74,40 @@
     
         <!-- Button trigger modal -->
 
-    <a href="" role="button" data-toggle="modal" data-target="#exampleModal">
+    <a href="" role="button" data-toggle="modal" data-target="#loginModal">
     <img src="../assets/bootstrap/icons/png/person-3x.png" class="icones-navbar"></a>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Área administrativa</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Área administrativa</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
             
-            <form class="px-4 py-3" method="post" action="valida.php">
-                    <div class="form-group">
-                      <label for="exampleDropdownFormEmail1">Usuário</label>
-                      <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Nome de usuário">
-                    </div>
-                    <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Senha</label>
-                    <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
-                    <div class="erro-form"><?php echo $_SESSION['loginErro']; ?></div>
-                    </div>
-                    <button class="btn btn-lg btn-2 btn-block btn-signin" type="submit">Login</button>
-                  </form>
+              <form class="px-4 py-3" method="post" action="valida.php">
+                <div class="form-group">
+                  <label for="loginDropdownFormEmail1">Usuário</label>
+                  <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Nome de usuário">
+                </div>
+                <div class="form-group">
+                  <label for="loginDropdownFormPassword1">Senha</label>
+                  <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
+                  <div class="erro-form">
+                    <?php echo $_SESSION['loginErro']; ?>
+                  </div>
+                </div>
+                <button class="btn btn-lg btn-2 btn-block btn-signin" type="submit">Login</button>
+              </form>
         
+            </div>
+         </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
       
   </div>  
 </nav>

@@ -1,4 +1,12 @@
+#loginModalLabel{
+	color: #000;
+}
+.imagem-area-restrita{
+	width: 100%;
+	height: 100;
+	margin-bottom: 20px;
 
+}
 .SocialMedia{
 	margin-left: 1em;
 	height: 2em;
