@@ -1,6 +1,6 @@
 <?php
 
-$conexao = new mysqli("localhost","root","root","chapeuseletor","3306");
+$conexao = new mysqli("localhost","admin","admin","chapeuSelestore","3306");
 mysqli_set_charset($conexao,"utf8");
 
 
