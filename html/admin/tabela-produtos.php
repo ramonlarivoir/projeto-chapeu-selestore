@@ -48,7 +48,18 @@ include("conexao.php");
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
                         $descricao = $row['descricao'];
-                        $imagem = '../'.$row['url_imagem'];
+
+
+                        $descricaoLonga = $descricao;
+                        if(strlen($descricao)>30){
+
+                            $descricao = substr($descricao, 0, 30);
+                            $descricao .= ' <a href="" role="button" data-toggle="modal" data-target="#exibirImagem'.$contador.'">
+                                                [...]
+                                             </a> ';
+                        }
+                        $imagem = '../'$row['url_imagem'];
+
                         echo
                             '
                             <tr>
@@ -77,14 +88,22 @@ include("conexao.php");
                                     <div class="modal-content">
 
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="imageModalLabel">Imagem do Produto</h5>
+                                            <h5 class="modal-title" id="imageModalLabel">'.$nomeProduto.'</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
 
                                         <div class="modal-body">
-                                            <img  class = "img-responsive img-modal" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
+                                            <div class="card mx-auto" style="width: 18rem;">
+                                                <img  class = "img-responsive card-img-top" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
+                                                <div class="card-body">
+
+                                                    <p class="card-text">'.$descricaoLonga.'</p>
+
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>
