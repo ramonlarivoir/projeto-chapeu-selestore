@@ -1,7 +1,7 @@
 
 	
 <?php include ('navbar.php') ?>
-
+<title>Localização</title>
 	<div class="margem-sup">
 		<section>
 			<div class="endereco">

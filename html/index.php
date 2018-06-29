@@ -3,7 +3,7 @@
     include ('navbar.php');
     include('admin/conexao.php');
  ?>
-
+<title>Home</title>
 
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">

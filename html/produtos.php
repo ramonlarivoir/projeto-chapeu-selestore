@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 <?php
+=======
+<title>Produtos</title>
+<?php 
+>>>>>>> ba111fa2b1bfd54965bd8c147ef8690a372acee9
     include ('navbar.php');
     include('admin/conexao.php');
 

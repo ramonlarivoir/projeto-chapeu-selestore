@@ -8,7 +8,7 @@
 include("conexao.php");
 
 ?>
-
+<title>Cadastro de Produtos</title>
 <?php
 
   if(isset($_POST['submit'])){

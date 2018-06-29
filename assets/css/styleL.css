@@ -198,6 +198,7 @@ width: 100%;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+   overflow-x: hidden;
 
   }
   .card-footer-edit{

@@ -1,5 +1,6 @@
 <?php include('navbar-admin.php');?>
 <?php include('conexao.php');?>
+<title>Cadastro de Categoria</title>
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $senha = $_POST['senha'];
