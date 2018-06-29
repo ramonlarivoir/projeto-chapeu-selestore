@@ -46,7 +46,8 @@
                             <a class="nav-link" href="tabela-usuarios.php">Usuarios
                                 <span class="sr-only">(current)</span>
                             </a>
-
+                        </li>
+                       
                     </ul>
                     <a class="nav-link " id="nav-adm-icon" href="sair.php">
                             <img src="../../assets/bootstrap/icons/png/account-logout-3x.png">
