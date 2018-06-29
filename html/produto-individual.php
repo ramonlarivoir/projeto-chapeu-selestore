@@ -1,10 +1,9 @@
 <?php
 	include("navbar.php");
+    include('admin/conexao.php');
 
 	$cod_produto = $_GET['produto'];
-	include("conexao.php");
-
-    mysqli_set_charset($conexao,"utf8");
+ 
 
     if($conexao->connect_error){
       echo 'falha: '. $conexao->connect_error;
@@ -29,7 +28,7 @@
 ?>
 
 	<?php if ($produto_cod != 	NULL){ ?>
-		<div class="container mx-auto " id="produto-box">
+		<div class="container mx-auto conjunto-categorias " id="produto-box">
 			<h1 id="h-produto-indiv"><?php echo $produto_nome ?> </h1>
 			<div class="row">
 				<div class="col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-8 text-lg-left text-md-right text-sm-center tex-xs-center" id="img-produto-indiv">
@@ -44,7 +43,7 @@
 					</p>
 				</div>
 				<div class="col-12 text-center" id="btn-produto-indiv">
-					<a href="produtos.php" class="btn btn-primary" role="button">Voltar</a>
+					<a href="produtos.php" class="btn btn-success btn-2 btn-edit" role="button">Voltar</a>
 				</div>
 			</div>
 		</div>

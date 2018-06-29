@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if(!isset($_SESSION['usuarioLogin'])){
+    if(($_SESSION['usuarioLogin'])==NULL){
       header("Location: ../area-restrita.php");
     }
     else {}

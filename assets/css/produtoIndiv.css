@@ -4,7 +4,10 @@
 }
 #produto-box{
 
-	background-color: #422142;
+  background-color: rgba(21, 21, 22, 0.2);
+  background-clip: border-box;
+  border: 1.1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 	margin: 10% 0%;
 	padding-bottom: none;
 }
@@ -13,11 +16,11 @@
 	text-align: center;
 	margin-bottom: 5%;
 	margin-right: 5%;
-	color: rgb(210, 231, 252);
-
+  color: #FFF;
 }
 #ValorProduto{
-	color: #E8DB7D;
+	color: #eee;
+	font-size: 30px;
 	
 }
 
@@ -27,11 +30,12 @@
 	margin-bottom: 5%;
 	padding: 1%;
 	margin-left: 3%;
-	color:rgb(210, 231, 252);
+  color: #FFF;
 	
 }
 #texto-produto-indiv p{
 	text-align: justify;
+
 }
 #img-produto-indiv{
 	align-items: center;
@@ -42,6 +46,6 @@
 	padding: 1%;
 }
 #btn-produto-indiv{
-	background-color: rgb(210, 231, 252);
+	background-color: transparent;
 	padding: 2% 0%;
 }
