@@ -99,7 +99,7 @@
                     <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
                     <div class="erro-form"><?php echo $_SESSION['loginErro']; ?></div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+                    <button class="btn btn-lg btn-2 btn-block btn-signin" type="submit">Login</button>
                   </form>
         
       </div>

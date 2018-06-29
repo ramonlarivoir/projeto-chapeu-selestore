@@ -65,7 +65,7 @@ ul.sem-marcador, ol.sem-marcador{
 	list-style: none;
 }
 a.botao, input.botao{
-	background: rgba(35, 17, 35, 0.88);
+	background: rgba(0,0,0, 0.54);
     opacity: 0.95;
 	padding: 5px 10px;
 	border-radius: 3px;
