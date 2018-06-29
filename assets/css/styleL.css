@@ -87,7 +87,7 @@
 }
 
 .navbar-edit{
-background-color: rgba(0,0,0, 0.94);
+background-color: rgba(3,3,3, 0.8);
 
 }
 
@@ -288,4 +288,10 @@ filter: invert(100%);
 }
 .paginacao{
   color: #fff !important; 
+}
+.erro {
+  color: #fff;
+  padding: 10px;
+  font-size: 26px;
+
 }

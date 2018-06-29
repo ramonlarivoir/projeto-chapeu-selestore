@@ -53,8 +53,8 @@
 
 		?>
 		<div class="col-md-12 text-center">
-			<img src="http://www.jb.com.br/media/fotos/2011/07/08/627w/neville-hermione-ron-e-potter-em-cena.jpg"  >;
-			<h2 style="color:#333;">Nem os melhores bruxos encontraram esse produto.</h2>
+			<img src="../assets/img/erro.jpeg"  >;
+			<h2 style="color:#fff;">Nem os melhores bruxos encontraram esse produto.</h2>
 		</div>
 
 		<?php

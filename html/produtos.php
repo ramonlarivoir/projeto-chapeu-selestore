@@ -151,8 +151,11 @@
 
 
       }
-      else {
-        echo "Não há produtos";
+      else { ?>
+    <div class="col-md-12 text-center">
+      <h3 class="erro">Não há nada como isso por aqui. Talvez o produto seja exclusivo para bruxos... ou apenas em falta no nosso estoque.</h3>
+    </div>
+    <?php 
       }
     ?>
 

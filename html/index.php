@@ -64,7 +64,7 @@
 <!--/.Carousel Wrapper-->
 
 
-<div class="row mb-5 jumb">
+<div class="row mb-4 jumb">
     <div class="col-md-12">
         <div class="jumb-bg">
             <div class="text-white text-center rgba-stylish-strong py-5 px-4">
@@ -86,10 +86,10 @@
 
 
 
-   <div class="col-lg-12  ">
-      <div class="row linha-card ">
+  <div class="col-lg-12  ">
+    <div class="row linha-card ">
 
-        <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
+
 
         <div class="card-deck  card-cascade wider mb-r d-flex justify-content-center">
 
@@ -138,7 +138,7 @@ $i--; } ?>
         </div>
       </div>
     </div>
-  </div>
+
 
 <?php
 }
