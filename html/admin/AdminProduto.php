@@ -31,7 +31,7 @@ include("conexao.php");
       if($fileError === 0){
         if($fileSize<1000000){
           $fileNameNew = uniqid('',true).".".$fileActualExt;
-          $fileDestination = '../assets/img/'.$fileNameNew;
+          $fileDestination = '../../assets/img/'.$fileNameNew;
           move_uploaded_file($fileTemporaryName,$fileDestination);
         }else{
           echo "arquivo muito grande";
@@ -50,7 +50,16 @@ include("conexao.php");
   $preco = $_POST["preço"];
   $descricao = $_POST["descricao"];
   //$fileDestination = $_POST["file"];
-  $idDaCategoria = $_POST["select"];
+  $nomeDaCategoria = $_POST["select"];
+
+  $query2 = "SELECT * from categoria";
+  $resultado2 = $conexao->query($query2);
+ while($row = $resultado2->fetch_assoc()){
+    if($row['nome_categoria']===$nomeDaCategoria){
+      $idDaCategoria = $row['id_categoria'];
+    }
+
+   }
 
 
 
@@ -61,10 +70,10 @@ include("conexao.php");
    }else{
      $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao' WHERE id_produto='$id'";
    }
-    $db_connect->query($resultado);
+    $conexao->query($resultado);
 
     $query = "SELECT * from produto WHERE id_produto = '$id'";
-    $resultado = $db_connect->query($query);
+    $resultado = $conexao->query($query);
 
         while($row = $resultado->fetch_assoc()){
             $nomeProduto = $row['nome_produto'];
@@ -73,6 +82,10 @@ include("conexao.php");
             $arquivineo = $row["url_imagem"];
             $categoriaProduto = $row["id_categoria"];
           }
+
+
+
+
     echo $nomeCategoria;
 
 
@@ -98,7 +111,7 @@ include("conexao.php");
 
 <div class="container mx-auto">
     <div class = "container col-lg-6 ml-8">
-      <label name="idProduto"> ID do Produto:<?php echo $id; ?></label>
+
        <label for="nomeC">Nome:</label>
        <input value="<?php echo $nomeProduto; ?>" type="text" name="nomeC" id="nomeC" class="form-control"/required>
        <label for="preço">Preço:</label>
@@ -114,33 +127,33 @@ include("conexao.php");
        <select class="form-control form-control-sm" name="select">
      <?php
      $query = "SELECT * from categoria";
-     $resultado = $db_connect->query($query);
+     $resultado = $conexao->query($query);
      if($resultado >0){
          while($row = $resultado->fetch_assoc()){
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
           if($idCategoria!=$categoriaProduto){
          echo'
-           <option>'.$idCategoria.'</option>
+           <option>'.$nomeCategoria.'</option>
            ';
          }else{
-              echo  '<option selected> '.$categoriaProduto.'</option>';
+              echo  '<option selected> '.$nomeCategoria.'</option>';
          }
          }
        }
-        mysqli_close($db_connect);
+        mysqli_close($conexao);
       ?>
     </div>
       </select>
 
 
           <button class="mt-3 mb-3 btn btn-success" type="submit" name="submit" >Salvar</button>
-
+   <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
 
        </form>
 
     </div>
-     <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
+
   </div>
 
 

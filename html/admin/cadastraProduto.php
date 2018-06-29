@@ -48,7 +48,16 @@ include("conexao.php");
   $preco = $_POST["preço"];
   $descricao = $_POST["descricao"];
   //$fileDestination = $_POST["file"];
-  $idDaCategoria = $_POST["select"];
+  $nomeDaCategoria = $_POST["select"];
+
+   $query2 = "SELECT * from categoria";
+   $resultado2 = $conexao->query($query2);
+  while($row = $resultado2->fetch_assoc()){
+     if($row['nome_categoria']===$nomeDaCategoria){
+       $idDaCategoria = $row['id_categoria'];
+     }
+
+    }
 
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
@@ -91,10 +100,12 @@ include("conexao.php");
           $nomeCategoria = $row['nome_categoria'];
           $idCategoria = $row['id_categoria'];
          echo'
-           <option>'.$idCategoria.'</option>
+           <option>'.$nomeCategoria.'</option>
            ';
          }
        }
+
+
         mysqli_close($conexao);
       ?>
       </select>
