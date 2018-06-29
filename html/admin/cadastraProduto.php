@@ -29,7 +29,7 @@ include("conexao.php");
       if($fileError === 0){
         if($fileSize<1000000){
           $fileNameNew = uniqid('',true).".".$fileActualExt;
-          $fileDestination = '../../assets/img/'.$fileNameNew;
+          $fileDestination = '../assets/img/'.$fileNameNew;
           move_uploaded_file($fileTemporaryName,$fileDestination);
         }else{
           echo "arquivo muito grande";
