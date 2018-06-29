@@ -48,6 +48,10 @@ include("conexao.php");
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
                         $descricao = $row['descricao'];
+                        if(strlen($descricao)>30){
+                            $descricao = substr($descricao, 0, 26);
+                            $descricao .=' ...';
+                        }
                         $imagem = $row['url_imagem'];
                         echo
                             '
