@@ -58,7 +58,7 @@ include("conexao.php");
                                                 [...]
                                              </a> ';
                         }
-                        $imagem = '../'$row['url_imagem'];
+                        $imagem = '../'.$row['url_imagem'];
 
                         echo
                             '
