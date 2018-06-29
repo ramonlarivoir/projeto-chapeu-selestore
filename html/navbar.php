@@ -97,6 +97,7 @@
                     <div class="form-group">
                     <label for="exampleDropdownFormPassword1">Senha</label>
                     <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Senha">
+                    <div class="erro-form"><?php echo $_SESSION['loginErro']; ?></div>
                     </div>
                     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
                   </form>
