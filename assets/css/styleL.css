@@ -132,7 +132,7 @@ width: 100%;
 
 }
 .btn-2:hover{
- background-color: rgba(0,0,0,0.8); !important;
+ background-color: rgba(0,0,0,0.8)  !important;
 
 }
 
@@ -193,7 +193,7 @@ width: 100%;
   }
   .bg{
 
-  background: url('https://images.ctfassets.net/bxd3o8b291gf/2IUoxzrvXWGaQ8eYmyGA2M/2cc6635b219e7b9f8e70fc92cb3f4102/Carousel_2.jpg') center center no-repeat fixed; 
+  background: url('../../assets/img/background.jpg') center center no-repeat fixed ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -270,7 +270,7 @@ filter: invert(100%);
 }
 .jumb-bg{
 
-  background-image: url(http://2.bp.blogspot.com/-hqyUhNSEYHk/UHd9e_aJ2II/AAAAAAAABVE/mmASZ1LByO0/s1600/hogwarts_crest_grunge_wallpape_by_carvedincandy-d48rhf3.jpeg);
+  background: url('../../assets/img/jumb.jpeg');
    background-position: center; 
 }
 .card-3{
