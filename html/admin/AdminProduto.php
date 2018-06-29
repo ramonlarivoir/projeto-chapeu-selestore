@@ -52,7 +52,8 @@ include("conexao.php");
   //$fileDestination = $_POST["file"];
   $idDaCategoria = $_POST["select"];
 
-  $arquivo = $_GET['file'];
+
+
    $id = $_GET['id'];
 
    if($fileDestination!=null){
@@ -60,10 +61,10 @@ include("conexao.php");
    }else{
      $resultado = "UPDATE produto SET id_categoria='$idDaCategoria', nome_produto = '$nome',preco = '$preco', descricao = '$descricao' WHERE id_produto='$id'";
    }
-    $conexao->query($resultado);
+    $db_connect->query($resultado);
 
     $query = "SELECT * from produto WHERE id_produto = '$id'";
-    $resultado = $conexao->query($query);
+    $resultado = $db_connect->query($query);
 
         while($row = $resultado->fetch_assoc()){
             $nomeProduto = $row['nome_produto'];
@@ -84,10 +85,10 @@ include("conexao.php");
           <div class ="row">
    <div class="divAdmProd col-lg-5 col-md-5 mx-auto mt-5 mb-5 text-center card">
 
-      <form  action="AdminProduto.php?id=<?php echo $id; ?>&file=<?php echo $fileDestination;?> ?>" method="POST" enctype="multipart/form-data" class="form-admin-produto">
+      <form  action="AdminProduto.php?id=<?php echo $id;?>" method="POST" enctype="multipart/form-data" class="form-admin-produto">
         <img class="card-img-top" src="<?php echo $arquivineo ?>" alt="Produto 1">
 
-           <input type="file" value="<?php echo  $fileTemporaryName?>" name="file" ></input>
+           <input type="file" value="" name="file" ></input>
 
 
 
@@ -96,43 +97,44 @@ include("conexao.php");
  </div>
 
 <div class="container mx-auto">
-    <div class = "container col-lg-2 ml-8">
+    <div class = "container col-lg-6 ml-8">
+      <label name="idProduto"> ID do Produto:<?php echo $id; ?></label>
        <label for="nomeC">Nome:</label>
        <input value="<?php echo $nomeProduto; ?>" type="text" name="nomeC" id="nomeC" class="form-control"/required>
        <label for="preço">Preço:</label>
        <input value="<?php echo $precoProduto; ?>" type="text" name="preço" id="preço" class="form-control"/required>
 
-     </div>
 
-  <div class = "container col-lg-6 ml-8">
+
+
        <label for="descricao">Descrição:</label>
-       <textarea placeholder="<?php echo $descricaoProduto; ?>" type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
+       <textarea type="text" name="descricao" id="descricao" class="form-control field" rows="3"><?php echo $descricaoProduto; ?></textarea>
 
-       <label for="nomeC">Categoria:</label>
-           <select class="form-control form-control-sm" name="select">
-         <?php
-         $query = "SELECT * from categoria";
-         $resultado = $conexao->query($query);
-         if($resultado >0){
-             while($row = $resultado->fetch_assoc()){
-              $nomeCategoria = $row['nome_categoria'];
-              $idCategoria = $row['id_categoria'];
-              if($idCategoria!=$categoriaProduto){
-             echo'
-               <option>'.$idCategoria.'</option>
-               ';
-             }else{
-                  echo  '<option selected> '.$categoriaProduto.'</option>';
-             }
-             }
-           }
-            mysqli_close($conexao);
-          ?>
-        </div>
-          </select>
+   <label for="nomeC">Categoria:</label>
+       <select class="form-control form-control-sm" name="select">
+     <?php
+     $query = "SELECT * from categoria";
+     $resultado = $db_connect->query($query);
+     if($resultado >0){
+         while($row = $resultado->fetch_assoc()){
+          $nomeCategoria = $row['nome_categoria'];
+          $idCategoria = $row['id_categoria'];
+          if($idCategoria!=$categoriaProduto){
+         echo'
+           <option>'.$idCategoria.'</option>
+           ';
+         }else{
+              echo  '<option selected> '.$categoriaProduto.'</option>';
+         }
+         }
+       }
+        mysqli_close($db_connect);
+      ?>
+    </div>
+      </select>
 
 
-          <button type="submit" name="submit" >Upload</button>
+          <button class="mt-3 mb-3 btn btn-success" type="submit" name="submit" >Salvar</button>
 
 
        </form>

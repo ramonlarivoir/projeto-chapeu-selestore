@@ -99,15 +99,14 @@ include("conexao.php");
       ?>
       </select>
 
-           <button type="submit" name="submit" >Upload</button>
-
-
+    <button type="submit" name="submit" class="btn btn-success">Salvar</button>
+   <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
        </form>
      </div>
 
     </div>
 
-     <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
+
   </div>
 
 
