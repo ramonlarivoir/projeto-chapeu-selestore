@@ -96,7 +96,7 @@ include("conexao.php");
                                                 <img  class = "img-responsive card-img-top" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
                                                 <div class="card-body">
             
-                                                    <p class="card-text">'.$descricaoLonga.'.</p>
+                                                    <p class="card-text">'.$descricaoLonga.'</p>
                                                     
                                                 </div>
                                             </div>

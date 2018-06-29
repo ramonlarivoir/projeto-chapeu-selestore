@@ -42,17 +42,20 @@
     <form action="cadastro-usuario.php" method="post">
         <div class="form-group">
             <label for="usuario">Nome do usuário</label>
-            <input type="text" class="form-control input-cadastro-usuario" name="usuario" placeholder="Seu Nome" required>
+            <input type="text" class="form-control input-cadastro-usuario" name="usuario" placeholder="Ex: Jon Doe" required>
         </div>
         <div class="form-group">
             <label for="Senha">Senha</label>
-            <input type="password" class="form-control input-cadastro-usuario"name="senha" placeholder="Sua Senha" required>
+            <input type="password" class="form-control input-cadastro-usuario"name="senha" placeholder="****" required>
         </div><div class="form-group">
             <label for="Confirmar_Senha">Repita sua senha</label>
-            <input type="password" class="form-control input-cadastro-usuario" name="confirmacaoDaSenha" placeholder="Confirme Sua Senha" required>
+            <input type="password" class="form-control input-cadastro-usuario" name="confirmacaoDaSenha" placeholder="****" required>
         </div>
-        <div class="col-3 mx-auto ">
-            <button type="submit" name="enviar" class="btn btn-primary ">Enviar</button>
+        <div class="col-6">
+            
+            <button type="submit" name="enviar" class="btn btn-success ">Salvar</button>
+            
+            <a href="tabela-produtos.php" type="button" role="button" name="voltar" class="btn btn-danger ">Voltar</a>
         </div>
     </form>
  
