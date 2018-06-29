@@ -9,12 +9,15 @@
 		$resultado = $conexao->query($query);
 		$row = $resultado->fetch_assoc();
         //$resultado = mysqli_fetch_assoc($result);
-        if (empty($resultado)) {
-            $_SESSION['loginErro'] = "mandado";
-            header("Location: index.php");
-        } else{
+        if (empty($row)) {
+            $_SESSION['loginErro'] = "Usuário ou Senha Inválidos";
+            header("Location:".$_SERVER['HTTP_REFERER']);
+        } else {
             $_SESSION['usuarioLogin'] = $row['login'];
             header("Location: admin/tabela-produtos.php");
         }
-	}
+	}else{
+        $_SESSION['loginErro'] = "Usuário ou Senha Inválidos";
+            header("Location:".$_SERVER['HTTP_REFERER']);
+    }
 ?>
