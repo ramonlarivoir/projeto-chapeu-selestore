@@ -1,5 +1,5 @@
 <?php include ('navbar.php') ?>
-
+<title>Contato</title>
 <?php
 
 require 'phpmailer/Exception.php';
