@@ -1,3 +1,4 @@
+<title>Editar Usuário</title>
 <?php
     include("navbar-admin.php");
     include("conexao.php");

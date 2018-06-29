@@ -8,7 +8,7 @@
 include("conexao.php");
 
 ?>
-
+<title>Editar Produto</title>
 <?php
 
 
