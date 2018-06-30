@@ -3,6 +3,7 @@
 include("conexao.php");
 
 ?>
+<title>Tabela de Categorias</title>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from categoria WHERE id_categoria ='$id'";

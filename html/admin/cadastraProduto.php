@@ -8,7 +8,7 @@
 include("conexao.php");
 
 ?>
-
+<title>Cadastro de Produtos</title>
 <?php
 
   if(isset($_POST['submit'])){
@@ -29,7 +29,7 @@ include("conexao.php");
       if($fileError === 0){
         if($fileSize<1000000){
           $fileNameNew = uniqid('',true).".".$fileActualExt;
-          $fileDestination = '../../assets/img/'.$fileNameNew;
+          $fileDestination = '../assets/img/'.$fileNameNew;
           move_uploaded_file($fileTemporaryName,$fileDestination);
         }else{
           echo "arquivo muito grande";
@@ -59,6 +59,8 @@ include("conexao.php");
 
     }
 
+    $fileDestination2 = '../'.$fileDestination;
+
   $arquivo = $_GET['file'];
    $id = $_GET['id'];
 
@@ -76,7 +78,7 @@ include("conexao.php");
    <div class="divAdmProd col-lg-5 col-md-5 mt-5 mb-5 text-center card">
 
       <form  action="cadastraProduto.php" method="POST" enctype="multipart/form-data">
-        <img class="card-img-top" src="<?php echo $fileDestination; ?>" alt="Produto 1">
+        <img class="card-img-top" src="<?php echo $fileDestination2; ?>" alt="Produto 1">
 
            <input type="file" value="Input" name="file" ></input>
 

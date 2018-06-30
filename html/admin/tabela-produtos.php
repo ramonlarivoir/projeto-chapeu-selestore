@@ -3,6 +3,7 @@
 include("conexao.php");
 
 ?>
+<title>Tabela de Produtos</title>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from produto WHERE id_produto ='$id'";
@@ -48,6 +49,8 @@ include("conexao.php");
                         $idProduto = $row['id_produto'];
                         $preco = $row['preco'];
                         $descricao = $row['descricao'];
+
+
                         $descricaoLonga = $descricao;
                         if(strlen($descricao)>30){
 
@@ -56,7 +59,8 @@ include("conexao.php");
                                                 [...]
                                              </a> ';
                         }
-                        $imagem = $row['url_imagem'];
+                        $imagem = '../'.$row['url_imagem'];
+
                         echo
                             '
                             <tr>
@@ -95,12 +99,12 @@ include("conexao.php");
                                             <div class="card mx-auto" style="width: 18rem;">
                                                 <img  class = "img-responsive card-img-top" src= "'.$imagem.'" alt="imagem-do-produto-'.$idProduto.'">
                                                 <div class="card-body">
-            
+
                                                     <p class="card-text">'.$descricaoLonga.'</p>
-                                                    
+
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>

@@ -1,5 +1,6 @@
 <?php include("navbar-admin.php");?>
 <?php include("conexao.php");?>
+<title>Tabela de Usuários</title>
 <?php if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['id'];
         $query = "DELETE from usuario WHERE id_usuario ='$id'";
