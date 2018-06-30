@@ -82,6 +82,7 @@ include("conexao.php");
            <input type="file" value="Input" name="file" ></input>
 
      </div>
+     </div>
 
        <div class = "container">
      <label for="nomeC">Nome:</label>
@@ -91,6 +92,7 @@ include("conexao.php");
 
        <label for="descricao">Descrição:</label>
        <textarea type="text" name="descricao" id="descricao" class="form-control field" rows="3" /required></textarea>
+       <label for="categoria">Categoria:</label>
 
        <select class="form-control form-control-sm" name="select">
      <?php
