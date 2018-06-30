@@ -42,7 +42,7 @@ include("conexao.php");
       }
 
     }else{
-      echo "Este arquivo não é compatível";
+      header("Location:tabela-produtos.php");
     }
   }
 
@@ -148,7 +148,7 @@ include("conexao.php");
 
 
           <button class="mt-3 mb-3 btn btn-success" type="submit" name="submit" >Salvar</button>
-   <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
+          <a class="mt-3 mb-3 btn btn-danger" href="tabela-produtos.php" >Voltar</a>
 
        </form>
 

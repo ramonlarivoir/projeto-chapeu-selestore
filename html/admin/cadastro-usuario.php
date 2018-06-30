@@ -56,7 +56,7 @@
             
             <button type="submit" name="enviar" class="btn btn-success ">Salvar</button>
             
-            <a href="tabela-produtos.php" type="button" role="button" name="voltar" class="btn btn-danger ">Voltar</a>
+            <a href="tabela-usuarios.php" name="voltar" class="btn btn-danger ">Voltar</a>
         </div>
     </form>
  

@@ -40,11 +40,13 @@
                     <div class="form-group">
                         <label for="categoria">Nome da categoria</label>
                         <input type="text" class="form-control input-cadastro-categoria" name="categoria" value="'.$nomeCategoria.'" required>
+                        </div class="col-6">
+                            <button type="submit" name="enviar" class="btn btn-success ">Salvar</button>
+                            <a href="tabela-Categorias.php"  name="voltar" class="btn btn-danger ">Voltar</a>
+                        </div>
                     </div>
 
-                    <div class="col-3 mx-auto ">
-                        <button type="submit" name="id" value = "'.$id.'" class="btn btn-primary ">Enviar</button>
-                    </div>
+                    
                 </form>
 
             </div>

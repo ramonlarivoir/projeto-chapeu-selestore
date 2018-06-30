@@ -22,7 +22,7 @@ include("conexao.php");
 
     $fileExt = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExt));
-
+    
     $allowed = array('jpg','jpeg','png');
 
     if(in_array($fileActualExt,$allowed)){
@@ -42,6 +42,7 @@ include("conexao.php");
     }else{
       echo "Este arquivo não é compatível";
     }
+    header("Location: tabela-produtos.php");
   }
 
   $nome = $_POST["nomeC"];
@@ -111,7 +112,7 @@ include("conexao.php");
       </select>
 
     <button type="submit" name="submit" class="btn btn-success">Salvar</button>
-   <a class="mt-3 mb-3 btn btn-primary" href="tabela-produtos.php" role="button">Voltar</a>
+   <a class="mt-3 mb-3 btn btn-danger" href="tabela-produtos.php" >Voltar</a>
        </form>
      </div>
 

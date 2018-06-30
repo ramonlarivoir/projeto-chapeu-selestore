@@ -57,13 +57,14 @@
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
-                        <input type="password" class="form-control input-cadastro-usuario"name="senha" placeholder="Nova Senha" required>
+                        <input type="password" class="form-control input-cadastro-usuario"name="senha" placeholder="****" required>
                     </div><div class="form-group">
                         <label for="Confirmar_Senha">Repita sua senha</label>
-                        <input type="password" class="form-control input-cadastro-usuario" name="confirmacaoDaSenha" placeholder="Confirme Sua Senha" required>
+                        <input type="password" class="form-control input-cadastro-usuario" name="confirmacaoDaSenha" placeholder="****" required>
                     </div>
-                    <div class="col-3 mx-auto ">
-                        <button type="submit" name="id" value = "'.$id.'" class="btn btn-primary ">Enviar</button>
+                    <div class="col-6">
+                        <button type="submit" name="id" value = "'.$id.'" class="btn btn-success ">Salvar</button>
+                        <a href="tabela-usuarios.php" name="voltar" class="btn btn-danger ">Voltar</a>
                     </div>
                 </form>
 
