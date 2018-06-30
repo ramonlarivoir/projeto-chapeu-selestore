@@ -27,7 +27,7 @@
       $result = $conexao->query($sql);
         if($result->num_rows > 0){
           $i = $maiorId;
-            while( $i > $maiorId - 3 && $row = $result->fetch_assoc()){    ?>
+            while( $i > $maiorId -3 && $row = $result->fetch_assoc()){    ?>
 
 
 
